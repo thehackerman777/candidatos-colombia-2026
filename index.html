@@ -2,157 +2,218 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>🆚 Colombia 2026 — Segunda Vuelta: Abelardo vs Cepeda</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+  /* ===== RESET & BASE ===== */
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Inter',sans-serif; background:#0a0a0a; color:#e0e0e0; line-height:1.6; }
-  
-  /* HEADER */
+  html { font-size:16px; -webkit-text-size-adjust:100%; }
+  body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#0a0a0a; color:#e0e0e0; line-height:1.7; }
+
+  /* ===== ACCESSIBILITY HELPERS ===== */
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  :focus-visible { outline:3px solid #4ecca3; outline-offset:2px; border-radius:4px; }
+  :focus:not(:focus-visible) { outline:none; }
+
+  /* ===== TEXT SIZE ===== */
+  @media(max-width:480px){ html{font-size:15px;} }
+  @media(max-width:360px){ html{font-size:14px;} }
+
+  /* ===== HEADER ===== */
   .header {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    padding: 40px 20px; text-align:center; border-bottom:3px solid #e94560;
+    padding: 32px 16px; text-align:center; border-bottom:3px solid #e94560;
   }
-  .header h1 { font-size:2.5rem; font-weight:900; letter-spacing:-1px; }
+  .header h1 { font-size:clamp(1.6rem, 6vw, 2.8rem); font-weight:900; letter-spacing:-0.5px; word-break:break-word; }
   .header h1 span.right { color:#e94560; }
   .header h1 span.left { color:#4ecca3; }
-  .header .subtitle { color:#aaa; font-size:1.1rem; margin-top:8px; }
-  .header .badge { display:inline-block; background:#e94560; color:#fff; padding:4px 16px; border-radius:20px; font-size:0.85rem; font-weight:700; margin-top:12px; }
+  .header .subtitle { color:#ccc; font-size:clamp(0.9rem, 3vw, 1.1rem); margin-top:8px; }
+  .header .badge { display:inline-block; background:#e94560; color:#fff; padding:6px 18px; border-radius:20px; font-size:0.85rem; font-weight:700; margin-top:12px; }
 
-  /* NAV */
-  .nav { display:flex; justify-content:center; gap:10px; padding:15px; background:#111; flex-wrap:wrap; position:sticky; top:0; z-index:100; border-bottom:1px solid #222; }
-  .nav a { color:#aaa; text-decoration:none; padding:8px 16px; border-radius:8px; font-size:0.85rem; font-weight:600; transition:all .2s; }
+  /* ===== NAV (scrollable on mobile) ===== */
+  .nav-wrapper { position:sticky; top:0; z-index:100; background:#111; border-bottom:1px solid #222; }
+  .nav {
+    display:flex; gap:6px; padding:10px 12px; overflow-x:auto; overflow-y:hidden;
+    -webkit-overflow-scrolling:touch; scrollbar-width:thin; white-space:nowrap;
+    scroll-snap-type:x proximity; overscroll-behavior-x:contain;
+  }
+  .nav::-webkit-scrollbar { height:3px; }
+  .nav::-webkit-scrollbar-thumb { background:#444; border-radius:3px; }
+  .nav a {
+    display:inline-flex; align-items:center; gap:4px; flex-shrink:0;
+    color:#bbb; text-decoration:none; padding:10px 14px; min-height:44px;
+    border-radius:10px; font-size:0.82rem; font-weight:600;
+    transition:all .2s; scroll-snap-align:start;
+  }
   .nav a:hover { background:#222; color:#fff; }
+  .nav a:active { transform:scale(0.97); }
   .nav a.active { background:#e94560; color:#fff; }
+  @media(min-width:769px){
+    .nav { justify-content:center; flex-wrap:wrap; overflow-x:visible; padding:12px; gap:8px; }
+    .nav a { padding:8px 14px; min-height:auto; }
+  }
 
-  /* SECTIONS */
-  section { padding:40px 20px; max-width:1200px; margin:0 auto; }
-  section h2 { font-size:1.8rem; font-weight:800; margin-bottom:30px; text-align:center; }
-  section h2 .sub { font-size:0.9rem; color:#888; font-weight:400; display:block; }
+  /* ===== SECTIONS ===== */
+  section { padding:clamp(24px, 4vw, 48px) 16px; max-width:1200px; margin:0 auto; }
+  @media(min-width:768px){ section{ padding:40px 24px; } }
+  section h2 { font-size:clamp(1.3rem, 4vw, 2rem); font-weight:800; margin-bottom:clamp(16px, 3vw, 30px); text-align:center; }
+  section h2 .sub { font-size:clamp(0.8rem, 2.5vw, 0.95rem); color:#999; font-weight:400; display:block; margin-top:4px; }
 
-  /* SPLIT LAYOUT */
-  .split { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-  @media(max-width:768px){ .split{grid-template-columns:1fr;} }
+  /* ===== SPLIT LAYOUT ===== */
+  .split { display:grid; grid-template-columns:1fr; gap:20px; }
+  @media(min-width:768px){ .split{grid-template-columns:1fr 1fr; gap:30px;} }
 
-  .card-abelardo { background: linear-gradient(145deg, #1a0a0a, #2a1a1a); border:1px solid #e9456040; border-radius:16px; padding:25px; }
-  .card-cepeda { background: linear-gradient(145deg, #0a1a1a, #1a2a2a); border:1px solid #4ecca340; border-radius:16px; padding:25px; }
+  .card-abelardo { background: linear-gradient(145deg, #1a0a0a, #2a1a1a); border:1px solid #e9456040; border-radius:16px; padding:clamp(16px, 3vw, 28px); }
+  .card-cepeda { background: linear-gradient(145deg, #0a1a1a, #1a2a2a); border:1px solid #4ecca340; border-radius:16px; padding:clamp(16px, 3vw, 28px); }
 
-  .card-abelardo h3 { color:#e94560; font-size:1.3rem; margin-bottom:15px; }
-  .card-cepeda h3 { color:#4ecca3; font-size:1.3rem; margin-bottom:15px; }
+  .card-abelardo h3 { color:#e94560; font-size:clamp(1.1rem, 3vw, 1.4rem); margin-bottom:12px; }
+  .card-cepeda h3 { color:#4ecca3; font-size:clamp(1.1rem, 3vw, 1.4rem); margin-bottom:12px; }
 
-  .tag { display:inline-block; padding:3px 12px; border-radius:12px; font-size:0.75rem; font-weight:700; margin-bottom:12px; }
-  .tag-red { background:#e9456030; color:#e94560; border:1px solid #e94560; }
+  .tag { display:inline-block; padding:4px 14px; border-radius:20px; font-size:clamp(0.7rem, 2vw, 0.8rem); font-weight:700; margin-bottom:12px; }
+  .tag-red { background:#e9456030; color:#ff6b6b; border:1px solid #ff6b6b; }
   .tag-green { background:#4ecca330; color:#4ecca3; border:1px solid #4ecca3; }
 
-  /* DATA TABLES */
-  .data-table { width:100%; border-collapse:collapse; margin:10px 0; }
+  /* ===== DATA TABLES (scrollable on mobile) ===== */
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:10px 0; border-radius:8px; }
+  .table-wrap::-webkit-scrollbar { height:4px; }
+  .table-wrap::-webkit-scrollbar-thumb { background:#444; border-radius:4px; }
+  .data-table { width:100%; border-collapse:collapse; min-width:280px; }
   .data-table td { padding:8px 10px; border-bottom:1px solid #222; font-size:0.9rem; vertical-align:top; }
-  .data-table td:first-child { font-weight:700; color:#888; white-space:nowrap; width:100px; }
+  .data-table td:first-child { font-weight:700; color:#999; white-space:nowrap; width:100px; }
   .data-table tr:last-child td { border-bottom:none; }
+  @media(max-width:480px){
+    .data-table td { font-size:0.82rem; padding:6px 8px; }
+    .data-table td:first-child { width:85px; }
+  }
 
-  /* TIMELINE */
+  /* ===== TIMELINE ===== */
   .timeline { position:relative; padding-left:25px; }
   .timeline::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:2px; background:#333; }
-  .timeline-item { position:relative; margin-bottom:20px; }
+  .timeline-item { position:relative; margin-bottom:16px; }
   .timeline-item::before { content:''; position:absolute; left:-21px; top:6px; width:12px; height:12px; border-radius:50%; }
   .tl-abelardo .timeline-item::before { background:#e94560; }
   .tl-cepeda .timeline-item::before { background:#4ecca3; }
-  .timeline-item .year { font-weight:700; font-size:0.85rem; color:#888; }
-  .timeline-item p { margin-top:4px; font-size:0.95rem; }
+  .timeline-item .year { font-weight:700; font-size:0.85rem; color:#999; display:inline-block; margin-bottom:2px; }
+  .timeline-item p { font-size:clamp(0.88rem, 2.5vw, 0.95rem); }
 
-  /* ACCORDION */
+  /* ===== ACCORDION ===== */
   .accordion { margin:10px 0; }
-  .accordion-btn { width:100%; text-align:left; padding:14px 18px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#e0e0e0; font-size:0.95rem; font-weight:600; cursor:pointer; transition:all .2s; display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .accordion-btn {
+    width:100%; text-align:left; padding:clamp(12px, 2vw, 16px) clamp(14px, 2.5vw, 18px);
+    background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#e0e0e0;
+    font-size:clamp(0.88rem, 2.5vw, 0.95rem); font-weight:600;
+    cursor:pointer; transition:all .2s;
+    display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;
+    min-height:44px; -webkit-tap-highlight-color:transparent;
+  }
   .accordion-btn:hover { background:#222; border-color:#555; }
-  .accordion-btn .arrow { transition:transform .3s; font-size:1.2rem; }
-  .accordion-btn.active .arrow { transform:rotate(180deg); }
+  .accordion-btn:active { transform:scale(0.99); }
+  .accordion-btn .arrow { transition:transform .3s; font-size:1.2rem; flex-shrink:0; margin-left:8px; }
+  .accordion-btn[aria-expanded="true"] .arrow { transform:rotate(180deg); }
   .accordion-content { max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s; padding:0 18px; background:#141414; border-radius:0 0 10px 10px; border:1px solid #333; border-top:none; margin-top:-6px; }
-  .accordion-content.open { max-height:4000px; padding:18px; }
+  .accordion-content.open { max-height:4000px; padding:clamp(12px, 2vw, 18px); }
   .accordion-content p, .accordion-content ul { margin-bottom:10px; }
   .accordion-content ul { padding-left:20px; }
-  .accordion-content li { margin-bottom:6px; font-size:0.9rem; }
+  .accordion-content li { margin-bottom:6px; font-size:clamp(0.85rem, 2.3vw, 0.9rem); line-height:1.6; }
 
-  /* QUOTES */
-  .quote { border-left:3px solid #e94560; padding:12px 18px; margin:15px 0; background:#111; border-radius:0 8px 8px 0; font-style:italic; color:#ccc; font-size:0.9rem; }
+  /* ===== QUOTES ===== */
+  .quote { border-left:3px solid #e94560; padding:12px 18px; margin:15px 0; background:#111; border-radius:0 8px 8px 0; font-style:italic; color:#ccc; font-size:clamp(0.85rem, 2.3vw, 0.9rem); }
   .quote.cepeda { border-left-color:#4ecca3; }
 
-  /* COMPARISON BAR */
-  .cmp-section { margin:30px 0; }
-  .cmp-section h3 { font-size:1.2rem; margin-bottom:15px; padding-bottom:8px; border-bottom:1px solid #222; }
-  .cmp-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:15px; align-items:start; }
-  .cmp-grid .vs { display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.2rem; color:#555; }
-  .cmp-box { padding:15px; border-radius:12px; font-size:0.9rem; }
+  /* ===== COMPARISON BAR ===== */
+  .cmp-section { margin:clamp(20px, 3vw, 30px) 0; }
+  .cmp-section h3 { font-size:clamp(1.05rem, 3vw, 1.2rem); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #222; }
+  .cmp-grid { display:grid; grid-template-columns:1fr; gap:12px; align-items:start; }
+  .cmp-grid .vs { display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.1rem; color:#555; padding:4px 0; }
+  .cmp-box { padding:clamp(12px, 2vw, 16px); border-radius:12px; font-size:clamp(0.85rem, 2.3vw, 0.9rem); }
   .cmp-box.abel { background:#1a0a0a; border:1px solid #e9456040; }
   .cmp-box.cep { background:#0a1a1a; border:1px solid #4ecca340; }
+  .cmp-box ul { padding-left:16px; font-size:clamp(0.82rem, 2.2vw, 0.88rem); }
+  .cmp-box ul li { margin-bottom:4px; }
+  @media(min-width:600px){
+    .cmp-grid { grid-template-columns:1fr auto 1fr; gap:15px; }
+  }
 
-  /* CONTROVERSY BADGE */
-  .controversy { background:#e9456015; border-left:4px solid #e94560; padding:15px; margin:15px 0; border-radius:0 10px 10px 0; }
-  .controversy h4 { color:#e94560; margin-bottom:8px; font-size:1rem; }
+  /* ===== CONTROVERSY BADGE ===== */
+  .controversy { background:#e9456015; border-left:4px solid #e94560; padding:clamp(12px, 2vw, 16px); margin:12px 0; border-radius:0 10px 10px 0; }
+  .controversy h4 { color:#e94560; margin-bottom:8px; font-size:clamp(0.9rem, 2.5vw, 1rem); }
+  .controversy p { font-size:clamp(0.85rem, 2.3vw, 0.9rem); line-height:1.6; }
   .controversy.cepeda { border-left-color:#4ecca3; background:#4ecca315; }
   .controversy.cepeda h4 { color:#4ecca3; }
 
-  /* FOOTER */
-  .footer { text-align:center; padding:30px; color:#555; font-size:0.8rem; border-top:1px solid #222; }
+  /* ===== FOOTER ===== */
+  .footer { text-align:center; padding:20px 16px; color:#777; font-size:0.8rem; border-top:1px solid #222; line-height:1.6; }
+  @media(min-width:768px){ .footer{ padding:30px; } }
 
-  /* VERDICT */
-  .verdict-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border:2px solid #e94560; border-radius:16px; padding:30px; margin:40px 0; text-align:center; }
-  .verdict-box h2 { margin-bottom:15px; }
-  .verdict-box p { max-width:800px; margin:0 auto; color:#aaa; }
+  /* ===== VERDICT ===== */
+  .verdict-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border:2px solid #e94560; border-radius:16px; padding:clamp(20px, 3vw, 30px); margin:clamp(24px, 4vw, 40px) 0; text-align:center; }
+  .verdict-box h2 { margin-bottom:12px; }
+  .verdict-box p { max-width:800px; margin:0 auto; color:#bbb; font-size:clamp(0.88rem, 2.3vw, 0.95rem); }
 
-  /* RESPONSIVE VIDEO EMBED */
-  .video-grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-  @media(max-width:768px){ .video-grid{grid-template-columns:1fr;} }
-  .video-card { background:#111; border-radius:12px; padding:15px; border:1px solid #222; }
-  .video-card h4 { margin-bottom:8px; font-size:0.95rem; }
+  /* ===== VIDEO GRID ===== */
+  .video-grid { display:grid; grid-template-columns:1fr; gap:12px; }
+  @media(min-width:600px){ .video-grid{grid-template-columns:1fr 1fr; gap:15px;} }
+  .video-card { background:#111; border-radius:12px; padding:clamp(12px, 2vw, 16px); border:1px solid #222; }
+  .video-card h4 { margin-bottom:6px; font-size:clamp(0.88rem, 2.5vw, 0.95rem); }
   .video-card a { color:#4ecca3; text-decoration:none; }
   .video-card a:hover { text-decoration:underline; }
 
-  /* CATEGORY TABS */
-  .cat-tabs { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:30px; }
-  .cat-tab { padding:8px 18px; border-radius:20px; background:#1a1a1a; border:1px solid #333; color:#aaa; cursor:pointer; font-size:0.85rem; font-weight:600; transition:all .2s; }
+  /* ===== CATEGORY TABS ===== */
+  .cat-tabs { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:24px; }
+  .cat-tab { padding:10px 18px; min-height:44px; border-radius:20px; background:#1a1a1a; border:1px solid #333; color:#bbb; cursor:pointer; font-size:0.85rem; font-weight:600; transition:all .2s; -webkit-tap-highlight-color:transparent; }
   .cat-tab:hover { background:#222; color:#fff; }
+  .cat-tab:active { transform:scale(0.97); }
   .cat-tab.active { background:#e94560; color:#fff; border-color:#e94560; }
   .cat-tab.active.cepeda-tab { background:#4ecca3; color:#000; border-color:#4ecca3; }
 
-  .source-link { color:#4ecca3; text-decoration:none; font-size:0.8rem; }
+  .source-link { color:#4ecca3; text-decoration:none; font-size:clamp(0.78rem, 2vw, 0.85rem); word-break:break-all; }
   .source-link:hover { text-decoration:underline; }
 
-  /* MODAL / LIGHTBOX */
-  .modal-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.85); z-index:1000; justify-content:center; align-items:center; padding:20px; backdrop-filter:blur(4px); }
+  /* ===== MODAL / LIGHTBOX ===== */
+  .modal-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.88); z-index:1000; justify-content:center; align-items:center; padding:12px; backdrop-filter:blur(4px); }
   .modal-overlay.open { display:flex; }
-  .modal-box { background:#1a1a1a; border:1px solid #333; border-radius:16px; max-width:800px; width:100%; max-height:85vh; overflow-y:auto; padding:25px; position:relative; }
-  .modal-close { position:absolute; top:12px; right:12px; background:#333; border:none; color:#fff; width:36px; height:36px; border-radius:50%; font-size:1.2rem; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; }
-  .modal-close:hover { background:#e94560; transform:rotate(90deg); }
-  .modal-box h3 { margin-bottom:15px; color:#fff; }
-  .modal-box .modal-body { font-size:0.9rem; color:#ccc; line-height:1.7; }
+  .modal-box { background:#1a1a1a; border:1px solid #333; border-radius:16px; max-width:800px; width:100%; max-height:90vh; overflow-y:auto; padding:clamp(16px, 3vw, 28px); position:relative; }
+  .modal-close { position:absolute; top:10px; right:10px; background:#333; border:none; color:#fff; width:44px; height:44px; border-radius:50%; font-size:1.3rem; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; }
+  .modal-close:hover { background:#e94560; }
+  .modal-close:focus-visible { outline:3px solid #4ecca3; }
+  .modal-box h3 { margin-bottom:12px; color:#fff; font-size:clamp(1rem, 3vw, 1.2rem); padding-right:40px; }
+  .modal-box .modal-body { font-size:clamp(0.85rem, 2.3vw, 0.9rem); color:#ccc; line-height:1.7; }
   .modal-box .modal-body a { color:#4ecca3; }
 
-  /* INLINE FRAME EMBED */
+  /* ===== EMBED ===== */
   .embed-container { position:relative; width:100%; padding-bottom:56.25%; margin:10px 0; border-radius:12px; overflow:hidden; background:#000; }
-  .embed-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+  .embed-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
   .embed-container.audio-embed { padding-bottom:80px; }
   .embed-container.audio-embed iframe { height:80px; }
 
-  /* INLINE ARTICLE PREVIEW */
-  .inline-article { background:#141414; border:1px solid #333; border-radius:12px; padding:18px; margin:12px 0; cursor:pointer; transition:all .2s; }
+  /* ===== INLINE ARTICLE PREVIEW ===== */
+  .inline-article { background:#141414; border:1px solid #333; border-radius:12px; padding:clamp(14px, 2.5vw, 18px); margin:12px 0; cursor:pointer; transition:all .2s; }
   .inline-article:hover { border-color:#555; background:#1a1a1a; }
   .inline-article .src { font-size:0.7rem; color:#888; text-transform:uppercase; letter-spacing:1px; }
-  .inline-article h4 { font-size:0.95rem; margin:6px 0; color:#ddd; }
-  .inline-article .excerpt { font-size:0.8rem; color:#888; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-  .inline-article .btn-read { display:inline-block; margin-top:8px; padding:4px 14px; border-radius:6px; font-size:0.75rem; font-weight:600; cursor:pointer; border:none; transition:all .2s; }
-  .btn-abel { background:#e9456020; color:#e94560; }
+  .inline-article h4 { font-size:clamp(0.88rem, 2.5vw, 0.95rem); margin:6px 0; color:#ddd; }
+  .inline-article .excerpt { font-size:0.8rem; color:#888; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .inline-article .btn-read { display:inline-block; margin-top:8px; padding:8px 16px; min-height:44px; border-radius:8px; font-size:0.8rem; font-weight:600; cursor:pointer; border:none; transition:all .2s; -webkit-tap-highlight-color:transparent; }
+  .btn-abel { background:#e9456020; color:#ff6b6b; }
   .btn-abel:hover { background:#e94560; color:#fff; }
   .btn-cep { background:#4ecca320; color:#4ecca3; }
   .btn-cep:hover { background:#4ecca3; color:#000; }
 
-  /* STAT CARDS */
-  .stat-row { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin:15px 0; }
-  .stat-card { background:#111; border-radius:10px; padding:15px; text-align:center; border:1px solid #222; }
-  .stat-card .num { font-size:1.8rem; font-weight:900; }
+  /* ===== STAT CARDS ===== */
+  .stat-row {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(clamp(120px, 30vw, 150px), 1fr));
+    gap:8px; margin:12px 0;
+  }
+  .stat-card { background:#111; border-radius:10px; padding:12px 8px; text-align:center; border:1px solid #222; }
+  .stat-card .num { font-size:clamp(1.4rem, 5vw, 1.8rem); font-weight:900; }
   .stat-card .num.red { color:#e94560; }
   .stat-card .num.green { color:#4ecca3; }
-  .stat-card .label { font-size:0.75rem; color:#888; margin-top:4px; }
+  .stat-card .label { font-size:0.7rem; color:#888; margin-top:4px; word-break:break-word; }
+  @media(max-width:400px){
+    .stat-row { grid-template-columns:repeat(2, 1fr); gap:6px; }
+  }
 
   /* PENSIONES SECTION */
   .tema-card { background:#111; border:1px solid #333; border-radius:12px; padding:20px; margin:15px 0; }
@@ -209,8 +270,9 @@
   <div class="badge">🔴 Análisis Extremo a Extremo</div>
 </div>
 
-<div class="nav" id="nav">
-  <a href="#perfiles">📋 Perfiles</a>
+<nav class="nav-wrapper" aria-label="Navegación principal">
+<div class="nav" id="nav" >
+  <a href="#perfiles" >📋 Perfiles</a>
   <a href="#programas">📜 Programas</a>
   <a href="#abelardo-dossier">📁 Dossier Abelardo</a>
   <a href="#cepeda-dossier">📁 Dossier Cepeda</a>
@@ -220,8 +282,9 @@
   <a href="#cronologia">⏳ Cronología</a>
   <a href="#pensiones">🏛️ Pensiones</a>
   <a href="#electoral">📊 Izq vs Der</a>
-  <a href="#fuentes">📚 Fuentes</a>
+  <a href="#fuentes" >📚 Fuentes</a>
 </div>
+</nav>
 
 <!-- ===== PERFILES ===== -->
 <section id="perfiles">
@@ -230,7 +293,7 @@
     <div class="card-abelardo">
       <span class="tag tag-red">🔴 EXTREMA DERECHA</span>
       <h3>Abelardo Gabriel de la Espriella Otero</h3>
-      <table class="data-table">
+      <div class="table-wrap"><table class="data-table">
         <tr><td>Edad</td><td>47 años (31 jul 1978)</td></tr>
         <tr><td>Lugar</td><td>Bogotá, criado en Montería, Córdoba</td></tr>
         <tr><td>Partido</td><td>Defensores de la Patria / Mov. Salvación Nacional</td></tr>
@@ -245,7 +308,7 @@
     <div class="card-cepeda">
       <span class="tag tag-green">🟢 IZQUIERDA DEMOCRÁTICA</span>
       <h3>Iván Cepeda Castro</h3>
-      <table class="data-table">
+      <div class="table-wrap"><table class="data-table">
         <tr><td>Edad</td><td>63 años (24 oct 1962)</td></tr>
         <tr><td>Lugar</td><td>Bogotá</td></tr>
         <tr><td>Partido</td><td>Pacto Histórico (antes Polo Dem., AD M-19, UP)</td></tr>
@@ -342,7 +405,7 @@
       <h4>💰 DMG — La Pirámide Financiera</h4>
       <p><strong>David Murcia Guzmán</strong> creó DMG, la captadora ilegal de dinero más grande de Colombia. Estafó a más de <strong>200.000 colombianos</strong> ofreciendo rendimientos de hasta 200%. Abelardo fue su <strong>abogado defensor</strong> desde 2008.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Detalles del caso DMG <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Detalles del caso DMG <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>Murcia pasó de jefe de comunicaciones de un pueblo en Putumayo a uno de los hombres más ricos del país en 3 años</li>
@@ -361,7 +424,7 @@
       <h4>📝 62% de Firmas Inválidas — Fraude Electoral</h4>
       <p>La Registraduría Nacional invalidó el <strong>62%</strong> de las firmas presentadas por Abelardo para inscribir su candidatura: <strong>3.1 millones de firmas</strong> estaban presuntamente falsificadas.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 El escándalo de las firmas <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 El escándalo de las firmas <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>Revelado por la periodista Cecilia Orozco en febrero 2026</li>
@@ -378,7 +441,7 @@
       <h4>🐱 Maltrato Animal Confesado en TV</h4>
       <p>En 2014, en el programa <strong>The Suso's Show</strong> (Caracol TV), Abelardo confesó entre risas que de niño <strong>amarraba gatos a petardos voladores</strong> para verlos estallar. Dijo: <em>"Era un niño travieso… era terrible, pero me divertía"</em>.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Reacciones y contradicciones <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Reacciones y contradicciones <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>El fragmento se viralizó en plena campaña 2026 desatando <strong>indignación masiva</strong></li>
@@ -398,7 +461,7 @@
       <h4 style="color:#ffd700;">⛪ Conversión del Ateísmo al Catolicismo</h4>
       <p>Abelardo fue <strong>ateo declarado</strong> durante la mayor parte de su vida. En 2021, tras la muerte de su tía Beatrice (figura cercana, mujer profundamente devota), comenzó un proceso de conversión.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 La historia completa <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 La historia completa <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>Lo que decía antes (como ateo):</strong> "Suponiendo que Dios exista, creo que es responsable, por acción u omisión, de todo lo malo que ha pasado. Podría alegar un eximente para el diablo: Dios lo echó del paraíso, lo persiguieron, es mucho más sencillo justificar la conducta del diablo que la de Dios"</li>
@@ -416,7 +479,7 @@
     <div class="controversy" style="border-left-color:#ffd700;">
       <h4 style="color:#ffd700;">💎 Estilo de Vida — Contradicciones con el Discurso</h4>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Lujo y ostentación <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Lujo y ostentación <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>Usa <strong>mocasines Louis Vuitton</strong></li>
@@ -456,7 +519,7 @@
       <h4>🏳️‍🌈 Adopción Homoparental — El Giro de 180°</h4>
       <p>En 2016 apoyaba la adopción por parejas del mismo sexo. En 2026 dice que <strong>"los niños son sagrados"</strong> y los sacaría de esa ecuación. Un giro completo que sus críticos señalan como <strong>oportunismo electoral</strong> para atraer el voto conservador.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Lo que dijo antes vs después <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Lo que dijo antes vs después <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>2016 (audiencia pública, referendo adopción):</strong> "En lo personal, prefiero a un niño que viva y crezca en un hogar integrado por homosexuales a que lo haga viviendo en una calle. No creo que su razonamiento esté guiado por homofobia"</li>
@@ -495,7 +558,7 @@
       <h4>☭ Herencia Comunista — La Unión Patriótica y el Partido Comunista</h4>
       <p>Iván Cepeda <strong>nació y se crió en el comunismo colombiano</strong>. Sus padres, Manuel Cepeda y Yira Castro, eran <strong>militantes del Partido Comunista Colombiano (PCC)</strong> y de la Unión Patriótica (UP). Su padre era miembro del Comité Central del PCC. Él mismo lo ha reconocido: <em>"Nací en política en el Partido Comunista"</em>.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 UP: El Brazo Político de las FARC <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 UP: El Brazo Político de las FARC <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>La <strong>Unión Patriótica (UP)</strong> no fue un partido de oposición convencional. Fue <strong>creada en 1985</strong> conjuntamente por el <strong>Partido Comunista Colombiano y las FARC</strong> como su brazo político electoral, resultado de los Acuerdos de La Uribe con el gobierno de Belisario Betancur</li>
@@ -514,7 +577,7 @@
       <h4>🔗 Relación con las FARC — "No soy de las FARC, pero..."</h4>
       <p>Las 2 Orillas publicó un análisis incisivo: <em>"Iván Cepeda no es de las FARC, pero camina como pato, grazna como pato y se mueve como pato de las FARC"</em>.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Vínculos documentados <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Vínculos documentados <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>Computador de Raúl Reyes:</strong> Iván Cepeda aparece en los archivos del comandante de las FARC como <strong>"compañero"</strong> al que había que "secundar"</li>
@@ -532,7 +595,7 @@
     <div class="controversy cepeda" style="border-left-color:#8888ff;">
       <h4 style="color:#8888ff;">🌍 Formación en el Bloque Soviético</h4>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Exilio, Cuba, Checoslovaquia y Bulgaria <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Exilio, Cuba, Checoslovaquia y Bulgaria <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>Primer exilio (1965):</strong> A los 3 años, sus padres huyeron a <strong>Cuba</strong> y luego a <strong>Praga (Checoslovaquia)</strong></li>
@@ -551,7 +614,7 @@
       <h4 style="color:#ff8800;">⚔️ El Caso Uribe — Vendetta Personal o Lucha Anticorrupción?</h4>
       <p>El caso más polarizador de Colombia. Cepeda investigó el paramilitarismo en Antioquia. Entrevistó a <strong>Juan Guillermo Monsalve</strong>, quien vinculó a los hermanos Uribe con la fundación del Bloque Metro de las AUC. Uribe lo demandó. El caso dio un vuelco y terminó <strong>investigando a Uribe</strong>.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Cronología del caso <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Cronología del caso <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>2014:</strong> Cepeda presenta debate en el Congreso. Uribe se retira furioso y lo demanda por manipulación de testigos</li>
@@ -578,7 +641,7 @@
       <h4 style="color:#ff4444;">💔 El Día que Encontró a su Padre Asesinado</h4>
       <p><strong>9 de agosto de 1994, 9:05 a.m.</strong> — Manuel Cepeda Vargas salía de su casa en Kennedy hacia el Congreso. Dos sargentos activos del Ejército Nacional lo interceptaron en la Av. de Las Américas con carrera 74 y le dispararon tres veces. Un tiro certero a través de la ventana de su campero Montero Mitsubishi verde esmeralda.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 El testimonio de Iván Cepeda <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 El testimonio de Iván Cepeda <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>Iván viajaba <strong>cuadras atrás</strong> en un bus de servicio público rumbo a la Universidad Javeriana</li>
@@ -602,7 +665,7 @@
       <h4 style="color:#ff6600;">🇻🇪 Relación con Nicolás Maduro y Venezuela</h4>
       <p>En 2013, tras la muerte de Hugo Chávez, Cepeda publicó un mensaje apoyando a <strong>Nicolás Maduro</strong> como sucesor. Ese mensaje ha sido usado por sus opositores para vincularlo con la dictadura venezolana.</p>
       <div class="accordion">
-        <button class="accordion-btn">🔍 La controversia Venezuela <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 La controversia Venezuela <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>Marzo 2013:</strong> Cepeda respalda a Maduro como sucesor de Chávez tras la muerte del líder venezolano</li>
@@ -620,7 +683,7 @@
     <div class="controversy cepeda" style="border-left-color:#4ecca3;">
       <h4 style="color:#4ecca3;">🔄 Transformación: del Comunismo a la Izquierda Democrática</h4>
       <div class="accordion">
-        <button class="accordion-btn">🔍 Su propia versión <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Su propia versión <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li>"Nací en política en el Partido Comunista, pero quien piense que esas etiquetas significan hoy lo mismo que en los años sesenta o setenta, vive fuera de época" — Iván Cepeda, Revista Bocas, 2026</li>
@@ -1177,39 +1240,39 @@
     <div>
       <h3 style="color:#e94560;font-size:1.1rem;margin-bottom:15px;">Sobre Abelardo</h3>
       <ul style="padding-left:20px;font-size:0.85rem;">
-        <li><a class="source-link" href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-05-31/abelardo-de-la-espriella-abogado-del-diablo-que-quiere-ser-presidente-de-colombia.html">El País: "El abogado del diablo"</a></li>
-        <li><a class="source-link" href="https://www.pares.com.co/el-papel-que-jugo-abelardo-de-la-espriella-en-el-entramado-de-dmg/">PAres: DMG y Abelardo</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/02/13/interceptaciones-judiciales-refuerzan-senalamientos-sobre-presunta-manipulacion-legislativa-relacionada-con-dmg-y-abelardo-de-la-espriella/">Infobae: Interceptaciones DMG</a></li>
-        <li><a class="source-link" href="https://www.lapatria.com/nacional/creador-de-la-piramide-dmg-acusa-al-candidato-presidencial-abelardo-de-la-espriella-de">La Patria: Murcia denuncia a Abelardo</a></li>
-        <li><a class="source-link" href="https://www.radionacional.co/actualidad/abelardo-de-la-espriella-62-de-sus-firmas-serian-falsas-y-enfrenta-denuncia">Radio Nacional: 62% firmas falsas</a></li>
-        <li><a class="source-link" href="https://laveintitres.com/abelardo-de-la-espriella-es-criticado-por-confesar-maltrato-a-gatos-en-su-niez/">La Veintitrés: Maltrato animal</a></li>
-        <li><a class="source-link" href="https://www.las2orillas.co/de-ponerle-polvora-a-gatos-a-querer-gobernar-con-terror-el-peligroso-perfil-de-abelardo-de-la-espriella/">Las 2 Orillas: Perfil peligroso</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/02/11/abelardo-de-la-espriella-relato-su-paso-del-ateismo-a-la-fe-cristiana-tras-una-tragedia-familiar-que-parte-de-que-me-converti-no-entendiste/">Infobae: Conversión católica</a></li>
-        <li><a class="source-link" href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-05-24/el-dinero-de-alex-saab-que-llego-a-las-cuentas-de-abelardo-de-la-espriella.html">El País: Dinero de Alex Saab</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/01/27/desempolvan-video-de-abelardo-de-la-espriella-en-el-que-respalda-la-adopcion-por-parte-de-parejas-del-mismo-sexo-prefiero/">Infobae: Giro adopción LGBT</a></li>
-        <li><a class="source-link" href="https://www.elespectador.com/politica/elecciones-colombia-2026/propuestas-de-abelardo-de-la-espriella-este-es-su-plan-de-gobierno/">El Espectador: Plan de gobierno</a></li>
-        <li><a class="source-link" href="https://cambiocolombia.com/analisis-programa-gobierno-abelardo-espriella-propuestas-viabilidad-elecciones">Cambio: Análisis viabilidad</a></li>
-        <li><a class="source-link" href="https://www.elcolombiano.com/colombia/abelardo-formula-vicepresidencial-jose-manuel-restrepo-claves-DF34466665">El Colombiano: Fórmula Restrepo</a></li>
-        <li><a class="source-link" href="https://www.las2orillas.co/ivan-cepeda-lleva-sobre-sus-hombros-la-semilla-del-genocidio-a-la-union-patriotica/">Las 2 Orillas: Cepeda y UP</a></li>
-        <li><a class="source-link" href="https://www.youtube.com/watch?v=sxc_1SYJDvk">YT: Abelardo conversión católica (EL TIEMPO)</a></li>
-        <li><a class="source-link" href="https://cdn.jwplayer.com/previews/T1NEgpk1">JWPlayer: Abelardo adopción LGBT</a></li>
-        <li><a class="source-link" href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html">RED+: Cepeda encuentra a su padre</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-05-31/abelardo-de-la-espriella-abogado-del-diablo-que-quiere-ser-presidente-de-colombia.html">El País: "El abogado del diablo"</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.pares.com.co/el-papel-que-jugo-abelardo-de-la-espriella-en-el-entramado-de-dmg/">PAres: DMG y Abelardo</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2026/02/13/interceptaciones-judiciales-refuerzan-senalamientos-sobre-presunta-manipulacion-legislativa-relacionada-con-dmg-y-abelardo-de-la-espriella/">Infobae: Interceptaciones DMG</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.lapatria.com/nacional/creador-de-la-piramide-dmg-acusa-al-candidato-presidencial-abelardo-de-la-espriella-de">La Patria: Murcia denuncia a Abelardo</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.radionacional.co/actualidad/abelardo-de-la-espriella-62-de-sus-firmas-serian-falsas-y-enfrenta-denuncia">Radio Nacional: 62% firmas falsas</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://laveintitres.com/abelardo-de-la-espriella-es-criticado-por-confesar-maltrato-a-gatos-en-su-niez/">La Veintitrés: Maltrato animal</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.las2orillas.co/de-ponerle-polvora-a-gatos-a-querer-gobernar-con-terror-el-peligroso-perfil-de-abelardo-de-la-espriella/">Las 2 Orillas: Perfil peligroso</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2026/02/11/abelardo-de-la-espriella-relato-su-paso-del-ateismo-a-la-fe-cristiana-tras-una-tragedia-familiar-que-parte-de-que-me-converti-no-entendiste/">Infobae: Conversión católica</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-05-24/el-dinero-de-alex-saab-que-llego-a-las-cuentas-de-abelardo-de-la-espriella.html">El País: Dinero de Alex Saab</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2026/01/27/desempolvan-video-de-abelardo-de-la-espriella-en-el-que-respalda-la-adopcion-por-parte-de-parejas-del-mismo-sexo-prefiero/">Infobae: Giro adopción LGBT</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.elespectador.com/politica/elecciones-colombia-2026/propuestas-de-abelardo-de-la-espriella-este-es-su-plan-de-gobierno/">El Espectador: Plan de gobierno</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://cambiocolombia.com/analisis-programa-gobierno-abelardo-espriella-propuestas-viabilidad-elecciones">Cambio: Análisis viabilidad</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.elcolombiano.com/colombia/abelardo-formula-vicepresidencial-jose-manuel-restrepo-claves-DF34466665">El Colombiano: Fórmula Restrepo</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.las2orillas.co/ivan-cepeda-lleva-sobre-sus-hombros-la-semilla-del-genocidio-a-la-union-patriotica/">Las 2 Orillas: Cepeda y UP</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=sxc_1SYJDvk">YT: Abelardo conversión católica (EL TIEMPO)</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://cdn.jwplayer.com/previews/T1NEgpk1">JWPlayer: Abelardo adopción LGBT</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html">RED+: Cepeda encuentra a su padre</a></li>
       </ul>
     </div>
     <div>
       <h3 style="color:#4ecca3;font-size:1.1rem;margin-bottom:15px;">Sobre Cepeda</h3>
       <ul style="padding-left:20px;font-size:0.85rem;">
-        <li><a class="source-link" href="https://www.las2orillas.co/ivan-cepeda-lleva-sobre-sus-hombros-la-semilla-del-genocidio-a-la-union-patriotica/">Las 2 Orillas: La semilla del genocidio UP</a></li>
-        <li><a class="source-link" href="https://www.las2orillas.co/la-herencia-comunista-de-cepeda-y-los-cuestionamientos-por-su-cercania-a-las-farc/">Las 2 Orillas: Herencia comunista y FARC</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/04/24/ivan-cepeda-aclaro-cual-es-realmente-su-ideologia-naci-en-politica-en-el-partido-comunista/">Infobae: "Nací en el Partido Comunista"</a></li>
-        <li><a class="source-link" href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html">Red+: El día que encontró a su padre asesinado</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2025/04/16/asi-fue-el-asesinato-de-manuel-cepeda-vargas-el-padre-del-senador-ivan-cepeda-gustavo-petro-anuncio-la-recaptura-del-exmilitar-condenado-por-el-crimen/">Infobae: Asesinato de Manuel Cepeda</a></li>
-        <li><a class="source-link" href="https://elexpediente.co/los-vinculos-de-manuel-cepeda-vargas-yira-castro-chadid-e-ivan-cepeda-con-las-farc-la-historia-que-el-candidato-del-pacto-no-cuenta/">El Expediente: Vínculos con FARC</a></li>
-        <li><a class="source-link" href="https://factual.afp.com/doc.afp.com.989N663">AFP Factual: Contexto genocidio UP</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/01/03/reviven-antiguo-mensaje-de-ivan-cepeda-sobre-nicolas-maduro-durante-la-sucesion-en-venezuela-tras-la-muerte-de-chavez-boquisucio/">Infobae: Cepeda y Maduro 2013</a></li>
-        <li><a class="source-link" href="https://www.elespectador.com/politica/elecciones-colombia-2026/consulta-pacto-historico-ivan-cepeda-habla-de-estados-unidos-daniel-quintero-uribe-y-sus-propuestas-noticias-hoy/">El Espectador: Entrevista Cepeda</a></li>
-        <li><a class="source-link" href="https://cnnespanol.cnn.com/2025/10/31/colombia/ivan-cepeda-colombia-entrevista-conclusiones-orix">CNN: Cepeda entrevista</a></li>
-        <li><a class="source-link" href="https://www.elcolombiano.com/colombia/entrevista-ivan-cepeda-ganador-consulta-pacto-historico-KH30402679">El Colombiano: Cepeda gana consulta</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.las2orillas.co/ivan-cepeda-lleva-sobre-sus-hombros-la-semilla-del-genocidio-a-la-union-patriotica/">Las 2 Orillas: La semilla del genocidio UP</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.las2orillas.co/la-herencia-comunista-de-cepeda-y-los-cuestionamientos-por-su-cercania-a-las-farc/">Las 2 Orillas: Herencia comunista y FARC</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2026/04/24/ivan-cepeda-aclaro-cual-es-realmente-su-ideologia-naci-en-politica-en-el-partido-comunista/">Infobae: "Nací en el Partido Comunista"</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html">Red+: El día que encontró a su padre asesinado</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2025/04/16/asi-fue-el-asesinato-de-manuel-cepeda-vargas-el-padre-del-senador-ivan-cepeda-gustavo-petro-anuncio-la-recaptura-del-exmilitar-condenado-por-el-crimen/">Infobae: Asesinato de Manuel Cepeda</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://elexpediente.co/los-vinculos-de-manuel-cepeda-vargas-yira-castro-chadid-e-ivan-cepeda-con-las-farc-la-historia-que-el-candidato-del-pacto-no-cuenta/">El Expediente: Vínculos con FARC</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://factual.afp.com/doc.afp.com.989N663">AFP Factual: Contexto genocidio UP</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2026/01/03/reviven-antiguo-mensaje-de-ivan-cepeda-sobre-nicolas-maduro-durante-la-sucesion-en-venezuela-tras-la-muerte-de-chavez-boquisucio/">Infobae: Cepeda y Maduro 2013</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.elespectador.com/politica/elecciones-colombia-2026/consulta-pacto-historico-ivan-cepeda-habla-de-estados-unidos-daniel-quintero-uribe-y-sus-propuestas-noticias-hoy/">El Espectador: Entrevista Cepeda</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://cnnespanol.cnn.com/2025/10/31/colombia/ivan-cepeda-colombia-entrevista-conclusiones-orix">CNN: Cepeda entrevista</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.elcolombiano.com/colombia/entrevista-ivan-cepeda-ganador-consulta-pacto-historico-KH30402679">El Colombiano: Cepeda gana consulta</a></li>
       </ul>
     </div>
   </div>
@@ -1219,15 +1282,15 @@
     <h3 style="font-size:0.95rem;text-align:center;margin-bottom:10px;">📚 Fuentes Adicionales — Pensiones y Análisis Electoral</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;font-size:0.8rem;">
       <ul style="padding-left:18px;">
-        <li><a class="source-link" href="https://www.presidencia.gov.co/prensa/Paginas/ABC-DE-LA-LEY-DE-REFORMA-PENSIONAL-250317.aspx">Presidencia: ABC Reforma Pensional</a></li>
-        <li><a class="source-link" href="https://www.infobae.com/colombia/2025/06/30/reforma-pensional-aprobada-este-es-el-abece-para-que-recuerde-el-nuevo-sistema-en-colombia/">Infobae: Nueva Reforma Pensional</a></li>
-        <li><a class="source-link" href="https://asesoriasjuridicas.com.co/reforma-pensional-colombia-2026/">Asesorías Jurídicas: Pilares Reforma</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.presidencia.gov.co/prensa/Paginas/ABC-DE-LA-LEY-DE-REFORMA-PENSIONAL-250317.aspx">Presidencia: ABC Reforma Pensional</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.infobae.com/colombia/2025/06/30/reforma-pensional-aprobada-este-es-el-abece-para-que-recuerde-el-nuevo-sistema-en-colombia/">Infobae: Nueva Reforma Pensional</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://asesoriasjuridicas.com.co/reforma-pensional-colombia-2026/">Asesorías Jurídicas: Pilares Reforma</a></li>
       </ul>
       <ul style="padding-left:18px;">
-        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2022">Wikipedia: Elecciones 2022</a></li>
-        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2018">Wikipedia: Elecciones 2018</a></li>
-        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2014">Wikipedia: Elecciones 2014</a></li>
-        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2010">Wikipedia: Elecciones 2010</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2022">Wikipedia: Elecciones 2022</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2018">Wikipedia: Elecciones 2018</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2014">Wikipedia: Elecciones 2014</a></li>
+        <li><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2010">Wikipedia: Elecciones 2010</a></li>
       </ul>
     </div>
   </div>
@@ -1239,10 +1302,11 @@
 </div>
 
 <script>
-  // Accordion
+  // Accordion with ARIA
   document.querySelectorAll('.accordion-btn').forEach(btn => {
     btn.addEventListener('click', function() {
-      this.classList.toggle('active');
+      const isOpen = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isOpen);
       const content = this.nextElementSibling;
       content.classList.toggle('open');
     });
@@ -1254,6 +1318,8 @@
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      // Close mobile nav on selection
+      this.blur();
     });
   });
 
@@ -1264,22 +1330,41 @@
     let current = '';
     sections.forEach(s => {
       const top = s.offsetTop - 150;
-      if (window.scrollY >= top) current = s.id || 'veredicto';
+      if (window.scrollY >= top) current = s.id || '';
     });
     navLinks.forEach(a => {
       a.classList.remove('active');
-      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-      if (current === 'veredicto' && a.getAttribute('href') === '#veredicto') a.classList.add('active');
+      a.removeAttribute('aria-current');
+      if (a.getAttribute('href') === '#' + current) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
     });
   });
 
   // Modal / Lightbox
-  function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    const closeBtn = modal.querySelector('.modal-close');
+    if (closeBtn) setTimeout(() => closeBtn.focus(), 100);
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow='';
+  }
   document.querySelectorAll('.modal-overlay').forEach(m => {
     m.addEventListener('click', function(e) { if(e.target === this) { this.classList.remove('open'); document.body.style.overflow=''; } });
   });
-  document.addEventListener('keydown', function(e) { if(e.key === 'Escape') { document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow=''; }); } });
+  document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => {
+        m.classList.remove('open');
+        document.body.style.overflow='';
+      });
+    }
+  });
 </script>
 
 </body>
