@@ -76,7 +76,10 @@
   .tag-green { background:#4ecca330; color:#4ecca3; border:1px solid #4ecca3; }
 
   /* ===== DATA TABLES (scrollable on mobile) ===== */
-  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:10px 0; border-radius:8px; }
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:10px 0; border-radius:8px; max-width:100%; }
+  .table-wrap-elec { overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; margin:12px 0; border-radius:8px; max-width:100%; }
+  .table-wrap-elec::-webkit-scrollbar { height:4px; }
+  .table-wrap-elec::-webkit-scrollbar-thumb { background:#444; border-radius:4px; }
   .table-wrap::-webkit-scrollbar { height:4px; }
   .table-wrap::-webkit-scrollbar-thumb { background:#444; border-radius:4px; }
   .data-table { width:100%; border-collapse:collapse; min-width:280px; }
@@ -238,7 +241,7 @@
   .pilar-card p { font-size:0.8rem; color:#999; }
 
   /* ELECTORAL ANALYSIS */
-  .elec-table { width:100%; border-collapse:collapse; margin:12px 0; font-size:0.85rem; }
+  .elec-table { width:100%; border-collapse:collapse; margin:0; font-size:clamp(0.72rem, 2vw, 0.85rem); }
   .elec-table th { background:#1a1a1a; color:#888; padding:8px 10px; text-align:left; font-weight:600; border-bottom:2px solid #333; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; }
   .elec-table td { padding:7px 10px; border-bottom:1px solid #222; }
   .elec-table tr:hover td { background:#141414; }
@@ -1304,6 +1307,8 @@
 </div>
 
 <script>
+  "use strict";
+
   // ===== ACCORDION =====
   document.querySelectorAll('.accordion-btn').forEach(btn => {
     btn.addEventListener('click', function() {
@@ -1313,50 +1318,20 @@
     });
   });
 
-  // ===== NAV: CLICK → SCROLL TO SECTION =====
-  let isScrollingProgrammatically = false;
+  // ===== NAV: SHARED STATE =====
+  const navLinks = document.querySelectorAll('.nav a');
+  const navEl = document.querySelector('.nav');
+  let navigationLocked = false;
+  let lastActiveId = '';
 
-  document.querySelectorAll('.nav a').forEach(a => {
-    a.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const target = document.getElementById(targetId);
-      if (!target) return;
-
-      // Mark that we're about to programmatically scroll
-      isScrollingProgrammatically = true;
-
-      // Remove active from all, set active on clicked
-      document.querySelectorAll('.nav a').forEach(link => {
-        link.classList.remove('active');
-        link.removeAttribute('aria-current');
-      });
-      this.classList.add('active');
-      this.setAttribute('aria-current', 'page');
-
-      // Scroll with smooth behavior — the scrollObserver will update active
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // Restore scroll flag after animation completes
-      setTimeout(() => {
-        isScrollingProgrammatically = false;
-      }, 800);
-
-      this.blur();
-    });
-  });
-
-  // ===== NAV: SCROLL → UPDATE ACTIVE SECTION (IntersectionObserver) =====
   function updateActiveNav(sectionId) {
-    const navLinks = document.querySelectorAll('.nav a');
-    // Also scroll nav horizontally to keep active link visible
-    const navEl = document.querySelector('.nav');
+    if (!sectionId) return;
+    lastActiveId = sectionId;
     navLinks.forEach(a => {
       const match = a.getAttribute('href') === '#' + sectionId;
       a.classList.toggle('active', match);
       if (match) {
         a.setAttribute('aria-current', 'page');
-        // Auto-scroll nav horizontally on mobile
         if (navEl && navEl.scrollWidth > navEl.clientWidth) {
           const aRect = a.getBoundingClientRect();
           const navRect = navEl.getBoundingClientRect();
@@ -1370,71 +1345,69 @@
     });
   }
 
-  // Build a section→nav map once
-  const sectionNavMap = new Map();
-  document.querySelectorAll('.nav a').forEach(a => {
-    const id = a.getAttribute('href').substring(1);
-    const el = document.getElementById(id);
-    if (el) sectionNavMap.set(id, el);
+  // ===== NAV: CLICK HANDLER =====
+  navLinks.forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      navigationLocked = true;
+      updateActiveNav(targetId);
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => { navigationLocked = false; }, 900);
+      this.blur();
+    });
   });
 
-  // Observer options: detect when section enters/leaves near the top
-  const observerOptions = {
-    rootMargin: '-60px 0px -40% 0px',
-    threshold: [0, 0.25, 0.5, 0.75, 1]
-  };
+  // ===== NAV: OBSERVER-BASED SCROLL DETECTION =====
+  const navHeight = 56;
+  const observer = new IntersectionObserver((entries) => {
+    if (navigationLocked) return;
 
-  let activeSectionId = '';
+    let bestId = lastActiveId;
+    let bestDist = Infinity;
 
-  const scrollObserver = new IntersectionObserver((entries) => {
-    // Only process during natural scroll, not programmatic
-    if (isScrollingProgrammatically) return;
-
-    // Find the section with the highest intersection ratio near top
-    let bestEntry = null;
     entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-        if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
-          bestEntry = entry;
-        }
+      if (!entry.isIntersecting) return;
+      const dist = Math.abs(entry.boundingClientRect.top - navHeight);
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestId = entry.target.id;
       }
     });
 
-    if (bestEntry && bestEntry.target.id !== activeSectionId) {
-      activeSectionId = bestEntry.target.id;
-      updateActiveNav(activeSectionId);
+    if (bestId && bestId !== lastActiveId) {
+      updateActiveNav(bestId);
     }
-  }, observerOptions);
-
-  // Observe all sections
-  document.querySelectorAll('section[id]').forEach(s => {
-    scrollObserver.observe(s);
+  }, {
+    rootMargin: '-55px 0px -45% 0px',
+    threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5]
   });
 
-  // Fallback: detect sections via scroll for edge cases (top/bottom of page)
-  window.addEventListener('scroll', () => {
-    if (isScrollingProgrammatically) return;
+  document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
 
-    // Top of page → first section
-    if (window.scrollY < 100) {
-      const firstSection = document.querySelector('section[id]');
-      if (firstSection && firstSection.id !== activeSectionId) {
-        activeSectionId = firstSection.id;
-        updateActiveNav(activeSectionId);
-      }
+  // ===== FALLBACK: TOP & BOTTOM EDGE DETECTION =====
+  window.addEventListener('scroll', () => {
+    if (navigationLocked) return;
+
+    const sy = window.scrollY;
+
+    // Top of page — first section
+    if (sy < navHeight + 100) {
+      const first = document.querySelector('section[id]');
+      if (first && first.id !== lastActiveId) updateActiveNav(first.id);
       return;
     }
 
-    // Bottom of page → last section
-    const scrollBottom = window.scrollY + window.innerHeight;
-    const docHeight = document.documentElement.scrollHeight;
-    if (scrollBottom >= docHeight - 50) {
-      const allSections = document.querySelectorAll('section[id]');
-      const lastSection = allSections[allSections.length - 1];
-      if (lastSection && lastSection.id !== activeSectionId) {
-        activeSectionId = lastSection.id;
-        updateActiveNav(activeSectionId);
-      }
+    // Bottom of page — last section
+    const docH = document.documentElement.scrollHeight;
+    const vpH = window.innerHeight;
+    if (sy + vpH >= docH - 80) {
+      const all = document.querySelectorAll('section[id]');
+      const last = all[all.length - 1];
+      if (last && last.id !== lastActiveId) updateActiveNav(last.id);
     }
   }, { passive: true });
 
