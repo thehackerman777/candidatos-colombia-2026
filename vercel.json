@@ -12,6 +12,7 @@
     { "src": "/css/(.*)", "dest": "/css/$1" },
     { "src": "/js/(.*)", "dest": "/js/$1" },
     { "src": "/refs/registry.json", "dest": "/refs/registry.json" },
+    { "src": "/pdfs/(.*)", "status": 404 },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
