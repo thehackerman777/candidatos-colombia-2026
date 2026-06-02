@@ -12,72 +12,7 @@
       "sections": {
         "perfil": {
           "label": "Perfil Biográfico",
-          "refs": [
-            {
-              "id": "abelardo-perfil-edad",
-              "page": 1,
-              "chapter": "Presentación",
-              "section": "Datos personales",
-              "text": "47 años (31 jul 1978)",
-              "context": "Edad del candidato"
-            },
-            {
-              "id": "abelardo-perfil-lugar",
-              "page": 1,
-              "chapter": "Presentación",
-              "section": "Datos personales",
-              "text": "Bogotá, criado en Montería, Córdoba",
-              "context": "Lugar de origen"
-            },
-            {
-              "id": "abelardo-perfil-partido",
-              "page": 1,
-              "chapter": "Presentación",
-              "section": "Filiación política",
-              "text": "Defensores de la Patria / Mov. Salvación Nacional",
-              "context": "Partido político"
-            },
-            {
-              "id": "abelardo-perfil-profesion",
-              "page": 1,
-              "chapter": "Presentación",
-              "section": "Formación",
-              "text": "Abogado (U. Sergio Arboleda), empresario",
-              "context": "Profesión del candidato"
-            },
-            {
-              "id": "abelardo-perfil-nacionalidad",
-              "page": 2,
-              "chapter": "Presentación",
-              "section": "Datos personales",
-              "text": "Colombiana, Estadounidense, Italiana",
-              "context": "Triple nacionalidad"
-            },
-            {
-              "id": "abelardo-perfil-religion",
-              "page": 2,
-              "chapter": "Presentación",
-              "section": "Trayectoria personal",
-              "text": "Ateo → Católico (2021)",
-              "context": "Conversión religiosa"
-            },
-            {
-              "id": "abelardo-perfil-experiencia",
-              "page": 2,
-              "chapter": "Trayectoria",
-              "section": "Experiencia laboral",
-              "text": "Ningún cargo público. Abogado litigante",
-              "context": "Experiencia política"
-            },
-            {
-              "id": "abelardo-perfil-lema",
-              "page": 1,
-              "chapter": "Presentación",
-              "paragraph": 1,
-              "text": "El Milagro de los Nunca — Patria Milagro",
-              "context": "Lema de campaña"
-            }
-          ]
+          "refs": []
         },
         "programa": {
           "label": "Programa de Gobierno: 13 Propuestas",
@@ -98,7 +33,7 @@
             },
             {
               "id": "abelardo-prog-seg-03",
-              "page": 6,
+              "page": 5,
               "chapter": "Eje 1: Seguridad y Orden",
               "text": "Porte de armas para ciudadanos",
               "context": "Política de tenencia de armas"
@@ -160,13 +95,6 @@
               "context": "Alineamiento internacional"
             },
             {
-              "id": "abelardo-prog-amb-01",
-              "page": 11,
-              "chapter": "Eje 5: Medio Ambiente",
-              "text": "Reactivar exploración petróleo y gas",
-              "context": "Política energética"
-            },
-            {
               "id": "abelardo-prog-amb-02",
               "page": 11,
               "chapter": "Eje 5: Medio Ambiente",
@@ -181,27 +109,12 @@
               "context": "Política minera"
             },
             {
-              "id": "abelardo-prog-amb-04",
-              "page": 12,
-              "chapter": "Eje 5: Medio Ambiente",
-              "text": "Expandir frontera agrícola 2M has",
-              "context": "Política agrícola"
-            },
-            {
               "id": "abelardo-prog-est-01",
               "page": 7,
               "chapter": "Principios",
               "section": "Modelo de Estado",
               "text": "Estado reducido en 1/4",
               "context": "Tamaño del Estado"
-            },
-            {
-              "id": "abelardo-prog-est-02",
-              "page": 7,
-              "chapter": "Principios",
-              "section": "Modelo de Estado",
-              "text": "Privatización de servicios",
-              "context": "Modelo económico"
             },
             {
               "id": "abelardo-prog-est-03",
@@ -220,38 +133,6 @@
               "context": "Reducción del Estado"
             },
             {
-              "id": "abelardo-prog-val-01",
-              "page": 3,
-              "chapter": "Principios",
-              "section": "Familia",
-              "text": "En contra del aborto",
-              "context": "Valores sociales"
-            },
-            {
-              "id": "abelardo-prog-val-02",
-              "page": 3,
-              "chapter": "Principios",
-              "section": "Familia",
-              "text": "En contra adopción homoparental",
-              "context": "Valores sociales"
-            },
-            {
-              "id": "abelardo-prog-val-03",
-              "page": 3,
-              "chapter": "Principios",
-              "section": "Familia",
-              "text": "Familia tradicional como núcleo",
-              "context": "Valores sociales"
-            },
-            {
-              "id": "abelardo-prog-val-04",
-              "page": 3,
-              "chapter": "Principios",
-              "section": "Rescate Moral",
-              "text": "Rescate moral de la nación",
-              "context": "Principios morales"
-            },
-            {
               "id": "abelardo-prog-jus-01",
               "page": 14,
               "chapter": "Eje 3: Justicia",
@@ -259,55 +140,11 @@
               "context": "Justicia internacional"
             },
             {
-              "id": "abelardo-prog-jus-02",
-              "page": 8,
-              "chapter": "Eje 3: Justicia",
-              "text": "Extinción de dominio exprés",
-              "context": "Política anticorrupción"
-            },
-            {
               "id": "abelardo-prog-jus-03",
               "page": 8,
               "chapter": "Eje 3: Justicia",
               "text": "Sin garantías procesales para criminales",
               "context": "Política penal"
-            },
-            {
-              "id": "abelardo-prog-pen-01",
-              "page": 15,
-              "chapter": "Eje 7: Pensiones",
-              "text": "Derogar reforma Ley 2381",
-              "context": "Reforma pensional"
-            },
-            {
-              "id": "abelardo-prog-pen-02",
-              "page": 15,
-              "chapter": "Eje 7: Pensiones",
-              "text": "100% capitalización individual",
-              "context": "Modelo pensional"
-            },
-            {
-              "id": "abelardo-prog-pen-03",
-              "page": 15,
-              "chapter": "Eje 7: Pensiones",
-              "text": "Reducir cotizaciones",
-              "context": "Política de cotizaciones"
-            },
-            {
-              "id": "abelardo-lista-01",
-              "page": 1,
-              "chapter": "13 Propuestas",
-              "section": "Propuesta 1",
-              "text": "Salvar la Patria Milagro",
-              "context": "Propuesta #1 del plan de gobierno: 4 amenazas"
-            },
-            {
-              "id": "abelardo-lista-02",
-              "page": 2,
-              "chapter": "13 Propuestas",
-              "section": "Propuesta 2",
-              "text": "Patriotismo Constitucional",
-              "context": "Propuesta #2: Defensa de la Constitución, no a constituyente"
             },
             {
               "id": "abelardo-lista-03",
@@ -372,496 +209,16 @@
               "section": "Propuesta 12",
               "text": "Cultura",
               "context": "Propuesta #12: Industria audiovisual, Pase mi Cultura"
-            },
-            {
-              "id": "abelardo-lista-13",
-              "page": 12,
-              "chapter": "13 Propuestas",
-              "section": "Propuesta 13",
-              "text": "Bienestar Animal Integral",
-              "context": "Propuesta #13: Esterilización masiva, erradicar maltrato"
             }
           ]
         },
         "dossier": {
           "label": "Dossier: Controversias y Dato Clave",
-          "refs": [
-            {
-              "id": "abelardo-dossier-dmg-01",
-              "page": 19,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "David Murcia Guzmán creó DMG, estafó a más de 200.000 colombianos",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-dmg-02",
-              "page": 20,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "Murcia pasó de jefe de comunicaciones a uno de los hombres más ricos en 3 años",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-dmg-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "En 2008 estalló el escándalo; Murcia huyó a Panamá",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-dmg-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "Abelardo lo defendió; interceptaciones revelan solicitudes de dinero",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-dmg-05",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "David Murcia denunció a Abelardo por no devolverle $5.000 millones",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-dmg-06",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "Murcia presentó queja disciplinaria ante la Comisión de Disciplina Judicial",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-dmg-07",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "DMG - Pirámide Financiera",
-              "text": "Abelardo también fue abogado de Alex Saab (testaferro de Maduro)",
-              "context": "Caso DMG"
-            },
-            {
-              "id": "abelardo-dossier-firmas-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Firmas Falsas",
-              "text": "Revelado por Cecilia Orozco en febrero 2026",
-              "context": "Fraude electoral"
-            },
-            {
-              "id": "abelardo-dossier-firmas-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Firmas Falsas",
-              "text": "Datos ilegibles, duplicados y firmas de personas fallecidas",
-              "context": "Fraude electoral"
-            },
-            {
-              "id": "abelardo-dossier-firmas-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Firmas Falsas",
-              "text": "La Registraduría dijo que inconsistencias no constituían necesariamente fraude",
-              "context": "Fraude electoral"
-            },
-            {
-              "id": "abelardo-dossier-firmas-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Firmas Falsas",
-              "text": "El candidato defendió la fortaleza del respaldo ciudadano",
-              "context": "Fraude electoral"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "Fragmento se viralizó en plena campaña 2026 desatando indignación masiva",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "Matador lo incendió en X: pregúntese qué clase de hombre se ríe contando que hizo sufrir a un animal",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "Esmeralda Hernández lo llamó maltratador y farsante",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "Abelardo incluyó Bienestar Animal como uno de los 13 pilares de su plan",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-05",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "Hernández señaló que Abelardo demandó a Petro cuando intentó prohibir las corridas de toros",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-06",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "También ha admitido haber sido cazador en el pasado",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-maltrato-07",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Maltrato Animal",
-              "text": "Las 2 Orillas: De ponerle pólvora a gatos a querer gobernar con terror",
-              "context": "Controversia maltrato animal"
-            },
-            {
-              "id": "abelardo-dossier-conv-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Conversión Religiosa",
-              "text": "Suponiendo que Dios exista, creo que es responsable de todo lo malo",
-              "context": "Conversión al catolicismo"
-            },
-            {
-              "id": "abelardo-dossier-conv-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Conversión Religiosa",
-              "text": "Muerte de su tía Beatrice → empezó a estudiar la Biblia",
-              "context": "Conversión al catolicismo"
-            },
-            {
-              "id": "abelardo-dossier-conv-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Conversión Religiosa",
-              "text": "Visita a la Basílica del Señor de los Milagros en Buga, rompió a llorar",
-              "context": "Conversión al catolicismo"
-            },
-            {
-              "id": "abelardo-dossier-conv-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Conversión Religiosa",
-              "text": "La inteligencia viene del hombre, pero la sabiduría viene de Dios",
-              "context": "Conversión al catolicismo"
-            },
-            {
-              "id": "abelardo-dossier-conv-05",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Conversión Religiosa",
-              "text": "A mí es el único tipo que se le ha negado la conversión",
-              "context": "Conversión al catolicismo"
-            },
-            {
-              "id": "abelardo-dossier-conv-06",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Conversión Religiosa",
-              "text": "Conversión vista como oportunismo político para atraer el voto cristiano",
-              "context": "Conversión al catolicismo"
-            },
-            {
-              "id": "abelardo-dossier-life-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Usa mocasines Louis Vuitton",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Más de 20 lociones para distintas horas del día",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Botellas de alcohol que cuestan más de $10.000 USD",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Viaja en jet privado",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-05",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Viaja una vez al año a comprar ropa a Italia",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-06",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Esposa: Si perdemos, nos volvemos a Italia o EE.UU.",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-07",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "Se presenta como la voz de los nunca pero tiene triple nacionalidad",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-life-08",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Estilo de Vida",
-              "text": "El País: El abogado del diablo que quiere ser presidente",
-              "context": "Contradicción estilo de vida"
-            },
-            {
-              "id": "abelardo-dossier-ext-01",
-              "page": 11,
-              "chapter": "Anexos",
-              "section": "Posición Internacional",
-              "text": "Sacar a Colombia de la Corte IDH",
-              "context": "Política exterior extrema"
-            },
-            {
-              "id": "abelardo-dossier-ext-02",
-              "page": 12,
-              "chapter": "Anexos",
-              "section": "Posición Internacional",
-              "text": "Sacar a Colombia de las Naciones Unidas",
-              "context": "Política exterior extrema"
-            },
-            {
-              "id": "abelardo-dossier-ext-03",
-              "page": 13,
-              "chapter": "Anexos",
-              "section": "Posición Internacional",
-              "text": "Reanudar relaciones con Israel",
-              "context": "Política exterior extrema"
-            },
-            {
-              "id": "abelardo-dossier-ext-04",
-              "page": 14,
-              "chapter": "Anexos",
-              "section": "Posición Internacional",
-              "text": "Restaurar el porte de armas para ciudadanos",
-              "context": "Política exterior extrema"
-            },
-            {
-              "id": "abelardo-dossier-ext-05",
-              "page": 15,
-              "chapter": "Anexos",
-              "section": "Posición Internacional",
-              "text": "Terminar los procesos de paz con grupos armados",
-              "context": "Política exterior extrema"
-            },
-            {
-              "id": "abelardo-dossier-ext-06",
-              "page": 16,
-              "chapter": "Anexos",
-              "section": "Posición Internacional",
-              "text": "Alineamiento con Trump, Milei, Bukele",
-              "context": "Política exterior extrema"
-            },
-            {
-              "id": "abelardo-dossier-mancuso-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Vínculos Paramilitarismo",
-              "text": "Conozco a Abelardo desde que somos muchachitos - Salvatore Mancuso",
-              "context": "Relación con Mancuso"
-            },
-            {
-              "id": "abelardo-dossier-mancuso-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Vínculos Paramilitarismo",
-              "text": "Estudiaron en el mismo colegio y círculo social de clase alta de Montería",
-              "context": "Relación con Mancuso"
-            },
-            {
-              "id": "abelardo-dossier-mancuso-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Vínculos Paramilitarismo",
-              "text": "Álvaro Uribe es amigo cercano del padre de Abelardo",
-              "context": "Relación con Mancuso"
-            },
-            {
-              "id": "abelardo-dossier-adop-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Adopción Homoparental",
-              "text": "2016: prefería niño en hogar homosexual que en la calle",
-              "context": "Giro en adopción LGBT"
-            },
-            {
-              "id": "abelardo-dossier-adop-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Adopción Homoparental",
-              "text": "2026: los niños son sagrados, los sacaría de esa ecuación",
-              "context": "Giro en adopción LGBT"
-            },
-            {
-              "id": "abelardo-dossier-adop-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Adopción Homoparental",
-              "text": "También en contra del aborto, rescate moral de la nación",
-              "context": "Giro en adopción LGBT"
-            },
-            {
-              "id": "abelardo-dossier-adop-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Adopción Homoparental",
-              "text": "Defiende la familia tradicional como núcleo de la sociedad",
-              "context": "Giro en adopción LGBT"
-            },
-            {
-              "id": "abelardo-dossier-adop-05",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Adopción Homoparental",
-              "text": "Opositores: cambió posición para alinearse con voto cristiano",
-              "context": "Giro en adopción LGBT"
-            },
-            {
-              "id": "abelardo-dossier-restrepo-01",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Fórmula Vicepresidencial",
-              "text": "Restrepo fue Ministro de Hacienda y Comercio de Duque",
-              "context": "José Manuel Restrepo"
-            },
-            {
-              "id": "abelardo-dossier-restrepo-02",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Fórmula Vicepresidencial",
-              "text": "Rector de la Universidad del Rosario",
-              "context": "José Manuel Restrepo"
-            },
-            {
-              "id": "abelardo-dossier-restrepo-03",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Fórmula Vicepresidencial",
-              "text": "Busca dar confianza a los mercados y sector empresarial",
-              "context": "José Manuel Restrepo"
-            },
-            {
-              "id": "abelardo-dossier-restrepo-04",
-              "page": 21,
-              "chapter": "Anexos",
-              "section": "Fórmula Vicepresidencial",
-              "text": "Críticos: es el freno técnico a las ideas radicales de Abelardo",
-              "context": "José Manuel Restrepo"
-            }
-          ]
+          "refs": []
         },
         "cronologia": {
           "label": "Cronología Clave",
-          "refs": [
-            {
-              "id": "abelardo-crono-1978",
-              "page": 2,
-              "chapter": "Línea de Tiempo",
-              "text": "Nace en Bogotá. Criado en Montería, clase alta ganadera",
-              "context": "1978 - Nacimiento"
-            },
-            {
-              "id": "abelardo-crono-2008",
-              "page": 18,
-              "chapter": "Línea de Tiempo",
-              "text": "Abogado de David Murcia Guzmán (DMG). Interceptaciones lo vinculan",
-              "context": "2008 - Caso DMG"
-            },
-            {
-              "id": "abelardo-crono-2012",
-              "page": 21,
-              "chapter": "Línea de Tiempo",
-              "text": "Biografía autorizada El Abogado del Diablo. Abelardo ateo",
-              "context": "2012 - Publicación biografía"
-            },
-            {
-              "id": "abelardo-crono-2014",
-              "page": 21,
-              "chapter": "Línea de Tiempo",
-              "text": "The Suso's Show: confiesa haber quemado gatos con pólvora",
-              "context": "2014 - Maltrato animal"
-            },
-            {
-              "id": "abelardo-crono-2016",
-              "page": 21,
-              "chapter": "Línea de Tiempo",
-              "text": "Apoya adopción homoparental: prefiero niño en hogar homosexual que en la calle",
-              "context": "2016 - Posición adopción LGBT"
-            },
-            {
-              "id": "abelardo-crono-2021",
-              "page": 21,
-              "chapter": "Línea de Tiempo",
-              "text": "Muerte de su tía Beatrice → conversión al catolicismo",
-              "context": "2021 - Conversión religiosa"
-            },
-            {
-              "id": "abelardo-crono-2025",
-              "page": 19,
-              "chapter": "Línea de Tiempo",
-              "text": "Lanza campaña. Alex Saab vinculado a sus cuentas",
-              "context": "2025 - Campaña"
-            },
-            {
-              "id": "abelardo-crono-feb2026",
-              "page": 20,
-              "chapter": "Línea de Tiempo",
-              "text": "62% firmas inválidas. Murcia lo denuncia por $5.000M. Dinero Saab",
-              "context": "Feb 2026 - Escándalos"
-            },
-            {
-              "id": "abelardo-crono-mar2026",
-              "page": 21,
-              "chapter": "Línea de Tiempo",
-              "text": "Anuncia a José Manuel Restrepo como fórmula vicepresidencial",
-              "context": "Mar 2026 - Fórmula VP"
-            },
-            {
-              "id": "abelardo-crono-may2026",
-              "page": 1,
-              "chapter": "Línea de Tiempo",
-              "text": "Pasa a segunda vuelta. Video maltrato animal se viraliza",
-              "context": "May 2026 - Segunda vuelta"
-            }
-          ]
+          "refs": []
         },
         "analisis_electoral": {
           "label": "Análisis Electoral",
@@ -880,7 +237,7 @@
           "refs": [
             {
               "id": "cepeda-perfil-edad",
-              "page": 1,
+              "page": 10,
               "chapter": "Presentación",
               "section": "Datos personales",
               "text": "63 años (24 oct 1962)",
@@ -888,7 +245,7 @@
             },
             {
               "id": "cepeda-perfil-lugar",
-              "page": 1,
+              "page": 10,
               "chapter": "Presentación",
               "section": "Datos personales",
               "text": "Bogotá",
@@ -896,7 +253,7 @@
             },
             {
               "id": "cepeda-perfil-partido",
-              "page": 1,
+              "page": 10,
               "chapter": "Presentación",
               "section": "Filiación política",
               "text": "Pacto Histórico (antes Polo Dem., AD M-19, UP)",
@@ -904,7 +261,7 @@
             },
             {
               "id": "cepeda-perfil-profesion",
-              "page": 1,
+              "page": 10,
               "chapter": "Presentación",
               "section": "Formación",
               "text": "Filósofo (U. de Sofía, Bulgaria)",
@@ -912,7 +269,7 @@
             },
             {
               "id": "cepeda-perfil-cargo",
-              "page": 2,
+              "page": 10,
               "chapter": "Trayectoria",
               "section": "Cargos públicos",
               "text": "Senador de la República (desde 2014)",
@@ -920,7 +277,7 @@
             },
             {
               "id": "cepeda-perfil-padres",
-              "page": 2,
+              "page": 10,
               "chapter": "Trayectoria",
               "section": "Origen familiar",
               "text": "Manuel Cepeda (senador UP, asesinado 1994) · Yira Castro (concejala)",
@@ -928,7 +285,7 @@
             },
             {
               "id": "cepeda-perfil-exilio",
-              "page": 2,
+              "page": 10,
               "chapter": "Trayectoria",
               "section": "Exilio",
               "text": "Cuba, Checoslovaquia, Bulgaria — 3 años a los 3 años",
@@ -936,7 +293,7 @@
             },
             {
               "id": "cepeda-perfil-ideologia",
-              "page": 3,
+              "page": 10,
               "chapter": "Trayectoria",
               "section": "Evolución ideológica",
               "text": "Nací en el Partido Comunista → izquierda democrática",
@@ -944,7 +301,7 @@
             },
             {
               "id": "cepeda-perfil-lema",
-              "page": 1,
+              "page": 10,
               "chapter": "Presentación",
               "text": "El Poder de la Verdad",
               "context": "Lema de campaña"
@@ -956,77 +313,77 @@
           "refs": [
             {
               "id": "cepeda-prog-seg-01",
-              "page": 5,
+              "page": 10,
               "chapter": "Eje 1: Seguridad Humana",
               "text": "Seguridad = derechos (salud, educación, trabajo)",
               "context": "Concepto de seguridad"
             },
             {
               "id": "cepeda-prog-seg-02",
-              "page": 5,
+              "page": 10,
               "chapter": "Eje 1: Seguridad Humana",
               "text": "Desmilitarización civil",
               "context": "Política de seguridad"
             },
             {
               "id": "cepeda-prog-seg-03",
-              "page": 5,
+              "page": 10,
               "chapter": "Eje 1: Paz",
               "text": "Paz con justicia social",
               "context": "Política de paz"
             },
             {
               "id": "cepeda-prog-seg-04",
-              "page": 6,
+              "page": 10,
               "chapter": "Eje 1: Liderazgo Social",
               "text": "Protección líderes sociales",
               "context": "Protección a defensores"
             },
             {
               "id": "cepeda-prog-eco-01",
-              "page": 7,
+              "page": 10,
               "chapter": "Eje 2: Economía",
               "text": "Superar pobreza como meta",
               "context": "Objetivo económico"
             },
             {
               "id": "cepeda-prog-eco-02",
-              "page": 7,
+              "page": 10,
               "chapter": "Eje 2: Economía",
               "text": "Fortalecer Estado social",
               "context": "Modelo de Estado"
             },
             {
               "id": "cepeda-prog-eco-03",
-              "page": 8,
+              "page": 10,
               "chapter": "Eje 2: Economía",
               "text": "Protección sectores vulnerables",
               "context": "Política social"
             },
             {
               "id": "cepeda-prog-eco-04",
-              "page": 8,
+              "page": 10,
               "chapter": "Eje 2: Economía",
               "text": "Austeridad republicana",
               "context": "Política fiscal"
             },
             {
               "id": "cepeda-prog-ext-01",
-              "page": 9,
+              "page": 10,
               "chapter": "Eje 3: Política Exterior",
               "text": "Política exterior autónoma",
               "context": "Relaciones internacionales"
             },
             {
               "id": "cepeda-prog-ext-02",
-              "page": 9,
+              "page": 10,
               "chapter": "Eje 3: Política Exterior",
               "text": "Solidaridad con A.Latina",
               "context": "Integración regional"
             },
             {
               "id": "cepeda-prog-ext-03",
-              "page": 9,
+              "page": 10,
               "chapter": "Eje 3: Política Exterior",
               "text": "Defensa migrantes colombianos",
               "context": "Política migratoria"
@@ -1117,28 +474,28 @@
             },
             {
               "id": "cepeda-prog-amb-01",
-              "page": 7,
+              "page": 10,
               "chapter": "Eje 7: Ambiente",
               "text": "Transición energética justa",
               "context": "Política climática"
             },
             {
               "id": "cepeda-prog-amb-02",
-              "page": 7,
+              "page": 10,
               "chapter": "Eje 7: Ambiente",
               "text": "Proteger Amazonía y páramos",
               "context": "Conservación ambiental"
             },
             {
               "id": "cepeda-prog-amb-03",
-              "page": 7,
+              "page": 10,
               "chapter": "Eje 7: Ambiente",
               "text": "Justicia ambiental",
               "context": "Política ambiental"
             },
             {
               "id": "cepeda-prog-amb-04",
-              "page": 7,
+              "page": 10,
               "chapter": "Eje 7: Ambiente",
               "text": "Bioeconomía",
               "context": "Modelo económico sostenible"
@@ -1630,7 +987,7 @@
           "refs": [
             {
               "id": "cepeda-crono-1962",
-              "page": 2,
+              "page": 10,
               "chapter": "Línea de Tiempo",
               "text": "Nace en Bogotá en familia comunista. Manuel Cepeda y Yira Castro",
               "context": "1962 - Nacimiento"
@@ -1665,7 +1022,7 @@
             },
             {
               "id": "cepeda-crono-2010",
-              "page": 2,
+              "page": 10,
               "chapter": "Línea de Tiempo",
               "text": "Representante a la Cámara por Bogotá",
               "context": "2010-2014 - Cámara"
@@ -1686,7 +1043,7 @@
             },
             {
               "id": "cepeda-crono-2014",
-              "page": 2,
+              "page": 10,
               "chapter": "Línea de Tiempo",
               "text": "Elegido Senador. Debate contra Uribe por paramilitarismo",
               "context": "2014 - Senado"
@@ -1714,7 +1071,7 @@
             },
             {
               "id": "cepeda-crono-may2026",
-              "page": 1,
+              "page": 10,
               "chapter": "Línea de Tiempo",
               "text": "Pasa a segunda vuelta. Propone continuar reformas de Petro",
               "context": "May 2026 - Segunda vuelta"
