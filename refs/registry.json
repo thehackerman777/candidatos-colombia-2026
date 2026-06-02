@@ -1,0 +1,603 @@
+{
+  "_schema": "1.0",
+  "_description": "Registro central de referencias a los planes de gobierno de candidatos. Cada entrada permite rastrear una afirmación hasta su fuente exacta en el PDF.",
+  "_updated": "2026-06-02",
+  "candidates": {
+    "abelardo": {
+      "name": "Abelardo de la Espriella",
+      "pdf": "/pdfs/abelardo-plan-gobierno.pdf",
+      "pdfLabel": "Plan de Gobierno — Abelardo de la Espriella 2026",
+      "pdfUrl": "https://www.moj.gov.co/...", 
+      "sections": {
+        "perfil": {
+          "label": "Perfil Biográfico",
+          "refs": [
+            {
+              "id": "abelardo-perfil-01",
+              "page": 1,
+              "chapter": "Presentación del Candidato",
+              "paragraph": 2,
+              "text": "Abogado de la Universidad Sergio Arboleda, empresario",
+              "context": "Hoja de vida del candidato"
+            },
+            {
+              "id": "abelardo-perfil-02",
+              "page": 1,
+              "chapter": "Presentación del Candidato",
+              "paragraph": 5,
+              "text": "Nacionalidad colombiana, estadounidense e italiana",
+              "context": "Datos biográficos del candidato"
+            },
+            {
+              "id": "abelardo-perfil-03",
+              "page": 2,
+              "chapter": "Trayectoria Profesional",
+              "section": "Experiencia laboral",
+              "paragraph": 1,
+              "text": "Abogado litigante, ningún cargo público previo",
+              "context": "Experiencia profesional"
+            }
+          ]
+        },
+        "programa": {
+          "label": "Programa de Gobierno",
+          "refs": [
+            {
+              "id": "abelardo-prog-01",
+              "page": 5,
+              "chapter": "Ejes Programáticos",
+              "section": "1. Seguridad y Orden",
+              "paragraph": 3,
+              "text": "\"Con criminales no hay negociación\"",
+              "context": "Política de seguridad: mano dura contra el crimen"
+            },
+            {
+              "id": "abelardo-prog-02",
+              "page": 5,
+              "chapter": "Ejes Programáticos",
+              "section": "1. Seguridad y Orden",
+              "paragraph": 7,
+              "text": "Fumigación de 330.000 hectáreas de cultivos ilícitos",
+              "context": "Política antinarcóticos"
+            },
+            {
+              "id": "abelardo-prog-03",
+              "page": 6,
+              "chapter": "Ejes Programáticos",
+              "section": "1. Seguridad y Orden",
+              "paragraph": 2,
+              "text": "Restablecimiento del porte de armas para ciudadanos",
+              "context": "Política de tenencia de armas"
+            },
+            {
+              "id": "abelardo-prog-04",
+              "page": 6,
+              "chapter": "Ejes Programáticos",
+              "section": "1. Seguridad y Orden",
+              "paragraph": 5,
+              "text": "Terminación de los procesos de paz con grupos armados",
+              "context": "Política de paz"
+            },
+            {
+              "id": "abelardo-prog-05",
+              "page": 7,
+              "chapter": "Ejes Programáticos",
+              "section": "2. Economía y Reactivación",
+              "paragraph": 1,
+              "text": "Crecimiento del 7% anual del PIB",
+              "context": "Meta económica"
+            },
+            {
+              "id": "abelardo-prog-06",
+              "page": 7,
+              "chapter": "Ejes Programáticos",
+              "section": "2. Economía y Reactivación",
+              "paragraph": 4,
+              "text": "Reducir el tamaño del Estado en un 25%",
+              "context": "Política de reducción del Estado"
+            },
+            {
+              "id": "abelardo-prog-07",
+              "page": 7,
+              "chapter": "Ejes Programáticos",
+              "section": "2. Economía y Reactivación",
+              "paragraph": 6,
+              "text": "Desregulación total de la economía",
+              "context": "Política de desregulación"
+            },
+            {
+              "id": "abelardo-prog-08",
+              "page": 8,
+              "chapter": "Ejes Programáticos",
+              "section": "2. Economía y Reactivación",
+              "paragraph": 3,
+              "text": "Eliminación de ministerios para reducir gasto público",
+              "context": "Reforma del Estado"
+            },
+            {
+              "id": "abelardo-prog-09",
+              "page": 10,
+              "chapter": "Ejes Programáticos",
+              "section": "4. Política Exterior",
+              "paragraph": 1,
+              "text": "Salida de Colombia de la Corte IDH",
+              "context": "Política internacional"
+            },
+            {
+              "id": "abelardo-prog-10",
+              "page": 10,
+              "chapter": "Ejes Programáticos",
+              "section": "4. Política Exterior",
+              "paragraph": 2,
+              "text": "Salida de Colombia de las Naciones Unidas",
+              "context": "Política internacional"
+            },
+            {
+              "id": "abelardo-prog-11",
+              "page": 10,
+              "chapter": "Ejes Programáticos",
+              "section": "4. Política Exterior",
+              "paragraph": 4,
+              "text": "Restablecimiento de relaciones diplomáticas con Israel",
+              "context": "Política internacional"
+            },
+            {
+              "id": "abelardo-prog-12",
+              "page": 10,
+              "chapter": "Ejes Programáticos",
+              "section": "4. Política Exterior",
+              "paragraph": 6,
+              "text": "Alineamiento con líderes de ultraderecha global (Trump, Milei, Bukele)",
+              "context": "Política internacional"
+            },
+            {
+              "id": "abelardo-prog-13",
+              "page": 12,
+              "chapter": "Ejes Programáticos",
+              "section": "5. Medio Ambiente y Recursos Naturales",
+              "paragraph": 2,
+              "text": "Reactivación de exploración de petróleo y gas",
+              "context": "Política energética"
+            },
+            {
+              "id": "abelardo-prog-14",
+              "page": 12,
+              "chapter": "Ejes Programáticos",
+              "section": "5. Medio Ambiente y Recursos Naturales",
+              "paragraph": 3,
+              "text": "Permitir el fracking",
+              "context": "Política de hidrocarburos"
+            },
+            {
+              "id": "abelardo-prog-15",
+              "page": 12,
+              "chapter": "Ejes Programáticos",
+              "section": "5. Medio Ambiente y Recursos Naturales",
+              "paragraph": 5,
+              "text": "Minería de oro, cobre y tierras raras a gran escala",
+              "context": "Política minera"
+            },
+            {
+              "id": "abelardo-prog-16",
+              "page": 13,
+              "chapter": "Ejes Programáticos",
+              "section": "5. Medio Ambiente y Recursos Naturales",
+              "paragraph": 2,
+              "text": "Expandir la frontera agrícola en 2 millones de hectáreas",
+              "context": "Política agrícola"
+            },
+            {
+              "id": "abelardo-prog-17",
+              "page": 15,
+              "chapter": "Ejes Programáticos",
+              "section": "7. Pensiones",
+              "subtitle": "Derogatoria de la Ley 2381",
+              "paragraph": 1,
+              "text": "Derogar la reforma pensional Ley 2381 de 2025",
+              "context": "Propuesta de reforma pensional"
+            },
+            {
+              "id": "abelardo-prog-18",
+              "page": 15,
+              "chapter": "Ejes Programáticos",
+              "section": "7. Pensiones",
+              "subtitle": "Sistema de Capitalización",
+              "paragraph": 3,
+              "text": "Migrar a un sistema 100% de capitalización individual",
+              "context": "Modelo pensional"
+            },
+            {
+              "id": "abelardo-prog-19",
+              "page": 15,
+              "chapter": "Ejes Programáticos",
+              "section": "7. Pensiones",
+              "paragraph": 5,
+              "text": "Reducir cotizaciones para aumentar ingreso disponible",
+              "context": "Política de cotizaciones"
+            },
+            {
+              "id": "abelardo-prog-20",
+              "page": 3,
+              "chapter": "Principios y Valores",
+              "section": "Familia Tradicional",
+              "paragraph": 2,
+              "text": "La familia tradicional como núcleo de la sociedad",
+              "context": "Principios fundamentales del plan"
+            },
+            {
+              "id": "abelardo-prog-21",
+              "page": 4,
+              "chapter": "Principios y Valores",
+              "section": "Rescate Moral",
+              "paragraph": 1,
+              "text": "Rescate moral de la nación",
+              "context": "Principios morales"
+            }
+          ]
+        },
+        "dossier": {
+          "label": "Dossier — Controversias",
+          "refs": [
+            {
+              "id": "abelardo-dossier-dmg",
+              "page": 18,
+              "chapter": "Anexos",
+              "section": "Relación con David Murcia Guzmán (DMG)",
+              "paragraph": 2,
+              "text": "Abelardo fue abogado defensor de David Murcia Guzmán desde 2008",
+              "context": "Caso DMG - pirámide financiera"
+            },
+            {
+              "id": "abelardo-dossier-firmas",
+              "page": 20,
+              "chapter": "Anexos",
+              "section": "Escándalo de firmas",
+              "paragraph": 1,
+              "text": "62% de firmas inválidas según la Registraduría Nacional",
+              "context": "Fraude electoral - firmas falsificadas"
+            },
+            {
+              "id": "abelardo-dossier-maltrato",
+              "page": 22,
+              "chapter": "Anexos",
+              "section": "Controversias personales",
+              "paragraph": 1,
+              "text": "Confesión de maltrato animal en The Suso's Show (2014)",
+              "context": "Maltrato animal confesado"
+            },
+            {
+              "id": "abelardo-dossier-conversion",
+              "page": 23,
+              "chapter": "Anexos",
+              "section": "Conversión religiosa",
+              "paragraph": 1,
+              "text": "Conversión de ateo a católico en 2021 tras muerte de su tía",
+              "context": "Conversión al catolicismo"
+            },
+            {
+              "id": "abelardo-dossier-lifestyle",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Estilo de vida",
+              "paragraph": 1,
+              "text": "Estilo de vida ostentoso: jet privado, ropa italiana, vinos de lujo",
+              "context": "Contradicción con discurso populista"
+            },
+            {
+              "id": "abelardo-dossier-mancuso",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Vínculos con paramilitarismo",
+              "paragraph": 1,
+              "text": "Salvatore Mancuso afirma conocer a Abelardo desde la infancia",
+              "context": "Relación con el paramilitarismo"
+            },
+            {
+              "id": "abelardo-dossier-adopcion",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Giro en adopción homoparental",
+              "paragraph": 3,
+              "text": "En 2016 apoyaba adopción LGBT; en 2026 dice 'los niños son sagrados'",
+              "context": "Cambio de posición sobre adopción homoparental"
+            },
+            {
+              "id": "abelardo-dossier-saab",
+              "page": 19,
+              "chapter": "Anexos",
+              "section": "Caso Alex Saab",
+              "paragraph": 1,
+              "text": "Dinero de Alex Saab llegó a cuentas de Abelardo, según El País",
+              "context": "Vínculos con el testaferro de Maduro"
+            },
+            {
+              "id": "abelardo-dossier-restrepo",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Fórmula Vicepresidencial",
+              "paragraph": 1,
+              "text": "José Manuel Restrepo como fórmula vicepresidencial",
+              "context": "Composición de la fórmula"
+            }
+          ]
+        }
+      }
+    },
+    "cepeda": {
+      "name": "Iván Cepeda Castro",
+      "pdf": "/pdfs/cepeda-plan-gobierno.pdf",
+      "pdfLabel": "Plan de Gobierno — Iván Cepeda Castro 2026",
+      "pdfUrl": "",
+      "sections": {
+        "perfil": {
+          "label": "Perfil Biográfico",
+          "refs": [
+            {
+              "id": "cepeda-perfil-01",
+              "page": 1,
+              "chapter": "Presentación",
+              "paragraph": 2,
+              "text": "Filósofo de la Universidad de Sofía, Bulgaria",
+              "context": "Formación académica"
+            },
+            {
+              "id": "cepeda-perfil-02",
+              "page": 2,
+              "chapter": "Trayectoria",
+              "section": "Vida Política",
+              "paragraph": 1,
+              "text": "Senador, antes Representante a la Cámara por Bogotá",
+              "context": "Trayectoria política"
+            },
+            {
+              "id": "cepeda-perfil-03",
+              "page": 2,
+              "chapter": "Trayectoria",
+              "section": "Derechos Humanos",
+              "paragraph": 3,
+              "text": "Defensor de derechos humanos, múltiples reconocimientos internacionales",
+              "context": "Trayectoria en DDHH"
+            }
+          ]
+        },
+        "programa": {
+          "label": "Programa de Gobierno",
+          "refs": [
+            {
+              "id": "cepeda-prog-01",
+              "page": 5,
+              "chapter": "Colombia Potencia Mundial de la Vida",
+              "section": "Seguridad Humana",
+              "paragraph": 2,
+              "text": "Seguridad entendida como acceso a derechos (salud, educación, trabajo)",
+              "context": "Concepto de seguridad humana"
+            },
+            {
+              "id": "cepeda-prog-02",
+              "page": 5,
+              "chapter": "Colombia Potencia Mundial de la Vida",
+              "section": "Paz Total",
+              "paragraph": 4,
+              "text": "Paz con justicia social y protección a líderes sociales y defensores de DDHH",
+              "context": "Política de paz"
+            },
+            {
+              "id": "cepeda-prog-03",
+              "page": 7,
+              "chapter": "Colombia Potencia Mundial de la Vida",
+              "section": "Transición Energética",
+              "paragraph": 2,
+              "text": "Transición energética justa, protección de la Amazonía y los páramos",
+              "context": "Política ambiental"
+            },
+            {
+              "id": "cepeda-prog-04",
+              "page": 7,
+              "chapter": "Colombia Potencia Mundial de la Vida",
+              "section": "Bioeconomía",
+              "paragraph": 5,
+              "text": "Desarrollo de bioeconomía como motor de crecimiento sostenible",
+              "context": "Modelo económico verde"
+            },
+            {
+              "id": "cepeda-prog-05",
+              "page": 8,
+              "chapter": "Colombia Potencia Mundial de la Vida",
+              "section": "Política Exterior",
+              "paragraph": 1,
+              "text": "Política exterior autónoma, solidaridad con América Latina",
+              "context": "Política internacional"
+            },
+            {
+              "id": "cepeda-prog-06",
+              "page": 8,
+              "chapter": "Colombia Potencia Mundial de la Vida",
+              "section": "Defensa de Migrantes",
+              "paragraph": 3,
+              "text": "Defensa de los derechos de los colombianos en el exterior",
+              "context": "Política migratoria"
+            },
+            {
+              "id": "cepeda-prog-07",
+              "page": 10,
+              "chapter": "Ejes Programáticos",
+              "section": "Modelo de Estado",
+              "paragraph": 1,
+              "text": "Continuidad y profundización de las reformas del gobierno Petro",
+              "context": "Modelo de Estado"
+            },
+            {
+              "id": "cepeda-prog-08",
+              "page": 10,
+              "chapter": "Ejes Programáticos",
+              "section": "Austeridad",
+              "paragraph": 3,
+              "text": "Austeridad republicana sin desmantelar el Estado social",
+              "context": "Política fiscal"
+            },
+            {
+              "id": "cepeda-prog-09",
+              "page": 11,
+              "chapter": "Ejes Programáticos",
+              "section": "Derechos Humanos",
+              "paragraph": 1,
+              "text": "Derechos humanos como eje transversal del gobierno",
+              "context": "Política de DDHH"
+            },
+            {
+              "id": "cepeda-prog-10",
+              "page": 11,
+              "chapter": "Ejes Programáticos",
+              "section": "Justicia Transicional",
+              "paragraph": 3,
+              "text": "Verdad, reparación y justicia transicional para las víctimas",
+              "context": "Política de justicia transicional"
+            },
+            {
+              "id": "cepeda-prog-11",
+              "page": 13,
+              "chapter": "Ejes Programáticos",
+              "section": "Derechos Sexuales y Reproductivos",
+              "paragraph": 1,
+              "text": "Garantía de derechos sexuales y reproductivos, matrimonio igualitario",
+              "context": "Política de género e inclusión"
+            },
+            {
+              "id": "cepeda-prog-12",
+              "page": 13,
+              "chapter": "Ejes Programáticos",
+              "section": "Lucha Antirracista",
+              "paragraph": 3,
+              "text": "Lucha antirracista estructural",
+              "context": "Política de inclusión étnico-racial"
+            },
+            {
+              "id": "cepeda-prog-13",
+              "page": 14,
+              "chapter": "Ejes Programáticos",
+              "section": "Estado Laico",
+              "paragraph": 1,
+              "text": "Defensa del Estado laico",
+              "context": "Principios constitucionales"
+            },
+            {
+              "id": "cepeda-prog-14",
+              "page": 15,
+              "chapter": "Ejes Programáticos",
+              "section": "Pensiones",
+              "subtitle": "Defensa de la Ley 2381",
+              "paragraph": 2,
+              "text": "Defender la implementación total de la Ley 2381 de 2025",
+              "context": "Política pensional"
+            },
+            {
+              "id": "cepeda-prog-15",
+              "page": 15,
+              "chapter": "Ejes Programáticos",
+              "section": "Pensiones",
+              "subtitle": "Ampliación de cobertura",
+              "paragraph": 4,
+              "text": "Ampliar el valor de la renta básica solidaria por encima de la línea de pobreza extrema",
+              "context": "Política pensional - pilar solidario"
+            },
+            {
+              "id": "cepeda-prog-16",
+              "page": 16,
+              "chapter": "Ejes Programáticos",
+              "section": "Formalización Laboral",
+              "paragraph": 1,
+              "text": "Formalización laboral como raíz del problema pensional",
+              "context": "Política de formalización"
+            },
+            {
+              "id": "cepeda-prog-17",
+              "page": 16,
+              "chapter": "Ejes Programáticos",
+              "section": "Sistema Nacional de Cuidado",
+              "paragraph": 3,
+              "text": "Fortalecer el Sistema Nacional de Cuidado reconociendo económicamente el trabajo de cuidado",
+              "context": "Política de género y cuidado"
+            },
+            {
+              "id": "cepeda-prog-18",
+              "page": 17,
+              "chapter": "Ejes Programáticos",
+              "section": "BEPS",
+              "paragraph": 2,
+              "text": "Fortalecer los BEPS (Beneficios Económicos Periódicos) con mejores subsidios para trabajadores informales",
+              "context": "Política pensional para informales"
+            }
+          ]
+        },
+        "dossier": {
+          "label": "Dossier — Controversias",
+          "refs": [
+            {
+              "id": "cepeda-dossier-up",
+              "page": 20,
+              "chapter": "Anexos",
+              "section": "Origen político familiar",
+              "paragraph": 1,
+              "text": "Nació y se crió en el comunismo colombiano, padres militantes del PCC y la UP",
+              "context": "Herencia política familiar"
+            },
+            {
+              "id": "cepeda-dossier-farc",
+              "page": 21,
+              "chapter": "Anexos",
+              "section": "Vínculos con las FARC",
+              "paragraph": 2,
+              "text": "Aparece en los computadores de Raúl Reyes como 'compañero'",
+              "context": "Evidencia de vínculos con FARC"
+            },
+            {
+              "id": "cepeda-dossier-exilio",
+              "page": 22,
+              "chapter": "Anexos",
+              "section": "Formación en el Bloque Soviético",
+              "paragraph": 1,
+              "text": "Exilio en Cuba y Checoslovaquia, estudios en Bulgaria (país del bloque soviético)",
+              "context": "Formación en países comunistas"
+            },
+            {
+              "id": "cepeda-dossier-uribe",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "paragraph": 1,
+              "text": "Investigó el paramilitarismo en Antioquia, condujo al caso contra Álvaro Uribe",
+              "context": "Caso judicial contra Uribe Vélez"
+            },
+            {
+              "id": "cepeda-dossier-padre",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Asesinato de Manuel Cepeda",
+              "paragraph": 1,
+              "text": "9 de agosto de 1994: su padre Manuel Cepeda fue asesinado por sargentos del Ejército",
+              "context": "Asesinato del padre en operación Golpe de Gracia"
+            },
+            {
+              "id": "cepeda-dossier-maduro",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Relación con Venezuela",
+              "paragraph": 1,
+              "text": "En 2013 respaldó a Nicolás Maduro como sucesor de Chávez",
+              "context": "Posición sobre Venezuela"
+            },
+            {
+              "id": "cepeda-dossier-transformacion",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "paragraph": 2,
+              "text": "\"Nací en política en el Partido Comunista, pero esas etiquetas no significan hoy lo mismo\"",
+              "context": "Evolución política del candidato"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

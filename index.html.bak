@@ -264,7 +264,6 @@
   .chart-fill.right { background:#e94560; }
   .chart-fill.neutral { background:#ffd700; }
 </style>
-  <link rel="stylesheet" href="/css/refs-system.css">
 </head>
 <body>
 
@@ -301,11 +300,11 @@
         <tr><td>Edad</td><td>47 años (31 jul 1978)</td></tr>
         <tr><td>Lugar</td><td>Bogotá, criado en Montería, Córdoba</td></tr>
         <tr><td>Partido</td><td>Defensores de la Patria / Mov. Salvación Nacional</td></tr>
-        <tr><td>Profesión</td><td data-ref="abelardo-perfil-01">Abogado (U. Sergio Arboleda), empresario</td></tr>
+        <tr><td>Profesión</td><td>Abogado (U. Sergio Arboleda), empresario</td></tr>
         <tr><td>Apodo</td><td>"El Tigre" 🐯</td></tr>
         <tr><td>Nacionalidad</td><td>🇨🇴 Colombiana · 🇺🇸 Estadounidense · 🇮🇹 Italiana</td></tr>
         <tr><td>Religión</td><td>Ateo → Católico (2021)</td></tr>
-        <tr><td>Experiencia</td><td data-ref="abelardo-perfil-03">Ningún cargo público. Abogado litigante toda su carrera</td></tr>
+        <tr><td>Experiencia</td><td>Ningún cargo público. Abogado litigante toda su carrera</td></tr>
         <tr><td>Lema</td><td>"El Milagro de los Nunca — Patria Milagro"</td></tr>
       </table>
     </div>
@@ -317,7 +316,7 @@
         <tr><td>Edad</td><td>63 años (24 oct 1962)</td></tr>
         <tr><td>Lugar</td><td>Bogotá</td></tr>
         <tr><td>Partido</td><td>Pacto Histórico (antes Polo Dem., AD M-19, UP)</td></tr>
-        <tr><td>Profesión</td><td data-ref="cepeda-perfil-01">Filósofo (U. de Sofía, Bulgaria)</td></tr>
+        <tr><td>Profesión</td><td>Filósofo (U. de Sofía, Bulgaria)</td></tr>
         <tr><td>Cargo</td><td>Senador de la República (desde 2014)</td></tr>
         <tr><td>Padres</td><td>Manuel Cepeda (senador UP, asesinado 1994) · Yira Castro (concejala, comunista)</td></tr>
         <tr><td>Exilio</td><td>Cuba, Checoslovaquia, Bulgaria — 3 años a los 3 años</td></tr>
@@ -409,7 +408,7 @@
     <!-- DMG -->
     <div class="controversy">
       <h4>💰 DMG — La Pirámide Financiera</h4>
-      <p><strong data-ref="abelardo-dossier-dmg">David Murcia Guzmán</strong> creó DMG, la captadora ilegal de dinero más grande de Colombia. Estafó a más de <strong>200.000 colombianos</strong> ofreciendo rendimientos de hasta 200%. Abelardo fue su <strong>abogado defensor</strong> desde 2008.</p>
+      <p><strong>David Murcia Guzmán</strong> creó DMG, la captadora ilegal de dinero más grande de Colombia. Estafó a más de <strong>200.000 colombianos</strong> ofreciendo rendimientos de hasta 200%. Abelardo fue su <strong>abogado defensor</strong> desde 2008.</p>
       <div class="accordion">
         <button class="accordion-btn" aria-expanded="false" type="button">🔍 Detalles del caso DMG <span class="arrow">▼</span></button>
         <div class="accordion-content">
@@ -428,7 +427,7 @@
     <!-- FIRMAS FALSAS -->
     <div class="controversy">
       <h4>📝 62% de Firmas Inválidas — Fraude Electoral</h4>
-      <p>La Registraduría Nacional invalidó el <strong data-ref="abelardo-dossier-firmas">62%</strong> de las firmas presentadas por Abelardo para inscribir su candidatura: <strong>3.1 millones de firmas</strong> estaban presuntamente falsificadas.</p>
+      <p>La Registraduría Nacional invalidó el <strong>62%</strong> de las firmas presentadas por Abelardo para inscribir su candidatura: <strong>3.1 millones de firmas</strong> estaban presuntamente falsificadas.</p>
       <div class="accordion">
         <button class="accordion-btn" aria-expanded="false" type="button">🔍 El escándalo de las firmas <span class="arrow">▼</span></button>
         <div class="accordion-content">
@@ -465,7 +464,7 @@
     <!-- CONVERSIÓN CATOLICISMO -->
     <div class="controversy" style="border-left-color:#ffd700;">
       <h4 style="color:#ffd700;">⛪ Conversión del Ateísmo al Catolicismo</h4>
-      <p>Abelardo fue <strong data-ref="abelardo-dossier-conversion">ateo declarado</strong> durante la mayor parte de su vida. En 2021, tras la muerte de su tía Beatrice (figura cercana, mujer profundamente devota), comenzó un proceso de conversión.</p>
+      <p>Abelardo fue <strong>ateo declarado</strong> durante la mayor parte de su vida. En 2021, tras la muerte de su tía Beatrice (figura cercana, mujer profundamente devota), comenzó un proceso de conversión.</p>
       <div class="accordion">
         <button class="accordion-btn" aria-expanded="false" type="button">🔍 La historia completa <span class="arrow">▼</span></button>
         <div class="accordion-content">
@@ -562,7 +561,7 @@
     <!-- UP / COMUNISMO -->
     <div class="controversy cepeda">
       <h4>☭ Herencia Comunista — La Unión Patriótica y el Partido Comunista</h4>
-      <p>Iván Cepeda <strong data-ref="cepeda-dossier-up" data-ref="cepeda-dossier-up">nació y se crió en el comunismo colombiano</strong>. Sus padres, Manuel Cepeda y Yira Castro, eran <strong>militantes del Partido Comunista Colombiano (PCC)</strong> y de la Unión Patriótica (UP). Su padre era miembro del Comité Central del PCC. Él mismo lo ha reconocido: <em>"Nací en política en el Partido Comunista"</em>.</p>
+      <p>Iván Cepeda <strong>nació y se crió en el comunismo colombiano</strong>. Sus padres, Manuel Cepeda y Yira Castro, eran <strong>militantes del Partido Comunista Colombiano (PCC)</strong> y de la Unión Patriótica (UP). Su padre era miembro del Comité Central del PCC. Él mismo lo ha reconocido: <em>"Nací en política en el Partido Comunista"</em>.</p>
       <div class="accordion">
         <button class="accordion-btn" aria-expanded="false" type="button">🔍 UP: El Brazo Político de las FARC <span class="arrow">▼</span></button>
         <div class="accordion-content">
@@ -583,7 +582,7 @@
       <h4>🔗 Relación con las FARC — "No soy de las FARC, pero..."</h4>
       <p>Las 2 Orillas publicó un análisis incisivo: <em>"Iván Cepeda no es de las FARC, pero camina como pato, grazna como pato y se mueve como pato de las FARC"</em>.</p>
       <div class="accordion">
-        <button class="accordion-btn" aria-expanded="false" type="button" data-ref="cepeda-dossier-farc">🔍 Vínculos documentados <span class="arrow">▼</span></button>
+        <button class="accordion-btn" aria-expanded="false" type="button">🔍 Vínculos documentados <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
             <li><strong>Computador de Raúl Reyes:</strong> Iván Cepeda aparece en los archivos del comandante de las FARC como <strong>"compañero"</strong> al que había que "secundar"</li>
@@ -623,7 +622,7 @@
         <button class="accordion-btn" aria-expanded="false" type="button">🔍 Cronología del caso <span class="arrow">▼</span></button>
         <div class="accordion-content">
           <ul>
-            <li><strong data-ref="cepeda-dossier-uribe">2014:</strong> Cepeda presenta debate en el Congreso. Uribe se retira furioso y lo demanda por manipulación de testigos</li>
+            <li><strong>2014:</strong> Cepeda presenta debate en el Congreso. Uribe se retira furioso y lo demanda por manipulación de testigos</li>
             <li><strong>2018:</strong> Corte Suprema se inhibe contra Cepeda y <strong>ABRE INVESTIGACIÓN CONTRA URIBE</strong> por soborno a testigos y fraude procesal</li>
             <li><strong>2020:</strong> Detención domiciliaria de Uribe (2 meses) — hecho histórico, primera vez que un expresidente es detenido por orden judicial</li>
             <li><strong>Julio 2025:</strong> Tribunal Superior de Bogotá <strong>CONDENA</strong> a Uribe en primera instancia a 12 años de prisión</li>
@@ -669,7 +668,7 @@
     <!-- MADURO / VENEZUELA -->
     <div class="controversy cepeda" style="border-left-color:#ff6600;">
       <h4 style="color:#ff6600;">🇻🇪 Relación con Nicolás Maduro y Venezuela</h4>
-      <p>En 2013, tras la muerte de Hugo Chávez, Cepeda publicó un mensaje apoyando a <strong data-ref="cepeda-dossier-maduro">Nicolás Maduro</strong> como sucesor. Ese mensaje ha sido usado por sus opositores para vincularlo con la dictadura venezolana.</p>
+      <p>En 2013, tras la muerte de Hugo Chávez, Cepeda publicó un mensaje apoyando a <strong>Nicolás Maduro</strong> como sucesor. Ese mensaje ha sido usado por sus opositores para vincularlo con la dictadura venezolana.</p>
       <div class="accordion">
         <button class="accordion-btn" aria-expanded="false" type="button">🔍 La controversia Venezuela <span class="arrow">▼</span></button>
         <div class="accordion-content">
@@ -716,20 +715,20 @@
       <div class="cmp-box abel">
         <strong>Mano dura total</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="abelardo-prog-01">"Con criminales no hay negociación"</li>
-          <li data-ref="abelardo-prog-02">Fumigación 330.000 has</li>
-          <li data-ref="abelardo-prog-03">Porte de armas para ciudadanos</li>
-          <li data-ref="abelardo-prog-04">Fin del Acuerdo de Paz</li>
+          <li>"Con criminales no hay negociación"</li>
+          <li>Fumigación 330.000 has</li>
+          <li>Porte de armas para ciudadanos</li>
+          <li>Fin del Acuerdo de Paz</li>
         </ul>
       </div>
       <div class="vs">⚡</div>
       <div class="cmp-box cep">
         <strong>Seguridad Humana</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="cepeda-prog-01">Seguridad = derechos (salud, educación, trabajo)</li>
+          <li>Seguridad = derechos (salud, educación, trabajo)</li>
           <li>Desmilitarización civil</li>
-          <li data-ref="cepeda-prog-02">Paz con justicia social</li>
-          <li data-ref="cepeda-prog-02">Protección líderes sociales</li>
+          <li>Paz con justicia social</li>
+          <li>Protección líderes sociales</li>
         </ul>
       </div>
     </div>
@@ -741,10 +740,10 @@
       <div class="cmp-box abel">
         <strong>Shock de libre mercado</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="abelardo-prog-05">Crecimiento 7% anual</li>
-          <li data-ref="abelardo-prog-06">Reducir Estado en 1/4</li>
-          <li data-ref="abelardo-prog-07">Desregulación total</li>
-          <li data-ref="abelardo-prog-08">Eliminar ministerios</li>
+          <li>Crecimiento 7% anual</li>
+          <li>Reducir Estado en 1/4</li>
+          <li>Desregulación total</li>
+          <li>Eliminar ministerios</li>
         </ul>
       </div>
       <div class="vs">⚡</div>
@@ -766,18 +765,18 @@
       <div class="cmp-box abel">
         <strong>Aislamiento + ultraderecha</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="abelardo-prog-09">Salir de Corte IDH y ONU</li>
-          <li data-ref="abelardo-prog-11">Reanudar con Israel</li>
-          <li data-ref="abelardo-prog-12">Aliado de ultraderecha global</li>
+          <li>Salir de Corte IDH y ONU</li>
+          <li>Reanudar con Israel</li>
+          <li>Aliado de ultraderecha global</li>
         </ul>
       </div>
       <div class="vs">⚡</div>
       <div class="cmp-box cep">
         <strong>Autonomía + multilateralismo</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="cepeda-prog-05">Política exterior autónoma</li>
+          <li>Política exterior autónoma</li>
           <li>Solidaridad con A.Latina</li>
-          <li data-ref="cepeda-prog-06">Defensa migrantes colombianos</li>
+          <li>Defensa migrantes colombianos</li>
         </ul>
       </div>
     </div>
@@ -789,7 +788,7 @@
       <div class="cmp-box abel">
         <strong>Estado mínimo</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="abelardo-prog-06">Estado reducido en 1/4</li>
+          <li>Estado reducido en 1/4</li>
           <li>Privatización de servicios</li>
           <li>Desregulación como dogma</li>
           <li>Eliminar ministerios</li>
@@ -799,7 +798,7 @@
       <div class="cmp-box cep">
         <strong>Estado social de derecho</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="cepeda-prog-07">Continuidad reformas Petro</li>
+          <li>Continuidad reformas Petro</li>
           <li>Garantía derechos universales</li>
           <li>Participación ciudadana</li>
           <li>Austeridad sin desmantelar</li>
@@ -814,8 +813,8 @@
       <div class="cmp-box abel">
         <strong>Orden por encima de derechos</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="abelardo-prog-09">Salir de Corte IDH</li>
-          <li data-ref="abelardo-prog-03">Extinción de dominio exprés</li>
+          <li>Salir de Corte IDH</li>
+          <li>Extinción de dominio exprés</li>
           <li>Sin garantías procesales para criminales</li>
         </ul>
       </div>
@@ -823,9 +822,9 @@
       <div class="cmp-box cep">
         <strong>Verdad + Reparación</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="cepeda-prog-09">Derechos humanos como eje</li>
-          <li data-ref="cepeda-prog-10">Víctimas en el centro</li>
-          <li data-ref="cepeda-prog-10">Justicia transicional</li>
+          <li>Derechos humanos como eje</li>
+          <li>Víctimas en el centro</li>
+          <li>Justicia transicional</li>
         </ul>
       </div>
     </div>
@@ -848,11 +847,11 @@
       <div class="cmp-box cep">
         <strong>Progresismo / Inclusión</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="cepeda-prog-11">Derechos sexuales y reproductivos</li>
-          <li data-ref="cepeda-prog-11">Matrimonio igualitario</li>
+          <li>Derechos sexuales y reproductivos</li>
+          <li>Matrimonio igualitario</li>
           <li>Mujeres protagonistas</li>
-          <li data-ref="cepeda-prog-12">Lucha antirracista estructural</li>
-          <li data-ref="cepeda-prog-13">Estado laico</li>
+          <li>Lucha antirracista estructural</li>
+          <li>Estado laico</li>
         </ul>
       </div>
     </div>
@@ -864,20 +863,20 @@
       <div class="cmp-box abel">
         <strong>Explotación intensiva</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="abelardo-prog-13">Reactivar exploración petróleo y gas</li>
-          <li data-ref="abelardo-prog-14">Fracking permitido</li>
-          <li data-ref="abelardo-prog-15">Minería de oro, cobre, tierras raras</li>
-          <li data-ref="abelardo-prog-16">Expandir frontera agrícola 2M has</li>
+          <li>Reactivar exploración petróleo y gas</li>
+          <li>Fracking permitido</li>
+          <li>Minería de oro, cobre, tierras raras</li>
+          <li>Expandir frontera agrícola 2M has</li>
         </ul>
       </div>
       <div class="vs">⚡</div>
       <div class="cmp-box cep">
         <strong>Potencia mundial de la vida</strong>
         <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
-          <li data-ref="cepeda-prog-03">Transición energética justa</li>
-          <li data-ref="cepeda-prog-03">Proteger Amazonía y páramos</li>
+          <li>Transición energética justa</li>
+          <li>Proteger Amazonía y páramos</li>
           <li>Justicia ambiental</li>
-          <li data-ref="cepeda-prog-04">Bioeconomía</li>
+          <li>Bioeconomía</li>
         </ul>
       </div>
     </div>
@@ -1124,9 +1123,9 @@
       <span class="tag tag-red">🔴 ABELARDO — EXTREMA DERECHA</span>
       <h3>Postura: Derogar la Ley 2381</h3>
       <ul style="padding-left:18px;font-size:0.88rem;">
-        <li data-ref="abelardo-prog-17"><strong>Derogar la reforma</strong> y volver al sistema anterior de competencia RPM/RAIS</li>
-        <li data-ref="abelardo-prog-18">Migrar a un sistema <strong>100% de capitalización individual</strong> (estilo Chile pre-reforma)</li>
-        <li data-ref="abelardo-prog-19"><strong>Reducir cotizaciones</strong> para aumentar ingreso disponible de trabajadores</li>
+        <li><strong>Derogar la reforma</strong> y volver al sistema anterior de competencia RPM/RAIS</li>
+        <li>Migrar a un sistema <strong>100% de capitalización individual</strong> (estilo Chile pre-reforma)</li>
+        <li><strong>Reducir cotizaciones</strong> para aumentar ingreso disponible de trabajadores</li>
         <li>Subsidio directo a adultos mayores pobres con <strong>recorte de gasto público</strong></li>
       </ul>
       <div class="controversy" style="margin-top:12px;">
@@ -1138,10 +1137,10 @@
       <span class="tag tag-green">🟢 CEPEDA — IZQUIERDA DEMOCRÁTICA</span>
       <h3>Postura: Defender y Profundizar la Ley 2381</h3>
       <ul style="padding-left:18px;font-size:0.88rem;">
-        <li data-ref="cepeda-prog-14"><strong>Defender la implementación total</strong> de la Ley 2381 pese a recursos judiciales</li>
-        <li data-ref="cepeda-prog-15"><strong>Ampliar el valor</strong> de la renta básica solidaria por encima de la línea de pobreza extrema</li>
-        <li data-ref="cepeda-prog-16"><strong>Formalización laboral</strong> como raíz del problema pensional</li>
-        <li data-ref="cepeda-prog-17"><strong>Sistema Nacional de Cuidado</strong> que reconozca económicamente el trabajo de cuidado</li>
+        <li><strong>Defender la implementación total</strong> de la Ley 2381 pese a recursos judiciales</li>
+        <li><strong>Ampliar el valor</strong> de la renta básica solidaria por encima de la línea de pobreza extrema</li>
+        <li><strong>Formalización laboral</strong> como raíz del problema pensional</li>
+        <li><strong>Sistema Nacional de Cuidado</strong> que reconozca económicamente el trabajo de cuidado</li>
         <li>Fortalecer los <strong>BEPS</strong> con mejores subsidios para informales</li>
       </ul>
       <div class="controversy cepeda" style="margin-top:12px;">
@@ -1441,12 +1440,6 @@
     }
   });
 </script>
-
-
-  <!-- SISTEMA DE REFERENCIAS Y TRAZABILIDAD v1.0 -->
-  <script>window.__REFS_DATA__ = {"_schema": "1.0", "_description": "Registro central de referencias a los planes de gobierno de candidatos. Cada entrada permite rastrear una afirmación hasta su fuente exacta en el PDF.", "_updated": "2026-06-02", "candidates": {"abelardo": {"name": "Abelardo de la Espriella", "pdf": "/pdfs/abelardo-plan-gobierno.pdf", "pdfLabel": "Plan de Gobierno — Abelardo de la Espriella 2026", "pdfUrl": "https://www.moj.gov.co/...", "sections": {"perfil": {"label": "Perfil Biográfico", "refs": [{"id": "abelardo-perfil-01", "page": 1, "chapter": "Presentación del Candidato", "paragraph": 2, "text": "Abogado de la Universidad Sergio Arboleda, empresario", "context": "Hoja de vida del candidato"}, {"id": "abelardo-perfil-02", "page": 1, "chapter": "Presentación del Candidato", "paragraph": 5, "text": "Nacionalidad colombiana, estadounidense e italiana", "context": "Datos biográficos del candidato"}, {"id": "abelardo-perfil-03", "page": 2, "chapter": "Trayectoria Profesional", "section": "Experiencia laboral", "paragraph": 1, "text": "Abogado litigante, ningún cargo público previo", "context": "Experiencia profesional"}]}, "programa": {"label": "Programa de Gobierno", "refs": [{"id": "abelardo-prog-01", "page": 5, "chapter": "Ejes Programáticos", "section": "1. Seguridad y Orden", "paragraph": 3, "text": "\"Con criminales no hay negociación\"", "context": "Política de seguridad: mano dura contra el crimen"}, {"id": "abelardo-prog-02", "page": 5, "chapter": "Ejes Programáticos", "section": "1. Seguridad y Orden", "paragraph": 7, "text": "Fumigación de 330.000 hectáreas de cultivos ilícitos", "context": "Política antinarcóticos"}, {"id": "abelardo-prog-03", "page": 6, "chapter": "Ejes Programáticos", "section": "1. Seguridad y Orden", "paragraph": 2, "text": "Restablecimiento del porte de armas para ciudadanos", "context": "Política de tenencia de armas"}, {"id": "abelardo-prog-04", "page": 6, "chapter": "Ejes Programáticos", "section": "1. Seguridad y Orden", "paragraph": 5, "text": "Terminación de los procesos de paz con grupos armados", "context": "Política de paz"}, {"id": "abelardo-prog-05", "page": 7, "chapter": "Ejes Programáticos", "section": "2. Economía y Reactivación", "paragraph": 1, "text": "Crecimiento del 7% anual del PIB", "context": "Meta económica"}, {"id": "abelardo-prog-06", "page": 7, "chapter": "Ejes Programáticos", "section": "2. Economía y Reactivación", "paragraph": 4, "text": "Reducir el tamaño del Estado en un 25%", "context": "Política de reducción del Estado"}, {"id": "abelardo-prog-07", "page": 7, "chapter": "Ejes Programáticos", "section": "2. Economía y Reactivación", "paragraph": 6, "text": "Desregulación total de la economía", "context": "Política de desregulación"}, {"id": "abelardo-prog-08", "page": 8, "chapter": "Ejes Programáticos", "section": "2. Economía y Reactivación", "paragraph": 3, "text": "Eliminación de ministerios para reducir gasto público", "context": "Reforma del Estado"}, {"id": "abelardo-prog-09", "page": 10, "chapter": "Ejes Programáticos", "section": "4. Política Exterior", "paragraph": 1, "text": "Salida de Colombia de la Corte IDH", "context": "Política internacional"}, {"id": "abelardo-prog-10", "page": 10, "chapter": "Ejes Programáticos", "section": "4. Política Exterior", "paragraph": 2, "text": "Salida de Colombia de las Naciones Unidas", "context": "Política internacional"}, {"id": "abelardo-prog-11", "page": 10, "chapter": "Ejes Programáticos", "section": "4. Política Exterior", "paragraph": 4, "text": "Restablecimiento de relaciones diplomáticas con Israel", "context": "Política internacional"}, {"id": "abelardo-prog-12", "page": 10, "chapter": "Ejes Programáticos", "section": "4. Política Exterior", "paragraph": 6, "text": "Alineamiento con líderes de ultraderecha global (Trump, Milei, Bukele)", "context": "Política internacional"}, {"id": "abelardo-prog-13", "page": 12, "chapter": "Ejes Programáticos", "section": "5. Medio Ambiente y Recursos Naturales", "paragraph": 2, "text": "Reactivación de exploración de petróleo y gas", "context": "Política energética"}, {"id": "abelardo-prog-14", "page": 12, "chapter": "Ejes Programáticos", "section": "5. Medio Ambiente y Recursos Naturales", "paragraph": 3, "text": "Permitir el fracking", "context": "Política de hidrocarburos"}, {"id": "abelardo-prog-15", "page": 12, "chapter": "Ejes Programáticos", "section": "5. Medio Ambiente y Recursos Naturales", "paragraph": 5, "text": "Minería de oro, cobre y tierras raras a gran escala", "context": "Política minera"}, {"id": "abelardo-prog-16", "page": 13, "chapter": "Ejes Programáticos", "section": "5. Medio Ambiente y Recursos Naturales", "paragraph": 2, "text": "Expandir la frontera agrícola en 2 millones de hectáreas", "context": "Política agrícola"}, {"id": "abelardo-prog-17", "page": 15, "chapter": "Ejes Programáticos", "section": "7. Pensiones", "subtitle": "Derogatoria de la Ley 2381", "paragraph": 1, "text": "Derogar la reforma pensional Ley 2381 de 2025", "context": "Propuesta de reforma pensional"}, {"id": "abelardo-prog-18", "page": 15, "chapter": "Ejes Programáticos", "section": "7. Pensiones", "subtitle": "Sistema de Capitalización", "paragraph": 3, "text": "Migrar a un sistema 100% de capitalización individual", "context": "Modelo pensional"}, {"id": "abelardo-prog-19", "page": 15, "chapter": "Ejes Programáticos", "section": "7. Pensiones", "paragraph": 5, "text": "Reducir cotizaciones para aumentar ingreso disponible", "context": "Política de cotizaciones"}, {"id": "abelardo-prog-20", "page": 3, "chapter": "Principios y Valores", "section": "Familia Tradicional", "paragraph": 2, "text": "La familia tradicional como núcleo de la sociedad", "context": "Principios fundamentales del plan"}, {"id": "abelardo-prog-21", "page": 4, "chapter": "Principios y Valores", "section": "Rescate Moral", "paragraph": 1, "text": "Rescate moral de la nación", "context": "Principios morales"}]}, "dossier": {"label": "Dossier — Controversias", "refs": [{"id": "abelardo-dossier-dmg", "page": 18, "chapter": "Anexos", "section": "Relación con David Murcia Guzmán (DMG)", "paragraph": 2, "text": "Abelardo fue abogado defensor de David Murcia Guzmán desde 2008", "context": "Caso DMG - pirámide financiera"}, {"id": "abelardo-dossier-firmas", "page": 20, "chapter": "Anexos", "section": "Escándalo de firmas", "paragraph": 1, "text": "62% de firmas inválidas según la Registraduría Nacional", "context": "Fraude electoral - firmas falsificadas"}, {"id": "abelardo-dossier-maltrato", "page": 22, "chapter": "Anexos", "section": "Controversias personales", "paragraph": 1, "text": "Confesión de maltrato animal en The Suso's Show (2014)", "context": "Maltrato animal confesado"}, {"id": "abelardo-dossier-conversion", "page": 23, "chapter": "Anexos", "section": "Conversión religiosa", "paragraph": 1, "text": "Conversión de ateo a católico en 2021 tras muerte de su tía", "context": "Conversión al catolicismo"}, {"id": "abelardo-dossier-lifestyle", "page": 24, "chapter": "Anexos", "section": "Estilo de vida", "paragraph": 1, "text": "Estilo de vida ostentoso: jet privado, ropa italiana, vinos de lujo", "context": "Contradicción con discurso populista"}, {"id": "abelardo-dossier-mancuso", "page": 25, "chapter": "Anexos", "section": "Vínculos con paramilitarismo", "paragraph": 1, "text": "Salvatore Mancuso afirma conocer a Abelardo desde la infancia", "context": "Relación con el paramilitarismo"}, {"id": "abelardo-dossier-adopcion", "page": 26, "chapter": "Anexos", "section": "Giro en adopción homoparental", "paragraph": 3, "text": "En 2016 apoyaba adopción LGBT; en 2026 dice 'los niños son sagrados'", "context": "Cambio de posición sobre adopción homoparental"}, {"id": "abelardo-dossier-saab", "page": 19, "chapter": "Anexos", "section": "Caso Alex Saab", "paragraph": 1, "text": "Dinero de Alex Saab llegó a cuentas de Abelardo, según El País", "context": "Vínculos con el testaferro de Maduro"}, {"id": "abelardo-dossier-restrepo", "page": 27, "chapter": "Anexos", "section": "Fórmula Vicepresidencial", "paragraph": 1, "text": "José Manuel Restrepo como fórmula vicepresidencial", "context": "Composición de la fórmula"}]}}}, "cepeda": {"name": "Iván Cepeda Castro", "pdf": "/pdfs/cepeda-plan-gobierno.pdf", "pdfLabel": "Plan de Gobierno — Iván Cepeda Castro 2026", "pdfUrl": "", "sections": {"perfil": {"label": "Perfil Biográfico", "refs": [{"id": "cepeda-perfil-01", "page": 1, "chapter": "Presentación", "paragraph": 2, "text": "Filósofo de la Universidad de Sofía, Bulgaria", "context": "Formación académica"}, {"id": "cepeda-perfil-02", "page": 2, "chapter": "Trayectoria", "section": "Vida Política", "paragraph": 1, "text": "Senador, antes Representante a la Cámara por Bogotá", "context": "Trayectoria política"}, {"id": "cepeda-perfil-03", "page": 2, "chapter": "Trayectoria", "section": "Derechos Humanos", "paragraph": 3, "text": "Defensor de derechos humanos, múltiples reconocimientos internacionales", "context": "Trayectoria en DDHH"}]}, "programa": {"label": "Programa de Gobierno", "refs": [{"id": "cepeda-prog-01", "page": 5, "chapter": "Colombia Potencia Mundial de la Vida", "section": "Seguridad Humana", "paragraph": 2, "text": "Seguridad entendida como acceso a derechos (salud, educación, trabajo)", "context": "Concepto de seguridad humana"}, {"id": "cepeda-prog-02", "page": 5, "chapter": "Colombia Potencia Mundial de la Vida", "section": "Paz Total", "paragraph": 4, "text": "Paz con justicia social y protección a líderes sociales y defensores de DDHH", "context": "Política de paz"}, {"id": "cepeda-prog-03", "page": 7, "chapter": "Colombia Potencia Mundial de la Vida", "section": "Transición Energética", "paragraph": 2, "text": "Transición energética justa, protección de la Amazonía y los páramos", "context": "Política ambiental"}, {"id": "cepeda-prog-04", "page": 7, "chapter": "Colombia Potencia Mundial de la Vida", "section": "Bioeconomía", "paragraph": 5, "text": "Desarrollo de bioeconomía como motor de crecimiento sostenible", "context": "Modelo económico verde"}, {"id": "cepeda-prog-05", "page": 8, "chapter": "Colombia Potencia Mundial de la Vida", "section": "Política Exterior", "paragraph": 1, "text": "Política exterior autónoma, solidaridad con América Latina", "context": "Política internacional"}, {"id": "cepeda-prog-06", "page": 8, "chapter": "Colombia Potencia Mundial de la Vida", "section": "Defensa de Migrantes", "paragraph": 3, "text": "Defensa de los derechos de los colombianos en el exterior", "context": "Política migratoria"}, {"id": "cepeda-prog-07", "page": 10, "chapter": "Ejes Programáticos", "section": "Modelo de Estado", "paragraph": 1, "text": "Continuidad y profundización de las reformas del gobierno Petro", "context": "Modelo de Estado"}, {"id": "cepeda-prog-08", "page": 10, "chapter": "Ejes Programáticos", "section": "Austeridad", "paragraph": 3, "text": "Austeridad republicana sin desmantelar el Estado social", "context": "Política fiscal"}, {"id": "cepeda-prog-09", "page": 11, "chapter": "Ejes Programáticos", "section": "Derechos Humanos", "paragraph": 1, "text": "Derechos humanos como eje transversal del gobierno", "context": "Política de DDHH"}, {"id": "cepeda-prog-10", "page": 11, "chapter": "Ejes Programáticos", "section": "Justicia Transicional", "paragraph": 3, "text": "Verdad, reparación y justicia transicional para las víctimas", "context": "Política de justicia transicional"}, {"id": "cepeda-prog-11", "page": 13, "chapter": "Ejes Programáticos", "section": "Derechos Sexuales y Reproductivos", "paragraph": 1, "text": "Garantía de derechos sexuales y reproductivos, matrimonio igualitario", "context": "Política de género e inclusión"}, {"id": "cepeda-prog-12", "page": 13, "chapter": "Ejes Programáticos", "section": "Lucha Antirracista", "paragraph": 3, "text": "Lucha antirracista estructural", "context": "Política de inclusión étnico-racial"}, {"id": "cepeda-prog-13", "page": 14, "chapter": "Ejes Programáticos", "section": "Estado Laico", "paragraph": 1, "text": "Defensa del Estado laico", "context": "Principios constitucionales"}, {"id": "cepeda-prog-14", "page": 15, "chapter": "Ejes Programáticos", "section": "Pensiones", "subtitle": "Defensa de la Ley 2381", "paragraph": 2, "text": "Defender la implementación total de la Ley 2381 de 2025", "context": "Política pensional"}, {"id": "cepeda-prog-15", "page": 15, "chapter": "Ejes Programáticos", "section": "Pensiones", "subtitle": "Ampliación de cobertura", "paragraph": 4, "text": "Ampliar el valor de la renta básica solidaria por encima de la línea de pobreza extrema", "context": "Política pensional - pilar solidario"}, {"id": "cepeda-prog-16", "page": 16, "chapter": "Ejes Programáticos", "section": "Formalización Laboral", "paragraph": 1, "text": "Formalización laboral como raíz del problema pensional", "context": "Política de formalización"}, {"id": "cepeda-prog-17", "page": 16, "chapter": "Ejes Programáticos", "section": "Sistema Nacional de Cuidado", "paragraph": 3, "text": "Fortalecer el Sistema Nacional de Cuidado reconociendo económicamente el trabajo de cuidado", "context": "Política de género y cuidado"}, {"id": "cepeda-prog-18", "page": 17, "chapter": "Ejes Programáticos", "section": "BEPS", "paragraph": 2, "text": "Fortalecer los BEPS (Beneficios Económicos Periódicos) con mejores subsidios para trabajadores informales", "context": "Política pensional para informales"}]}, "dossier": {"label": "Dossier — Controversias", "refs": [{"id": "cepeda-dossier-up", "page": 20, "chapter": "Anexos", "section": "Origen político familiar", "paragraph": 1, "text": "Nació y se crió en el comunismo colombiano, padres militantes del PCC y la UP", "context": "Herencia política familiar"}, {"id": "cepeda-dossier-farc", "page": 21, "chapter": "Anexos", "section": "Vínculos con las FARC", "paragraph": 2, "text": "Aparece en los computadores de Raúl Reyes como 'compañero'", "context": "Evidencia de vínculos con FARC"}, {"id": "cepeda-dossier-exilio", "page": 22, "chapter": "Anexos", "section": "Formación en el Bloque Soviético", "paragraph": 1, "text": "Exilio en Cuba y Checoslovaquia, estudios en Bulgaria (país del bloque soviético)", "context": "Formación en países comunistas"}, {"id": "cepeda-dossier-uribe", "page": 24, "chapter": "Anexos", "section": "Caso Uribe", "paragraph": 1, "text": "Investigó el paramilitarismo en Antioquia, condujo al caso contra Álvaro Uribe", "context": "Caso judicial contra Uribe Vélez"}, {"id": "cepeda-dossier-padre", "page": 25, "chapter": "Anexos", "section": "Asesinato de Manuel Cepeda", "paragraph": 1, "text": "9 de agosto de 1994: su padre Manuel Cepeda fue asesinado por sargentos del Ejército", "context": "Asesinato del padre en operación Golpe de Gracia"}, {"id": "cepeda-dossier-maduro", "page": 26, "chapter": "Anexos", "section": "Relación con Venezuela", "paragraph": 1, "text": "En 2013 respaldó a Nicolás Maduro como sucesor de Chávez", "context": "Posición sobre Venezuela"}, {"id": "cepeda-dossier-transformacion", "page": 27, "chapter": "Anexos", "section": "Transformación ideológica", "paragraph": 2, "text": "\"Nací en política en el Partido Comunista, pero esas etiquetas no significan hoy lo mismo\"", "context": "Evolución política del candidato"}]}}}}};</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script src="/js/refs-system.js"></script>
 
 </body>
 </html>

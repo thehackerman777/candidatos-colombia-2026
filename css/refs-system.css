@@ -1,0 +1,431 @@
+/* ============================================================
+   SISTEMA DE REFERENCIAS Y TRAZABILIDAD
+   Para candidatos-colombia-2026
+   ============================================================ */
+
+/* ----- REFERENCE BADGE ----- */
+.ref-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #999;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  vertical-align: middle;
+  margin: 0 3px;
+  line-height: 1.5;
+  position: relative;
+  top: -1px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.ref-badge:hover {
+  background: #4ecca3;
+  border-color: #4ecca3;
+  color: #000;
+}
+
+.ref-badge:active {
+  transform: scale(0.93);
+}
+
+.ref-badge.abel {
+  border-color: #e9456040;
+}
+.ref-badge.abel:hover {
+  background: #e94560;
+  border-color: #e94560;
+  color: #fff;
+}
+
+.ref-badge.cep {
+  border-color: #4ecca340;
+}
+.ref-badge.cep:hover {
+  background: #4ecca3;
+  border-color: #4ecca3;
+  color: #000;
+}
+
+.ref-badge .ref-icon {
+  font-size: 0.6rem;
+}
+
+.ref-badge .ref-page {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.ref-badge.pulse {
+  animation: refPulse 0.5s ease;
+}
+
+@keyframes refPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); box-shadow: 0 0 8px rgba(78, 204, 163, 0.6); }
+}
+
+/* ----- REFERENCE TOOLTIP ----- */
+.ref-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 12px 14px;
+  max-width: 320px;
+  width: max-content;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.ref-tooltip.visible {
+  display: block;
+}
+
+.ref-tooltip .ref-source {
+  font-size: 0.7rem;
+  color: #4ecca3;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.ref-tooltip .ref-context {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 8px;
+  display: block;
+  font-style: italic;
+}
+
+.ref-tooltip .ref-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.ref-tooltip .ref-view-btn {
+  background: #4ecca3;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ref-tooltip .ref-view-btn:hover {
+  background: #3dbb92;
+}
+
+.ref-tooltip .ref-view-btn.abel-btn {
+  background: #e94560;
+  color: #fff;
+}
+
+.ref-tooltip .ref-view-btn.abel-btn:hover {
+  background: #d63850;
+}
+
+/* ----- PDF VIEWER MODAL ----- */
+.pdf-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  backdrop-filter: blur(6px);
+}
+
+.pdf-modal-overlay.open {
+  display: flex;
+}
+
+.pdf-modal-box {
+  background: #111;
+  border: 1px solid #333;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .pdf-modal-box {
+    max-width: 95vw;
+    max-height: 95vh;
+    height: 95vh;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+  gap: 10px;
+  min-height: 52px;
+}
+
+@media (max-width: 600px) {
+  .pdf-modal-header {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+  }
+}
+
+.pdf-modal-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ddd;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdf-modal-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pdf-modal-controls button {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pdf-modal-controls button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.pdf-modal-controls button:active {
+  transform: scale(0.97);
+}
+
+.pdf-modal-controls .pdf-close-btn {
+  background: transparent;
+  border-color: #555;
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  padding: 0;
+}
+
+.pdf-modal-controls .pdf-close-btn:hover {
+  background: #e94560;
+  border-color: #e94560;
+  color: #fff;
+}
+
+.pdf-modal-controls .pdf-page-input {
+  width: 50px;
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  text-align: center;
+  font-family: monospace;
+}
+
+.pdf-modal-controls .pdf-page-input:focus {
+  outline: 2px solid #4ecca3;
+  border-color: #4ecca3;
+}
+
+.pdf-modal-body {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #0a0a0a;
+}
+
+.pdf-modal-body canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* PDF loading spinner */
+.pdf-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.pdf-loader .spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333;
+  border-top-color: #4ecca3;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.pdf-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #e94560;
+  font-size: 0.9rem;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* PDF highlight overlay */
+.pdf-highlight {
+  position: absolute;
+  background: rgba(78, 204, 163, 0.25);
+  border: 2px solid #4ecca3;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 100;
+  transition: all 0.3s ease;
+  animation: highlightFadeIn 0.4s ease;
+}
+
+@keyframes highlightFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* PDF query (no PDF yet) state */
+.pdf-unavailable {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+}
+
+.pdf-unavailable .big-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pdf-unavailable h3 {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.pdf-unavailable p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pdf-unavailable .ref-meta {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 450px;
+  text-align: left;
+  font-size: 0.82rem;
+}
+
+.pdf-unavailable .ref-meta strong {
+  color: #ddd;
+}
+
+.pdf-unavailable .ref-meta span {
+  color: #4ecca3;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 480px) {
+  .ref-badge {
+    font-size: 0.55rem;
+    padding: 0px 5px;
+  }
+  
+  .ref-tooltip {
+    max-width: 280px;
+    font-size: 0.72rem;
+  }
+  
+  .pdf-modal-title {
+    font-size: 0.75rem;
+  }
+  
+  .pdf-modal-controls button {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+    min-height: 30px;
+  }
+  
+  .pdf-modal-controls .pdf-page-input {
+    width: 40px;
+    font-size: 0.65rem;
+  }
+}
+
+/* ----- PRINT HIDE ----- */
+@media print {
+  .ref-badge {
+    display: none !important;
+  }
+  .pdf-modal-overlay {
+    display: none !important;
+  }
+}
