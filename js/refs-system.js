@@ -136,38 +136,45 @@
     
     unavailable.style.display = 'block';
     
-    if (ref) {
-      const meta = document.getElementById('pdf-ref-meta');
-      if (meta) {
-        meta.innerHTML = `
-          <span class="meta-label">📍 UBICACIÓN EXACTA EN EL DOCUMENTO</span>
-          <strong>Documento:</strong> ${ref.candidate.pdfLabel || 'Plan de Gobierno'}<br>
-          ${ref.chapter ? `<strong>Capítulo:</strong> ${ref.chapter}<br>` : ''}
-          ${ref.section ? `<strong>Sección:</strong> ${ref.section}<br>` : ''}
-          ${ref.subtitle ? `<strong>Subtítulo:</strong> ${ref.subtitle}<br>` : ''}
-          <strong>Página:</strong> ${ref.page || '—'}<br>
-          ${ref.paragraph ? `<strong>Párrafo:</strong> ${ref.paragraph}<br>` : ''}
-          <br>
-          <span class="quote-text">💬 "${ref.context || ref.text || ''}"</span>
-        `;
-      }
-      
-      const btn = document.getElementById('pdf-external-btn');
-      if (btn) {
-        btn.style.display = 'inline-flex';
-        const url = ref.candidate.pdfUrl;
-        if (url) {
-          btn.onclick = () => window.open(url, '_blank');
-        } else {
-          btn.textContent = '📄 Buscar en el plan de gobierno (pág. ' + ref.page + ')';
-          btn.onclick = null;
-        }
-      }
+    // Always show: referncia completa y estado del PDF
+    const meta = document.getElementById('pdf-ref-meta');
+    if (meta && ref) {
+      meta.innerHTML = `
+        <span class="meta-label">📍 UBICACIÓN EXACTA EN EL DOCUMENTO</span>
+        <strong>Documento:</strong> ${ref.candidate.pdfLabel || 'Plan de Gobierno'}<br>
+        ${ref.chapter ? `<strong>Capítulo:</strong> ${ref.chapter}<br>` : ''}
+        ${ref.section ? `<strong>Sección:</strong> ${ref.section}<br>` : ''}
+        ${ref.subtitle ? `<strong>Subtítulo:</strong> ${ref.subtitle}<br>` : ''}
+        <strong>Página:</strong> ${ref.page || '—'}<br>
+        ${ref.paragraph ? `<strong>Párrafo:</strong> ${ref.paragraph}<br>` : ''}
+        <br>
+        <span class="quote-text">💬 "${(ref.context || ref.text || '').replace(/</g,'&lt;').replace(/>/g,'&gt;')}"</span>
+      `;
+    } else if (meta) {
+      meta.innerHTML = `<span class="meta-label">⚠️ REFERENCIA</span><p>Referencia no encontrada en el registro.</p>`;
     }
     
+    const btn = document.getElementById('pdf-external-btn');
+    if (btn && ref) {
+      btn.style.display = 'inline-flex';
+      const url = ref.candidate.pdfUrl;
+      if (url) {
+        btn.textContent = '🔗 Ver PDF externo →';
+        btn.onclick = () => window.open(url, '_blank');
+      } else {
+        btn.textContent = '📄 Buscar en el PDF original (pág. ' + ref.page + ')';
+        btn.onclick = null;
+        btn.style.opacity = '0.6';
+        btn.style.cursor = 'default';
+      }
+    } else if (btn) {
+      btn.style.display = 'none';
+    }
+    
+    // Custom message override
     if (customMsg) {
-      const msg = document.querySelector('.pdf-unavailable p');
-      if (msg) msg.textContent = customMsg;
+      const msgEl = document.querySelector('.pdf-unavailable p');
+      if (msgEl) msgEl.textContent = customMsg;
     }
   }
 
@@ -198,8 +205,8 @@
       if (!pdfjsLib) await loadPdfJs();
       
       const pdfPath = ref.candidate.pdf;
-      if (!pdfPath || pdfPath === '/pdfs/placeholder.pdf') {
-        throw new Error('PDF_NOT_AVAILABLE');
+      if (!pdfPath) {
+        throw new Error('PDF_NO_PATH');
       }
       
       const loadingTask = pdfjsLib.getDocument(pdfPath);
@@ -218,16 +225,14 @@
       await renderPdfPage(page);
       
     } catch (e) {
-      if (e.message === 'PDF_NOT_AVAILABLE' || e.message.includes('404') || e.message.includes('fetch')) {
-        showUnavailable(refId);
-      } else {
-        const err = document.getElementById('pdf-error');
-        if (err) {
-          hideAllStates();
-          err.style.display = 'block';
-          err.innerHTML = `⚠️ Error al cargar el PDF<br><span style="font-size:0.78rem;color:#888;">${e.message}</span>`;
-        }
-      }
+      console.error('[Refs] PDF load failed:', e.name, e.message);
+      
+      // Siempre mostrar estado 'no disponible' con metadata
+      // PDF.js lanza MissingPDFException, UnknownErrorException, etc.
+      showUnavailable(refId);
+      
+      // Mostrar el error técnico en consola, no al usuario
+      console.log('[Refs] Para que funcione el visor, coloca el PDF real en: ' + (ref.candidate.pdf || 'pdfs/'));
     }
   }
 
