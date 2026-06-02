@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🆚 Colombia 2026 — Segunda Vuelta: Abelardo vs Cepeda</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; background:#0a0a0a; color:#e0e0e0; line-height:1.6; }
+  
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 40px 20px; text-align:center; border-bottom:3px solid #e94560;
+  }
+  .header h1 { font-size:2.5rem; font-weight:900; letter-spacing:-1px; }
+  .header h1 span.right { color:#e94560; }
+  .header h1 span.left { color:#4ecca3; }
+  .header .subtitle { color:#aaa; font-size:1.1rem; margin-top:8px; }
+  .header .badge { display:inline-block; background:#e94560; color:#fff; padding:4px 16px; border-radius:20px; font-size:0.85rem; font-weight:700; margin-top:12px; }
+
+  /* NAV */
+  .nav { display:flex; justify-content:center; gap:10px; padding:15px; background:#111; flex-wrap:wrap; position:sticky; top:0; z-index:100; border-bottom:1px solid #222; }
+  .nav a { color:#aaa; text-decoration:none; padding:8px 16px; border-radius:8px; font-size:0.85rem; font-weight:600; transition:all .2s; }
+  .nav a:hover { background:#222; color:#fff; }
+  .nav a.active { background:#e94560; color:#fff; }
+
+  /* SECTIONS */
+  section { padding:40px 20px; max-width:1200px; margin:0 auto; }
+  section h2 { font-size:1.8rem; font-weight:800; margin-bottom:30px; text-align:center; }
+  section h2 .sub { font-size:0.9rem; color:#888; font-weight:400; display:block; }
+
+  /* SPLIT LAYOUT */
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+  @media(max-width:768px){ .split{grid-template-columns:1fr;} }
+
+  .card-abelardo { background: linear-gradient(145deg, #1a0a0a, #2a1a1a); border:1px solid #e9456040; border-radius:16px; padding:25px; }
+  .card-cepeda { background: linear-gradient(145deg, #0a1a1a, #1a2a2a); border:1px solid #4ecca340; border-radius:16px; padding:25px; }
+
+  .card-abelardo h3 { color:#e94560; font-size:1.3rem; margin-bottom:15px; }
+  .card-cepeda h3 { color:#4ecca3; font-size:1.3rem; margin-bottom:15px; }
+
+  .tag { display:inline-block; padding:3px 12px; border-radius:12px; font-size:0.75rem; font-weight:700; margin-bottom:12px; }
+  .tag-red { background:#e9456030; color:#e94560; border:1px solid #e94560; }
+  .tag-green { background:#4ecca330; color:#4ecca3; border:1px solid #4ecca3; }
+
+  /* DATA TABLES */
+  .data-table { width:100%; border-collapse:collapse; margin:10px 0; }
+  .data-table td { padding:8px 10px; border-bottom:1px solid #222; font-size:0.9rem; vertical-align:top; }
+  .data-table td:first-child { font-weight:700; color:#888; white-space:nowrap; width:100px; }
+  .data-table tr:last-child td { border-bottom:none; }
+
+  /* TIMELINE */
+  .timeline { position:relative; padding-left:25px; }
+  .timeline::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:2px; background:#333; }
+  .timeline-item { position:relative; margin-bottom:20px; }
+  .timeline-item::before { content:''; position:absolute; left:-21px; top:6px; width:12px; height:12px; border-radius:50%; }
+  .tl-abelardo .timeline-item::before { background:#e94560; }
+  .tl-cepeda .timeline-item::before { background:#4ecca3; }
+  .timeline-item .year { font-weight:700; font-size:0.85rem; color:#888; }
+  .timeline-item p { margin-top:4px; font-size:0.95rem; }
+
+  /* ACCORDION */
+  .accordion { margin:10px 0; }
+  .accordion-btn { width:100%; text-align:left; padding:14px 18px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#e0e0e0; font-size:0.95rem; font-weight:600; cursor:pointer; transition:all .2s; display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .accordion-btn:hover { background:#222; border-color:#555; }
+  .accordion-btn .arrow { transition:transform .3s; font-size:1.2rem; }
+  .accordion-btn.active .arrow { transform:rotate(180deg); }
+  .accordion-content { max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s; padding:0 18px; background:#141414; border-radius:0 0 10px 10px; border:1px solid #333; border-top:none; margin-top:-6px; }
+  .accordion-content.open { max-height:4000px; padding:18px; }
+  .accordion-content p, .accordion-content ul { margin-bottom:10px; }
+  .accordion-content ul { padding-left:20px; }
+  .accordion-content li { margin-bottom:6px; font-size:0.9rem; }
+
+  /* QUOTES */
+  .quote { border-left:3px solid #e94560; padding:12px 18px; margin:15px 0; background:#111; border-radius:0 8px 8px 0; font-style:italic; color:#ccc; font-size:0.9rem; }
+  .quote.cepeda { border-left-color:#4ecca3; }
+
+  /* COMPARISON BAR */
+  .cmp-section { margin:30px 0; }
+  .cmp-section h3 { font-size:1.2rem; margin-bottom:15px; padding-bottom:8px; border-bottom:1px solid #222; }
+  .cmp-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:15px; align-items:start; }
+  .cmp-grid .vs { display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.2rem; color:#555; }
+  .cmp-box { padding:15px; border-radius:12px; font-size:0.9rem; }
+  .cmp-box.abel { background:#1a0a0a; border:1px solid #e9456040; }
+  .cmp-box.cep { background:#0a1a1a; border:1px solid #4ecca340; }
+
+  /* CONTROVERSY BADGE */
+  .controversy { background:#e9456015; border-left:4px solid #e94560; padding:15px; margin:15px 0; border-radius:0 10px 10px 0; }
+  .controversy h4 { color:#e94560; margin-bottom:8px; font-size:1rem; }
+  .controversy.cepeda { border-left-color:#4ecca3; background:#4ecca315; }
+  .controversy.cepeda h4 { color:#4ecca3; }
+
+  /* FOOTER */
+  .footer { text-align:center; padding:30px; color:#555; font-size:0.8rem; border-top:1px solid #222; }
+
+  /* VERDICT */
+  .verdict-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border:2px solid #e94560; border-radius:16px; padding:30px; margin:40px 0; text-align:center; }
+  .verdict-box h2 { margin-bottom:15px; }
+  .verdict-box p { max-width:800px; margin:0 auto; color:#aaa; }
+
+  /* RESPONSIVE VIDEO EMBED */
+  .video-grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+  @media(max-width:768px){ .video-grid{grid-template-columns:1fr;} }
+  .video-card { background:#111; border-radius:12px; padding:15px; border:1px solid #222; }
+  .video-card h4 { margin-bottom:8px; font-size:0.95rem; }
+  .video-card a { color:#4ecca3; text-decoration:none; }
+  .video-card a:hover { text-decoration:underline; }
+
+  /* CATEGORY TABS */
+  .cat-tabs { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:30px; }
+  .cat-tab { padding:8px 18px; border-radius:20px; background:#1a1a1a; border:1px solid #333; color:#aaa; cursor:pointer; font-size:0.85rem; font-weight:600; transition:all .2s; }
+  .cat-tab:hover { background:#222; color:#fff; }
+  .cat-tab.active { background:#e94560; color:#fff; border-color:#e94560; }
+  .cat-tab.active.cepeda-tab { background:#4ecca3; color:#000; border-color:#4ecca3; }
+
+  .source-link { color:#4ecca3; text-decoration:none; font-size:0.8rem; }
+  .source-link:hover { text-decoration:underline; }
+
+  /* MODAL / LIGHTBOX */
+  .modal-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.85); z-index:1000; justify-content:center; align-items:center; padding:20px; backdrop-filter:blur(4px); }
+  .modal-overlay.open { display:flex; }
+  .modal-box { background:#1a1a1a; border:1px solid #333; border-radius:16px; max-width:800px; width:100%; max-height:85vh; overflow-y:auto; padding:25px; position:relative; }
+  .modal-close { position:absolute; top:12px; right:12px; background:#333; border:none; color:#fff; width:36px; height:36px; border-radius:50%; font-size:1.2rem; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; }
+  .modal-close:hover { background:#e94560; transform:rotate(90deg); }
+  .modal-box h3 { margin-bottom:15px; color:#fff; }
+  .modal-box .modal-body { font-size:0.9rem; color:#ccc; line-height:1.7; }
+  .modal-box .modal-body a { color:#4ecca3; }
+
+  /* INLINE FRAME EMBED */
+  .embed-container { position:relative; width:100%; padding-bottom:56.25%; margin:10px 0; border-radius:12px; overflow:hidden; background:#000; }
+  .embed-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+  .embed-container.audio-embed { padding-bottom:80px; }
+  .embed-container.audio-embed iframe { height:80px; }
+
+  /* INLINE ARTICLE PREVIEW */
+  .inline-article { background:#141414; border:1px solid #333; border-radius:12px; padding:18px; margin:12px 0; cursor:pointer; transition:all .2s; }
+  .inline-article:hover { border-color:#555; background:#1a1a1a; }
+  .inline-article .src { font-size:0.7rem; color:#888; text-transform:uppercase; letter-spacing:1px; }
+  .inline-article h4 { font-size:0.95rem; margin:6px 0; color:#ddd; }
+  .inline-article .excerpt { font-size:0.8rem; color:#888; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .inline-article .btn-read { display:inline-block; margin-top:8px; padding:4px 14px; border-radius:6px; font-size:0.75rem; font-weight:600; cursor:pointer; border:none; transition:all .2s; }
+  .btn-abel { background:#e9456020; color:#e94560; }
+  .btn-abel:hover { background:#e94560; color:#fff; }
+  .btn-cep { background:#4ecca320; color:#4ecca3; }
+  .btn-cep:hover { background:#4ecca3; color:#000; }
+
+  /* STAT CARDS */
+  .stat-row { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin:15px 0; }
+  .stat-card { background:#111; border-radius:10px; padding:15px; text-align:center; border:1px solid #222; }
+  .stat-card .num { font-size:1.8rem; font-weight:900; }
+  .stat-card .num.red { color:#e94560; }
+  .stat-card .num.green { color:#4ecca3; }
+  .stat-card .label { font-size:0.75rem; color:#888; margin-top:4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🆚 <span class="left">Abelardo</span> vs <span class="right">Cepeda</span></h1>
+  <div class="subtitle">Segunda Vuelta · Elecciones Presidenciales Colombia 2026</div>
+  <div class="badge">🔴 Análisis Extremo a Extremo</div>
+</div>
+
+<div class="nav" id="nav">
+  <a href="#perfiles">📋 Perfiles</a>
+  <a href="#programas">📜 Programas</a>
+  <a href="#abelardo-dossier">📁 Dossier Abelardo</a>
+  <a href="#cepeda-dossier">📁 Dossier Cepeda</a>
+  <a href="#datos-clave">📊 Datos Clave</a>
+  <a href="#comparativa">⚖️ Comparativa</a>
+  <a href="#multimedia">🎬 Multimedia</a>
+  <a href="#cronologia">⏳ Cronología</a>
+  <a href="#fuentes">📚 Fuentes</a>
+</div>
+
+<!-- ===== PERFILES ===== -->
+<section id="perfiles">
+  <h2>📋 Perfiles Biográficos</h2>
+  <div class="split">
+    <div class="card-abelardo">
+      <span class="tag tag-red">🔴 EXTREMA DERECHA</span>
+      <h3>Abelardo Gabriel de la Espriella Otero</h3>
+      <table class="data-table">
+        <tr><td>Edad</td><td>47 años (31 jul 1978)</td></tr>
+        <tr><td>Lugar</td><td>Bogotá, criado en Montería, Córdoba</td></tr>
+        <tr><td>Partido</td><td>Defensores de la Patria / Mov. Salvación Nacional</td></tr>
+        <tr><td>Profesión</td><td>Abogado (U. Sergio Arboleda), empresario</td></tr>
+        <tr><td>Apodo</td><td>"El Tigre" 🐯</td></tr>
+        <tr><td>Nacionalidad</td><td>🇨🇴 Colombiana · 🇺🇸 Estadounidense · 🇮🇹 Italiana</td></tr>
+        <tr><td>Religión</td><td>Ateo → Católico (2021)</td></tr>
+        <tr><td>Experiencia</td><td>Ningún cargo público. Abogado litigante toda su carrera</td></tr>
+        <tr><td>Lema</td><td>"El Milagro de los Nunca — Patria Milagro"</td></tr>
+      </table>
+    </div>
+    <div class="card-cepeda">
+      <span class="tag tag-green">🟢 IZQUIERDA DEMOCRÁTICA</span>
+      <h3>Iván Cepeda Castro</h3>
+      <table class="data-table">
+        <tr><td>Edad</td><td>63 años (24 oct 1962)</td></tr>
+        <tr><td>Lugar</td><td>Bogotá</td></tr>
+        <tr><td>Partido</td><td>Pacto Histórico (antes Polo Dem., AD M-19, UP)</td></tr>
+        <tr><td>Profesión</td><td>Filósofo (U. de Sofía, Bulgaria)</td></tr>
+        <tr><td>Cargo</td><td>Senador de la República (desde 2014)</td></tr>
+        <tr><td>Padres</td><td>Manuel Cepeda (senador UP, asesinado 1994) · Yira Castro (concejala, comunista)</td></tr>
+        <tr><td>Exilio</td><td>Cuba, Checoslovaquia, Bulgaria — 3 años a los 3 años</td></tr>
+        <tr><td>Ideología</td><td>"Nací en el Partido Comunista" → izquierda democrática</td></tr>
+        <tr><td>Lema</td><td>"El Poder de la Verdad"</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMAS ===== -->
+<section id="programas">
+  <h2>📜 Programas de Gobierno</h2>
+  <div class="split">
+    <div class="card-abelardo">
+      <h3>🐯 "13 Propuestas para Reconstruir la Patria Milagro"</h3>
+      <ul style="padding-left:20px;font-size:0.9rem;">
+        <li><strong>Salvar la Patria Milagro</strong> — 4 amenazas: autoritarismo, violencia, corrupción, narcotráfico</li>
+        <li><strong>Patriotismo Constitucional</strong> — No a constituyente, sí a la de 1991, familia como núcleo</li>
+        <li><strong>Seguridad</strong> — Fumigar 330.000 has de coca, fin de negociaciones, porte de armas</li>
+        <li><strong>Anticorrupción</strong> — Bloque de Búsqueda anticorrupción, blockchain en contratación</li>
+        <li><strong>Salud</strong> — Plan de choque $10 billones, paciente en el centro</li>
+        <li><strong>Economía</strong> — Crecimiento 7%, reducir Estado en 1/4, desregulación total</li>
+        <li><strong>Campo</strong> — 2 millones de nuevas has, "Matto Grosso colombiano" en altillanura</li>
+        <li><strong>Educación</strong> — Universidad Virtual en Casa, ciclos cortos IA y robótica</li>
+        <li><strong>Mujeres</strong> — Reducir 30% violencia, 40% feminicidios</li>
+        <li><strong>Cultura</strong> — Industria audiovisual, "Pase mi Cultura" bono joven</li>
+        <li><strong>Bienestar Animal</strong> — Esterilización masiva, marco legal antimaltrato</li>
+      </ul>
+    </div>
+    <div class="card-cepeda">
+      <h3>🌿 "El Poder de la Verdad — 4 Revoluciones"</h3>
+      <ul style="padding-left:20px;font-size:0.9rem;">
+        <li><strong>Revolución Ética</strong> — Reconstruir la moral pública, tolerancia cero corrupción</li>
+        <li><strong>Revolución Social</strong> — Superar pobreza, garantía universal de derechos</li>
+        <li><strong>Revolución Agraria</strong> — Transformar tenencia de tierra, agua como derecho, soberanía alimentaria</li>
+        <li><strong>Revolución Territorial</strong> — Descentralización, ecosistemas, Amazonía como prioridad</li>
+        <li><strong>Revolución Política</strong> — Participación ciudadana, "mandar obedeciendo"</li>
+        <li><strong>Sist. Nac. Anticorrupción</strong> — Persecución de macrorredes de corrupción</li>
+        <li><strong>Seguridad Humana</strong> — Paz con justicia social, protección de líderes</li>
+        <li><strong>Víctimas y Paz</strong> — Profundizar Acuerdo de Paz, UP nunca más</li>
+        <li><strong>Salud Universal</strong> — Sistema público, atención primaria, profundizar reformas</li>
+        <li><strong>Justicia Ambiental</strong> — Colombia potencia mundial de la vida</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATOS CLAVE ===== -->
+<section id="datos-clave">
+  <h2>📊 Datos Clave en Números</h2>
+  <div class="split">
+    <div class="card-abelardo">
+      <h3>🐯 Abelardo de la Espriella</h3>
+      <div class="stat-row">
+        <div class="stat-card"><div class="num red">0</div><div class="label">Cargos públicos</div></div>
+        <div class="stat-card"><div class="num red">62%</div><div class="label">Firmas inválidas</div></div>
+        <div class="stat-card"><div class="num red">3.1M</div><div class="label">Firmas rechazadas</div></div>
+        <div class="stat-card"><div class="num red">$5.000M</div><div class="label">Denuncia DMG (COP)</div></div>
+        <div class="stat-card"><div class="num red">200K</div><div class="label">Estafados por DMG</div></div>
+        <div class="stat-card"><div class="num red">330K</div><div class="label">Has de coca a fumigar</div></div>
+        <div class="stat-card"><div class="num red">7%</div><div class="label">Crecimiento meta</div></div>
+        <div class="stat-card"><div class="num red">$70B</div><div class="label">Ajuste fiscal (COP)</div></div>
+      </div>
+    </div>
+    <div class="card-cepeda">
+      <h3>🌿 Iván Cepeda Castro</h3>
+      <div class="stat-row">
+        <div class="stat-card"><div class="num green">12</div><div class="label">Años en el Congreso</div></div>
+        <div class="stat-card"><div class="num green">5.000+</div><div class="label">Militantes UP asesinados</div></div>
+        <div class="stat-card"><div class="num green">1994</div><div class="label">Asesinato de su padre</div></div>
+        <div class="stat-card"><div class="num green">1965</div><div class="label">Primer exilio (3 años)</div></div>
+        <div class="stat-card"><div class="num green">3</div><div class="label">Países de exilio</div></div>
+        <div class="stat-card"><div class="num green">12</div><div class="label">Años condena Uribe (1ra)</div></div>
+        <div class="stat-card"><div class="num green">21MB</div><div class="label">Plan gobierno (PDF)</div></div>
+        <div class="stat-card"><div class="num green">4</div><div class="label">Revoluciones propuestas</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABELARDO DOSSIER ===== -->
+<section id="abelardo-dossier">
+  <h2>📁 Dossier Completo — Abelardo de la Espriella <span class="sub">Toda la información, sin filtros</span></h2>
+
+  <div class="card-abelardo">
+
+    <!-- DMG -->
+    <div class="controversy">
+      <h4>💰 DMG — La Pirámide Financiera</h4>
+      <p><strong>David Murcia Guzmán</strong> creó DMG, la captadora ilegal de dinero más grande de Colombia. Estafó a más de <strong>200.000 colombianos</strong> ofreciendo rendimientos de hasta 200%. Abelardo fue su <strong>abogado defensor</strong> desde 2008.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Detalles del caso DMG <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Murcia pasó de jefe de comunicaciones de un pueblo en Putumayo a uno de los hombres más ricos del país en 3 años</li>
+            <li>En 2008 estalló el escándalo de las pirámides; Murcia huyó a Panamá</li>
+            <li>Abelardo lo defendió; interceptaciones telefónicas revelan que Abelardo presuntamente <strong>solicitó dinero</strong> a miembros de DMG</li>
+            <li><strong>En 2026, el propio David Murcia denunció a Abelardo</strong> por no devolverle <strong>$5.000 millones</strong> que, según Murcia, Abelardo le "timó" cuando era su abogado</li>
+            <li>Murcia presentó queja disciplinaria contra Abelardo ante la Comisión de Disciplina Judicial</li>
+            <li>Abelardo también fue abogado de <strong>Alex Saab</strong> (testaferro de Nicolás Maduro, Venezuela) — dinero de Saab llegó a cuentas de Abelardo, según investigación de El País</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIRMAS FALSAS -->
+    <div class="controversy">
+      <h4>📝 62% de Firmas Inválidas — Fraude Electoral</h4>
+      <p>La Registraduría Nacional invalidó el <strong>62%</strong> de las firmas presentadas por Abelardo para inscribir su candidatura: <strong>3.1 millones de firmas</strong> estaban presuntamente falsificadas.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 El escándalo de las firmas <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Revelado por la periodista Cecilia Orozco en febrero 2026</li>
+            <li>Datos ilegibles, duplicados y firmas de personas fallecidas</li>
+            <li>La Registraduría dijo que las "inconsistencias" no constituían necesariamente fraude, pero la cifra contrasta con el discurso del candidato</li>
+            <li>El candidato defendió la fortaleza del respaldo ciudadano, pero los datos oficiales lo contradicen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MALTRATO ANIMAL -->
+    <div class="controversy">
+      <h4>🐱 Maltrato Animal Confesado en TV</h4>
+      <p>En 2014, en el programa <strong>The Suso's Show</strong> (Caracol TV), Abelardo confesó entre risas que de niño <strong>amarraba gatos a petardos voladores</strong> para verlos estallar. Dijo: <em>"Era un niño travieso… era terrible, pero me divertía"</em>.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Reacciones y contradicciones <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>El fragmento se viralizó en plena campaña 2026 desatando <strong>indignación masiva</strong></li>
+            <li>El caricaturista <strong>Matador</strong> lo incendió en X: <em>"Antes de votar por un 'Tigre', pregúntese qué clase de hombre se ríe contando que hizo sufrir a un animal indefenso"</em></li>
+            <li>La senadora <strong>Esmeralda Hernández</strong> (Pacto Histórico) lo llamó "maltratador" y "farsante"</li>
+            <li><strong>Contradicción flagrante:</strong> Abelardo incluyó el <strong>"Bienestar Animal"</strong> como uno de los 13 pilares de su plan de gobierno, prometiendo esterilización masiva y erradicar el maltrato</li>
+            <li>Hernández señaló que Abelardo demandó a Petro cuando intentó prohibir las corridas de toros</li>
+            <li>También ha admitido haber sido <strong>cazador</strong> en el pasado</li>
+            <li>Las 2 Orillas tituló: <em>"De ponerle pólvora a gatos a querer gobernar con terror, el peligroso perfil de Abelardo"</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONVERSIÓN CATOLICISMO -->
+    <div class="controversy" style="border-left-color:#ffd700;">
+      <h4 style="color:#ffd700;">⛪ Conversión del Ateísmo al Catolicismo</h4>
+      <p>Abelardo fue <strong>ateo declarado</strong> durante la mayor parte de su vida. En 2021, tras la muerte de su tía Beatrice (figura cercana, mujer profundamente devota), comenzó un proceso de conversión.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 La historia completa <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>Lo que decía antes (como ateo):</strong> "Suponiendo que Dios exista, creo que es responsable, por acción u omisión, de todo lo malo que ha pasado. Podría alegar un eximente para el diablo: Dios lo echó del paraíso, lo persiguieron, es mucho más sencillo justificar la conducta del diablo que la de Dios"</li>
+            <li><strong>El detonante:</strong> Muerte de su tía Beatrice → empezó a estudiar la Biblia</li>
+            <li><strong>Momento clave:</strong> Visita a la <strong>Basílica del Señor de los Milagros</strong> en Buga — frente a la imagen original (expuesta cada 6 años), rompió a llorar inconteniblemente</li>
+            <li><strong>Su frase:</strong> "La inteligencia viene del hombre, pero la sabiduría viene de Dios"</li>
+            <li><strong>Queja:</strong> "A mí es el único tipo que se le ha negado la conversión. Increíble que quienes se dicen cristianos le nieguen a alguien que ha tenido una transformación"</li>
+            <li><strong>Críticas:</strong> Su conversión es vista por muchos como <strong>oportunismo político</strong> para atraer el voto cristiano, especialmente considerando su pasado ateo y hedonista (jet privado, más de 20 lociones, vinos de $10.000 USD, ropa de Italia)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIFESTYLE -->
+    <div class="controversy" style="border-left-color:#ffd700;">
+      <h4 style="color:#ffd700;">💎 Estilo de Vida — Contradicciones con el Discurso</h4>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Lujo y ostentación <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Usa <strong>mocasines Louis Vuitton</strong></li>
+            <li>Tiene más de <strong>20 lociones</strong> para distintas horas del día</li>
+            <li>Botellas de alcohol que cuestan más de <strong>$10.000 USD</strong></li>
+            <li>Viaja en <strong>jet privado</strong></li>
+            <li>Viaja una vez al año a comprar ropa a <strong>Italia</strong></li>
+            <li>Su esposa dijo: "Si perdemos, nos volvemos a Italia o EE.UU." (donde tienen ciudadanía)</li>
+            <li><strong>Contradicción:</strong> Se presenta como la voz de "los nunca" (los invisibles, los abandonados), pero tiene triple nacionalidad, jets privados y una vida de lujo extremo</li>
+            <li>El País lo describió como: <em>"El abogado del diablo que quiere ser presidente"</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- POSICIÓN INTERNACIONAL -->
+    <div class="controversy" style="border-left-color:#ff6600;">
+      <h4 style="color:#ff6600;">🌍 Posición Internacional Extrema</h4>
+      <ul style="padding-left:20px;font-size:0.9rem;">
+        <li>Sacar a Colombia de la <strong>Corte IDH</strong> (Corte Interamericana de Derechos Humanos)</li>
+        <li>Sacar a Colombia de las <strong>Naciones Unidas</strong></li>
+        <li>Reanudar relaciones con <strong>Israel</strong> (rotas por Petro)</li>
+        <li>Restaurar el <strong>porte de armas</strong> para ciudadanos</li>
+        <li>Terminar los procesos de paz con grupos armados</li>
+        <li>Alineamiento con líderes de ultraderecha global: <strong>Trump, Milei, Bukele</strong></li>
+      </ul>
+    </div>
+
+    <!-- RELACIÓN CON MANCUSO -->
+    <div class="controversy">
+      <h4>🔗 Vínculos con el Paramilitarismo</h4>
+      <p>El exjefe paramilitar <strong>Salvatore Mancuso</strong> dijo en entrevista: <em>"Conozco a Abelardo desde que somos muchachitos"</em>. Estudiaron en el mismo colegio y frecuentaban el mismo círculo social de la clase alta de Montería, Córdoba. Mancuso es 10 años mayor. <strong>Álvaro Uribe</strong> es amigo cercano del padre de Abelardo.</p>
+    </div>
+
+    <!-- ADOPCIÓN LGBT - CONTRADICCIÓN -->
+    <div class="controversy">
+      <h4>🏳️‍🌈 Adopción Homoparental — El Giro de 180°</h4>
+      <p>En 2016 apoyaba la adopción por parejas del mismo sexo. En 2026 dice que <strong>"los niños son sagrados"</strong> y los sacaría de esa ecuación. Un giro completo que sus críticos señalan como <strong>oportunismo electoral</strong> para atraer el voto conservador.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Lo que dijo antes vs después <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>2016 (audiencia pública, referendo adopción):</strong> "En lo personal, prefiero a un niño que viva y crezca en un hogar integrado por homosexuales a que lo haga viviendo en una calle. No creo que su razonamiento esté guiado por homofobia"</li>
+            <li><strong>2026 (campaña presidencial):</strong> "Si de mí dependiera, no lo haría. Yo creo que a los niños hay que sacarlos de esta ecuación. Yo respeto las inclinaciones sexuales de todo el mundo, pero los niños son sagrados"</li>
+            <li>También se ha manifestado <strong>en contra del aborto</strong>, prometiendo "rescatar moralmente a la nación"</li>
+            <li>Defiende la <strong>familia tradicional</strong> como núcleo de la sociedad según su plan de gobierno</li>
+            <li><strong>Críticas:</strong> Sus opositores dicen que cambió su posición para alinearse con el voto cristiano conservador que necesita para ganar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FÓRMULA VICEPRESIDENCIAL -->
+    <div class="controversy" style="border-left-color:#ff6600;">
+      <h4 style="color:#ff6600;">🧑‍⚖️ Fórmula Vicepresidencial: José Manuel Restrepo</h4>
+      <p>El exministro de Hacienda de Iván Duque, <strong>José Manuel Restrepo</strong>, economista y académico, fue anunciado como su fórmula vicepresidencial en marzo de 2026. Restrepo es visto como el <strong>componente técnico</strong> de la campaña, equilibrando la retórica explosiva de Abelardo con un perfil más mesurado y de establishment.</p>
+      <ul style="padding-left:20px;font-size:0.9rem;margin-top:10px;">
+        <li>Restrepo fue Ministro de Hacienda (2021-2022) y Ministro de Comercio (2018-2021) de Duque</li>
+        <li>Rector de la Universidad del Rosario</li>
+        <li>Su inclusión busca dar <strong>confianza a los mercados</strong> y al sector empresarial</li>
+        <li>Críticos señalan que es el <strong>"freno técnico"</strong> a las ideas más radicales de Abelardo</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CEPEDA DOSSIER ===== -->
+<section id="cepeda-dossier">
+  <h2>📁 Dossier Completo — Iván Cepeda Castro <span class="sub">Toda la información, sin filtros</span></h2>
+
+  <div class="card-cepeda">
+
+    <!-- UP / COMUNISMO -->
+    <div class="controversy cepeda">
+      <h4>☭ Herencia Comunista — La Unión Patriótica y el Partido Comunista</h4>
+      <p>Iván Cepeda <strong>nació y se crió en el comunismo colombiano</strong>. Sus padres, Manuel Cepeda y Yira Castro, eran <strong>militantes del Partido Comunista Colombiano (PCC)</strong> y de la Unión Patriótica (UP). Su padre era miembro del Comité Central del PCC. Él mismo lo ha reconocido: <em>"Nací en política en el Partido Comunista"</em>.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 UP: El Brazo Político de las FARC <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>La <strong>Unión Patriótica (UP)</strong> no fue un partido de oposición convencional. Fue <strong>creada en 1985</strong> conjuntamente por el <strong>Partido Comunista Colombiano y las FARC</strong> como su brazo político electoral, resultado de los Acuerdos de La Uribe con el gobierno de Belisario Betancur</li>
+            <li>Manuel Cepeda Vargas (<strong>padre de Iván</strong>) fue senador por la UP. Asesinado el <strong>9 de agosto de 1994</strong> en la operación "Golpe de Gracia" — un tiro certero a través de la ventana de su auto</li>
+            <li><strong>Iván Cepeda encontró a su padre asesinado</strong> a los 32 años. Dio una entrevista MINUTOS después, pidiendo el cese de la violencia contra la oposición — con una calma que muchos no podían creer</li>
+            <li>Más de <strong>5.000 militantes de la UP fueron asesinados</strong> en lo que se conoce como el <strong>Genocidio de la Unión Patriótica</strong></li>
+            <li>La Corte IDH condenó al Estado colombiano en 2010 por el asesinato de Manuel Cepeda</li>
+            <li><strong>Yira Castro</strong> (madre de Iván), concejala de Bogotá: sostenía que <em>"el marxismo-leninismo es la ciencia que muestra el verdadero camino hacia la liberación femenina"</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FARC -->
+    <div class="controversy cepeda">
+      <h4>🔗 Relación con las FARC — "No soy de las FARC, pero..."</h4>
+      <p>Las 2 Orillas publicó un análisis incisivo: <em>"Iván Cepeda no es de las FARC, pero camina como pato, grazna como pato y se mueve como pato de las FARC"</em>.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Vínculos documentados <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>Computador de Raúl Reyes:</strong> Iván Cepeda aparece en los archivos del comandante de las FARC como <strong>"compañero"</strong> al que había que "secundar"</li>
+            <li><strong>Defensa de Iván Márquez y Jesús Santrich:</strong> Cepeda asumió la tesis del "entrampamiento" para negar las actividades de narcotráfico de estos ex-FARC que se burlaban cínicamente con el "Quizás, quizás, quizás"</li>
+            <li><strong>Las FARC lo consideran suyo:</strong> Los excomandantes de las FARC que hoy tienen curul en el Congreso (Pablo Catatumbo, Carlos Antonio Lozada, etc.) lo consideran un héroe</li>
+            <li>Es el candidato que <strong>más confianza le genera a las FARC</strong> en cualquiera de sus versiones (Segunda Marquetalia incluida)</li>
+            <li><strong>Jacobo Arenas</strong> (jefe ideológico de las FARC, miembro del PCC) fue compañero de militancia de Manuel Cepeda</li>
+            <li>Cepeda fue <strong>facilitador del proceso de paz con las FARC</strong> (2012-2016), presidente de la Comisión de Paz del Senado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXILIO -->
+    <div class="controversy cepeda" style="border-left-color:#8888ff;">
+      <h4 style="color:#8888ff;">🌍 Formación en el Bloque Soviético</h4>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Exilio, Cuba, Checoslovaquia y Bulgaria <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>Primer exilio (1965):</strong> A los 3 años, sus padres huyeron a <strong>Cuba</strong> y luego a <strong>Praga (Checoslovaquia)</strong></li>
+            <li>Vivió la <strong>Primavera de Praga</strong> (levantamiento popular contra el socialismo real)</li>
+            <li>Estudió filosofía en la <strong>Universidad de Sofía, Bulgaria</strong> (país del bloque soviético)</li>
+            <li>Fue testigo de la <strong>dictadura</strong> bajo regímenes comunistas: "La comida de los líderes era traída descontaminada del extranjero mientras el resto soportábamos las consecuencias"</li>
+            <li>Mantuvo contacto con las <strong>Juventudes Comunistas (JUCO)</strong> desde los 13 años</li>
+            <li>Cepeda dice que esta experiencia lo <strong>alejó de los extremos</strong> y lo llevó a la izquierda democrática</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO URIBE -->
+    <div class="controversy cepeda" style="border-left-color:#ff8800;">
+      <h4 style="color:#ff8800;">⚔️ El Caso Uribe — Vendetta Personal o Lucha Anticorrupción?</h4>
+      <p>El caso más polarizador de Colombia. Cepeda investigó el paramilitarismo en Antioquia. Entrevistó a <strong>Juan Guillermo Monsalve</strong>, quien vinculó a los hermanos Uribe con la fundación del Bloque Metro de las AUC. Uribe lo demandó. El caso dio un vuelco y terminó <strong>investigando a Uribe</strong>.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Cronología del caso <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>2014:</strong> Cepeda presenta debate en el Congreso. Uribe se retira furioso y lo demanda por manipulación de testigos</li>
+            <li><strong>2018:</strong> Corte Suprema se inhibe contra Cepeda y <strong>ABRE INVESTIGACIÓN CONTRA URIBE</strong> por soborno a testigos y fraude procesal</li>
+            <li><strong>2020:</strong> Detención domiciliaria de Uribe (2 meses) — hecho histórico, primera vez que un expresidente es detenido por orden judicial</li>
+            <li><strong>Julio 2025:</strong> Tribunal Superior de Bogotá <strong>CONDENA</strong> a Uribe en primera instancia a 12 años de prisión</li>
+            <li><strong>Octubre 2025:</strong> Tribunal Superior de Bogotá (Sala Penal) <strong>ABSUELVE</strong> a Uribe en segunda instancia, revocando la condena</li>
+            <li><strong>2026:</strong> Cepeda y la Fiscalía <strong>anuncian recurso de casación</strong> ante la Corte Suprema. La decisión final está en manos de la Corte.</li>
+            <li>El caso es <strong>profundamente polarizador</strong>: para unos es un ejemplo de justicia contra el paramilitarismo; para otros, una persecución política disfrazada de lucha anticorrupción</li>
+            <li><strong>Críticas a Cepeda:</strong> Sus opositores dicen que ha convertido su <strong>trauma familiar</strong> (el asesinato de su padre y el genocidio de la UP) en una <strong>cacería personal contra Uribe</strong>, usando el poder del Estado para perseguir a su enemigo político</li>
+            <li>Uribe lo acusó de "farcpolítica" usando los <strong>computadores de Raúl Reyes</strong>, donde Cepeda aparece como "compañero"</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="embed-container" style="margin-top:15px;">
+        <iframe src="https://www.youtube.com/embed/bdW87EOpd88" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <p style="font-size:0.75rem;color:#888;margin-top:4px;">📺 Iván Cepeda: "Uribe terminó confesando hechos graves en juicio" — Noticiero</p>
+    </div>
+
+    <!-- Asesinato de su padre (detalle multimedia) -->
+    <div class="controversy cepeda" style="border-left-color:#ff4444;">
+      <h4 style="color:#ff4444;">💔 El Día que Encontró a su Padre Asesinado</h4>
+      <p><strong>9 de agosto de 1994, 9:05 a.m.</strong> — Manuel Cepeda Vargas salía de su casa en Kennedy hacia el Congreso. Dos sargentos activos del Ejército Nacional lo interceptaron en la Av. de Las Américas con carrera 74 y le dispararon tres veces. Un tiro certero a través de la ventana de su campero Montero Mitsubishi verde esmeralda.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 El testimonio de Iván Cepeda <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Iván viajaba <strong>cuadras atrás</strong> en un bus de servicio público rumbo a la Universidad Javeriana</li>
+            <li>Minutos antes había <strong>rechazado</strong> irse en el mismo vehículo con su padre</li>
+            <li>Vio la romería desde la distancia. Cuando el bus se aproximó, <strong>vio a su padre desgonzado en el puesto delantero</strong> con tres balazos</li>
+            <li>Los periodistas llegaron al sitio. Uno vio al hijo del mártir al lado del campero y le pidió una declaración</li>
+            <li><strong>Sus palabras, con la voz quebrada:</strong> "Acabo de ver esta cosa tan terrible, le pido al gobierno del presidente Samper que pare esta ofensiva contra los dirigentes de izquierda. Que no quede impune"</li>
+            <li>Los autores materiales: <strong>sargentos del Ejército Justo Gil Zúñiga Labrador y Hernando Medina Camacho</strong>, condenados por la Corte Suprema en 2021</li>
+            <li>La operación se llamó <strong>"Golpe de Gracia"</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="embed-container" style="margin-top:15px;">
+        <iframe src="https://www.youtube.com/embed/LkK1wag8-E4" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <p style="font-size:0.75rem;color:#888;margin-top:4px;">📺 Conmemoración del asesinato del senador Manuel Cepeda — @IvanCepedaCastro</p>
+    </div>
+
+    <!-- MADURO / VENEZUELA -->
+    <div class="controversy cepeda" style="border-left-color:#ff6600;">
+      <h4 style="color:#ff6600;">🇻🇪 Relación con Nicolás Maduro y Venezuela</h4>
+      <p>En 2013, tras la muerte de Hugo Chávez, Cepeda publicó un mensaje apoyando a <strong>Nicolás Maduro</strong> como sucesor. Ese mensaje ha sido usado por sus opositores para vincularlo con la dictadura venezolana.</p>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 La controversia Venezuela <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li><strong>Marzo 2013:</strong> Cepeda respalda a Maduro como sucesor de Chávez tras la muerte del líder venezolano</li>
+            <li><strong>2026:</strong> El senador Jota Pe Hernández desempolva el tuit y llama a Cepeda "boquisucio y admirador de Chávez, Fidel y Maduro"</li>
+            <li>Cepeda ha sido <strong>crítico de la intervención militar de EE.UU.</strong> en Venezuela y el Caribe</li>
+            <li>Advertió que una intervención militar estadounidense podría tener consecuencias desastrosas para la región</li>
+            <li><strong>Críticas:</strong> Sus opositores dicen que tiene una <strong>cercanía peligrosa</strong> con regímenes autoritarios de izquierda</li>
+            <li><strong>Su defensa:</strong> Cepeda se ha distanciado del socialismo real y defiende una izquierda democrática, pero mantiene una postura de <strong>no intervención</strong> y solidaridad regional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSFORMACIÓN IDEOLÓGICA -->
+    <div class="controversy cepeda" style="border-left-color:#4ecca3;">
+      <h4 style="color:#4ecca3;">🔄 Transformación: del Comunismo a la Izquierda Democrática</h4>
+      <div class="accordion">
+        <button class="accordion-btn">🔍 Su propia versión <span class="arrow">▼</span></button>
+        <div class="accordion-content">
+          <ul>
+            <li>"Nací en política en el Partido Comunista, pero quien piense que esas etiquetas significan hoy lo mismo que en los años sesenta o setenta, vive fuera de época" — Iván Cepeda, Revista Bocas, 2026</li>
+            <li>Vivió en sus propias carnes las <strong>contradicciones del socialismo real</strong></li>
+            <li>"Una persona con un poco de sentido común ya no mira la realidad con esos esquemas"</li>
+            <li>Su rechazo a la violencia: "Entendí rápido que lo mío nunca iba a ser eso, por un rechazo innato a la violencia"</li>
+            <li><strong>Sus críticos dicen:</strong> Es un <strong>comunista reciclado</strong> que se ha moderado por conveniencia electoral. <em>"Lo que se hereda no se hurta"</em> — Las 2 Orillas</li>
+            <li><strong>Sus defensores dicen:</strong> Es un ejemplo de transformación genuina, una izquierda democrática que aprendió de los errores del socialismo real</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== COMPARATIVA ===== -->
+<section id="comparativa">
+  <h2>⚖️ Comparativa Extremo a Extremo</h2>
+
+  <div class="cmp-section">
+    <h3>🔐 Seguridad</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Mano dura total</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>"Con criminales no hay negociación"</li>
+          <li>Fumigación 330.000 has</li>
+          <li>Porte de armas para ciudadanos</li>
+          <li>Fin del Acuerdo de Paz</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Seguridad Humana</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Seguridad = derechos (salud, educación, trabajo)</li>
+          <li>Desmilitarización civil</li>
+          <li>Paz con justicia social</li>
+          <li>Protección líderes sociales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-section">
+    <h3>💰 Economía</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Shock de libre mercado</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Crecimiento 7% anual</li>
+          <li>Reducir Estado en 1/4</li>
+          <li>Desregulación total</li>
+          <li>Eliminar ministerios</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Estado garante de derechos</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Superar pobreza como meta</li>
+          <li>Fortalecer Estado social</li>
+          <li>Protección sectores vulnerables</li>
+          <li>Austeridad republicana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-section">
+    <h3>🌍 Política Exterior</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Aislamiento + ultraderecha</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Salir de Corte IDH y ONU</li>
+          <li>Reanudar con Israel</li>
+          <li>Aliado de ultraderecha global</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Autonomía + multilateralismo</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Política exterior autónoma</li>
+          <li>Solidaridad con A.Latina</li>
+          <li>Defensa migrantes colombianos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-section">
+    <h3>🏛️ Modelo de Estado</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Estado mínimo</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Estado reducido en 1/4</li>
+          <li>Privatización de servicios</li>
+          <li>Desregulación como dogma</li>
+          <li>Eliminar ministerios</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Estado social de derecho</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Continuidad reformas Petro</li>
+          <li>Garantía derechos universales</li>
+          <li>Participación ciudadana</li>
+          <li>Austeridad sin desmantelar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-section">
+    <h3>⚖️ Justicia y Derechos Humanos</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Orden por encima de derechos</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Salir de Corte IDH</li>
+          <li>Extinción de dominio exprés</li>
+          <li>Sin garantías procesales para criminales</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Verdad + Reparación</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Derechos humanos como eje</li>
+          <li>Víctimas en el centro</li>
+          <li>Justicia transicional</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-section">
+    <h3>🏳️‍🌈 Valores Sociales / Religión</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Conservadurismo radical</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>En contra del aborto</li>
+          <li>En contra adopción homoparental</li>
+          <li>Familia tradicional como núcleo</li>
+          <li>"Rescate moral de la nación"</li>
+          <li>Católico converso (ex-ateo)</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Progresismo / Inclusión</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Derechos sexuales y reproductivos</li>
+          <li>Matrimonio igualitario</li>
+          <li>Mujeres protagonistas</li>
+          <li>Lucha antirracista estructural</li>
+          <li>Estado laico</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-section">
+    <h3>🌱 Medio Ambiente vs Explotación</h3>
+    <div class="cmp-grid">
+      <div class="cmp-box abel">
+        <strong>Explotación intensiva</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Reactivar exploración petróleo y gas</li>
+          <li>Fracking permitido</li>
+          <li>Minería de oro, cobre, tierras raras</li>
+          <li>Expandir frontera agrícola 2M has</li>
+        </ul>
+      </div>
+      <div class="vs">⚡</div>
+      <div class="cmp-box cep">
+        <strong>Potencia mundial de la vida</strong>
+        <ul style="padding-left:16px;font-size:0.85rem;margin-top:8px;">
+          <li>Transición energética justa</li>
+          <li>Proteger Amazonía y páramos</li>
+          <li>Justicia ambiental</li>
+          <li>Bioeconomía</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== VEREDICTO ===== -->
+<div class="verdict-box">
+  <h2>🗳️ El Veredicto</h2>
+  <p>Son <strong>dos modelos de país antagónicos</strong>, sin punto medio posible. <strong>Abelardo</strong> representa un shock de derecha radical: desmantelamiento del Estado, mano dura, alineamiento con la ultraderecha global (Trump, Milei, Bukele). Sus talones de Aquiles: DMG, firmas falsas, maltrato animal confesado, oportunismo religioso. <strong>Cepeda</strong> representa la profundización del cambio de Petro: 4 revoluciones democráticas, verdad, derechos humanos, paz. Sus talones de Aquiles: herencia comunista, vínculos con las FARC, el Caso Uribe como posible vendetta.</p>
+  <p style="margin-top:15px;font-size:0.85rem;color:#666;">La elección no es entre dos personas. Es entre dos concepciones opuestas de Colombia.</p>
+</div>
+
+<!-- ===== MULTIMEDIA ===== -->
+<section id="multimedia">
+  <h2>🎬 Multimedia — Videos, Audio y Cobertura</h2>
+
+  <h3 style="color:#e94560;font-size:1.1rem;margin-bottom:15px;">🐯 Abelardo de la Espriella</h3>
+  <div class="video-grid" style="margin-bottom:30px;">
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/sxc_1SYJDvk" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>🎥 Conversión: ateo → católico</h4>
+      <p style="font-size:0.75rem;color:#888;">EL TIEMPO — "Abelardo confiesa por qué dejó de ser ateo"</p>
+    </div>
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/VljuIm8p_SM" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>📊 Voto internacional</h4>
+      <p style="font-size:0.75rem;color:#888;">Abelardo lideró el voto internacional, dejó atrás a Cepeda</p>
+    </div>
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/T6N4S8dc58s" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>💰 DMG — "Habla Abelardo, abogado de DMG"</h4>
+      <p style="font-size:0.75rem;color:#888;">Entrevista sobre su rol defendiendo la pirámide financiera</p>
+    </div>
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/L_jh-gnvT6g" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>🐱 Maltrato animal confesado</h4>
+      <p style="font-size:0.75rem;color:#888;">"Abelardo asesino de gatos" — Suso's Show 2014</p>
+    </div>
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/7QOmFbfgEx4" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>🍽️ Abelardo fuera del set</h4>
+      <p style="font-size:0.75rem;color:#888;">Familia, amigos y comida típica: los gustos de Abelardo</p>
+    </div>
+    <div class="video-card">
+      <div style="background:#1a1a1a;border-radius:8px;padding:15px;text-align:center;">
+        <h4>🎬 Adopción LGBT — El Giro</h4>
+        <p style="font-size:0.75rem;color:#888;margin:8px 0;">JWPlayer: posición en 2016 vs 2026</p>
+        <button class="btn-read btn-abel" onclick="openModal('jwplayer-modal')" style="padding:8px 20px;border:none;cursor:pointer;">▶️ Ver contenido en página →</button>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="color:#4ecca3;font-size:1.1rem;margin-bottom:15px;">🌿 Iván Cepeda Castro</h3>
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/bdW87EOpd88" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>⚔️ "Uribe confesó hechos graves"</h4>
+      <p style="font-size:0.75rem;color:#888;">Cepeda en entrevista sobre el Caso Uribe — Noticiero</p>
+    </div>
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/-Kb3gKH0Etw" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>🔍 "¿Quién es Cepeda según Uribe?"</h4>
+      <p style="font-size:0.75rem;color:#888;">La visión del expresidente sobre Cepeda</p>
+    </div>
+    <div class="video-card">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/LkK1wag8-E4" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <h4>💔 Asesinato de Manuel Cepeda</h4>
+      <p style="font-size:0.75rem;color:#888;">Conmemoración — @IvanCepedaCastro</p>
+    </div>
+    <div class="video-card">
+      <div class="inline-article" onclick="openModal('infobae-ideologia')">
+        <div class="src">📰 Infobae · 2026</div>
+        <h4>"Nací en política en el Partido Comunista"</h4>
+        <p class="excerpt">Cepeda explica su transformación ideológica: del comunismo a la izquierda democrática</p>
+        <button class="btn-read btn-cep">Leer sin salir de la página →</button>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="inline-article" onclick="openModal('redmas-reportaje')">
+        <div class="src">📰 RED+ NOTICIAS · 2026</div>
+        <h4>El día que Iván encontró a su padre asesinado</h4>
+        <p class="excerpt">9 de agosto de 1994: Iván viajaba en un bus, cuadras atrás. Vio la romería. Su padre estaba desgonzado con tres balazos.</p>
+        <button class="btn-read btn-cep">Leer sin salir de la página →</button>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="inline-article" onclick="openModal('cnn-entrevista')">
+        <div class="src">🎬 CNN · Oct 2025</div>
+        <h4>Entrevista: EE.UU., Venezuela y la Paz</h4>
+        <p class="excerpt">Cepeda rechaza intervención militar estadounidense en el Caribe y defiende la paz total</p>
+        <button class="btn-read btn-cep">Leer sin salir de la página →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modales (lightbox) -->
+  <div class="modal-overlay" id="jwplayer-modal"><div class="modal-box">
+    <button class="modal-close" onclick="closeModal('jwplayer-modal')">✕</button>
+    <h3>🎬 Abelardo: Adopción LGBT — El Giro</h3>
+    <div class="modal-body">
+      <p>En 2016 apoyaba la adopción. Hoy dice "los niños son sagrados". Un giro completo que sus críticos señalan como oportunismo electoral.</p>
+      <div style="background:#111;padding:20px;border-radius:10px;text-align:center;margin:15px 0;">
+        <a href="https://cdn.jwplayer.com/previews/T1NEgpk1" target="_blank" class="btn-read btn-abel" style="padding:10px 25px;text-decoration:none;">▶️ Abrir preview JWPlayer</a>
+        <p style="font-size:0.8rem;color:#888;margin-top:10px;">(JWPlayer no permite incrustación directa, pero el preview está disponible)</p>
+      </div>
+      <a href="https://www.infobae.com/colombia/2026/01/27/desempolvan-video-de-abelardo-de-la-espriella-en-el-que-respalda-la-adopcion-por-parte-de-parejas-del-mismo-sexo-prefiero/" target="_blank" style="color:#4ecca3;font-size:0.85rem;">→ Artículo completo en Infobae</a>
+    </div>
+  </div></div>
+
+  <div class="modal-overlay" id="infobae-ideologia"><div class="modal-box">
+    <button class="modal-close" onclick="closeModal('infobae-ideologia')">✕</button>
+    <h3>📰 "Nací en política en el Partido Comunista"</h3>
+    <div class="modal-body">
+      <p><em>Infobae — 24 de abril de 2026 | Entrevista a Revista Bocas</em></p>
+      <hr style="border-color:#333;margin:12px 0;">
+      <blockquote style="border-left:3px solid #4ecca3;padding:10px 15px;margin:10px 0;background:#111;border-radius:0 8px 8px 0;">"Nací en política en el Partido Comunista, pero quien piense que esas etiquetas significan hoy lo mismo que en los años sesenta o setenta, vive fuera de época"</blockquote>
+      <p>Cepeda detalló su exilio en Cuba y Checoslovaquia, su paso por la Cortina de Hierro, y cómo la experiencia con el socialismo real lo llevó a rechazar los extremos.</p>
+      <blockquote style="border-left:3px solid #4ecca3;padding:10px 15px;margin:10px 0;background:#111;border-radius:0 8px 8px 0;">"La comida de los líderes era traída descontaminada del extranjero mientras el resto soportábamos las consecuencias" <span style="font-size:0.75rem;color:#888;">— sobre Chernóbil en Bulgaria</span></blockquote>
+      <a href="https://www.infobae.com/colombia/2026/04/24/ivan-cepeda-aclaro-cual-es-realmente-su-ideologia-naci-en-politica-en-el-partido-comunista/" target="_blank" class="btn-read btn-cep" style="display:inline-block;padding:8px 20px;margin-top:10px;">📖 Artículo original →</a>
+    </div>
+  </div></div>
+
+  <div class="modal-overlay" id="redmas-reportaje"><div class="modal-box">
+    <button class="modal-close" onclick="closeModal('redmas-reportaje')">✕</button>
+    <h3>💔 El día que Iván encontró a su padre asesinado</h3>
+    <div class="modal-body">
+      <p><em>RED+ NOTICIAS — 29 de mayo de 2026</em></p>
+      <hr style="border-color:#333;margin:12px 0;">
+      <p><strong>9 de agosto de 1994, 8:30 a.m.</strong> Dos sargentos del Ejército asesinan a Manuel Cepeda (senador UP) en la Av. de Las Américas. Operación <strong>"Golpe de Gracia"</strong>.</p>
+      <p>Iván viajaba <strong>cuadras atrás en un bus</strong>. Vio la romería. Su padre estaba desgonzado en el campero verde esmeralda.</p>
+      <blockquote style="border-left:3px solid #4ecca3;padding:10px 15px;margin:10px 0;background:#111;border-radius:0 8px 8px 0;">"Acabo de ver esta cosa tan terrible, le pido al gobierno de Samper que pare esta ofensiva contra los dirigentes de izquierda" <span style="font-size:0.75rem;color:#888;">— Iván Cepeda, minutos después</span></blockquote>
+      <a href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html" target="_blank" class="btn-read btn-cep" style="display:inline-block;padding:8px 20px;margin-top:10px;">📖 Reportaje completo →</a>
+    </div>
+  </div></div>
+
+  <div class="modal-overlay" id="cnn-entrevista"><div class="modal-box">
+    <button class="modal-close" onclick="closeModal('cnn-entrevista')">✕</button>
+    <h3>🎬 Cepeda en CNN: EE.UU., Venezuela y la Paz</h3>
+    <div class="modal-body">
+      <p><em>CNN en Español — 31 de octubre de 2025</em></p>
+      <hr style="border-color:#333;margin:12px 0;">
+      <p>Cepeda rechazó las acciones militares de EE.UU. en el Caribe y advirtió que una intervención tendría consecuencias desastrosas. Defiende política exterior autónoma, paz total con el ELN y un gran acuerdo nacional.</p>
+      <a href="https://cnnespanol.cnn.com/2025/10/31/colombia/ivan-cepeda-colombia-entrevista-conclusiones-orix" target="_blank" class="btn-read btn-cep" style="display:inline-block;padding:8px 20px;margin-top:10px;">🎬 Ver entrevista original →</a>
+    </div>
+  </div></div>
+
+</section>
+
+<!-- ===== CRONOLOGÍA ===== -->
+<section id="cronologia">
+  <h2>⏳ Líneas de Tiempo</h2>
+  <div class="split">
+    <div class="card-abelardo">
+      <h3>🐯 Abelardo — Cronología Clave</h3>
+      <div class="timeline tl-abelardo">
+        <div class="timeline-item"><span class="year">1978</span><p>Nace en Bogotá. Criado en Montería, Córdoba, clase alta ganadera.</p></div>
+        <div class="timeline-item"><span class="year">2008</span><p>Se convierte en <strong>abogado de David Murcia Guzmán (DMG)</strong>, la pirámide financiera más grande de Colombia. Las interceptaciones telefónicas lo vinculan con solicitudes de dinero.</p></div>
+        <div class="timeline-item"><span class="year">2012</span><p>Se publica biografía autorizada "Abelardo de la Espriella: El Abogado del Diablo" por Ángel Becassino. Abelardo se declara <strong>ateo</strong>.</p></div>
+        <div class="timeline-item"><span class="year">2014</span><p>Entrevista en <strong>The Suso's Show</strong>: confiesa entre risas haber quemado gatos con pólvora en su niñez.</p></div>
+        <div class="timeline-item"><span class="year">2016</span><p>En audiencia pública, apoya <strong>adopción por parejas del mismo sexo</strong>: "Prefiero un niño en hogar homosexual que en la calle".</p></div>
+        <div class="timeline-item"><span class="year">2021</span><p>Muerte de su tía Beatrice → <strong>conversión al catolicismo</strong>. Pasa de ateo a ferviente católico activista.</p></div>
+        <div class="timeline-item"><span class="year">2025</span><p>Lanza campaña presidencial con "Defensores de la Patria". Recoge firmas. <strong>Alex Saab</strong> es vinculado a sus cuentas.</p></div>
+        <div class="timeline-item"><span class="year">Feb 2026</span><p><strong>Escándalo 62% firmas inválidas.</strong> David Murcia lo denuncia por $5.000M. Se revela dinero de Alex Saab en sus cuentas.</p></div>
+        <div class="timeline-item"><span class="year">Mar 2026</span><p>Anuncia a <strong>José Manuel Restrepo</strong> como fórmula vicepresidencial.</p></div>
+        <div class="timeline-item"><span class="year">May 2026</span><p><strong>Pasa a segunda vuelta</strong> como el candidato de ultraderecha con mayor votación. Video de maltrato animal se viraliza.</p></div>
+      </div>
+    </div>
+    <div class="card-cepeda">
+      <h3>🌿 Iván Cepeda — Cronología Clave</h3>
+      <div class="timeline tl-cepeda">
+        <div class="timeline-item"><span class="year">1962</span><p>Nace en Bogotá en el seno de una familia <strong>comunista</strong>. Padres: Manuel Cepeda y Yira Castro, ambos militantes del PCC.</p></div>
+        <div class="timeline-item"><span class="year">1965</span><p><strong>Primer exilio</strong> (3 años): Cuba, luego Praga (Checoslovaquia). Vive la Primavera de Praga.</p></div>
+        <div class="timeline-item"><span class="year">1975-1987</span><p>Militante de las <strong>Juventudes Comunistas (JUCO)</strong>. Estudia filosofía en la Universidad de Sofía (Bulgaria).</p></div>
+        <div class="timeline-item"><span class="year">1987-1990</span><p>Militante de la <strong>Unión Patriótica (UP)</strong>, brazo político electoral de las FARC y el PCC.</p></div>
+        <div class="timeline-item"><span class="year">9-Ago-1994</span><p><strong>Asesinato de Manuel Cepeda</strong> (su padre). Iván lo encuentra. Da entrevista minutos después pidiendo paz. Operación "Golpe de Gracia".</p></div>
+        <div class="timeline-item"><span class="year">2010-2014</span><p>Representante a la Cámara por Bogotá.</p></div>
+        <div class="timeline-item"><span class="year">2012-2016</span><p><strong>Facilitador del proceso de paz</strong> con las FARC en La Habana.</p></div>
+        <div class="timeline-item"><span class="year">2013</span><p>Respaldó a <strong>Nicolás Maduro</strong> como sucesor de Chávez. Tuit usado en su contra en 2026.</p></div>
+        <div class="timeline-item"><span class="year">2014</span><p>Elegido Senador. Presenta debate contra Uribe por paramilitarismo. Uribe lo demanda.</p></div>
+        <div class="timeline-item"><span class="year">2018</span><p>Corte Suprema <strong>investiga a Uribe</strong> por soborno de testigos en el caso contra Cepeda.</p></div>
+        <div class="timeline-item"><span class="year">Jul 2025</span><p>Uribe <strong>condenado</strong> a 12 años en primera instancia.</p></div>
+        <div class="timeline-item"><span class="year">Oct 2025</span><p>Uribe <strong>absuelto</strong> en segunda instancia. Cepeda apela.</p></div>
+        <div class="timeline-item"><span class="year">May 2026</span><p><strong>Pasa a segunda vuelta</strong> como candidato del Pacto Histórico. Propone continuar las reformas de Petro.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FUENTES ===== -->
+<section id="fuentes">
+  <h2>📚 Fuentes Documentales</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div>
+      <h3 style="color:#e94560;font-size:1.1rem;margin-bottom:15px;">Sobre Abelardo</h3>
+      <ul style="padding-left:20px;font-size:0.85rem;">
+        <li><a class="source-link" href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-05-31/abelardo-de-la-espriella-abogado-del-diablo-que-quiere-ser-presidente-de-colombia.html">El País: "El abogado del diablo"</a></li>
+        <li><a class="source-link" href="https://www.pares.com.co/el-papel-que-jugo-abelardo-de-la-espriella-en-el-entramado-de-dmg/">PAres: DMG y Abelardo</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/02/13/interceptaciones-judiciales-refuerzan-senalamientos-sobre-presunta-manipulacion-legislativa-relacionada-con-dmg-y-abelardo-de-la-espriella/">Infobae: Interceptaciones DMG</a></li>
+        <li><a class="source-link" href="https://www.lapatria.com/nacional/creador-de-la-piramide-dmg-acusa-al-candidato-presidencial-abelardo-de-la-espriella-de">La Patria: Murcia denuncia a Abelardo</a></li>
+        <li><a class="source-link" href="https://www.radionacional.co/actualidad/abelardo-de-la-espriella-62-de-sus-firmas-serian-falsas-y-enfrenta-denuncia">Radio Nacional: 62% firmas falsas</a></li>
+        <li><a class="source-link" href="https://laveintitres.com/abelardo-de-la-espriella-es-criticado-por-confesar-maltrato-a-gatos-en-su-niez/">La Veintitrés: Maltrato animal</a></li>
+        <li><a class="source-link" href="https://www.las2orillas.co/de-ponerle-polvora-a-gatos-a-querer-gobernar-con-terror-el-peligroso-perfil-de-abelardo-de-la-espriella/">Las 2 Orillas: Perfil peligroso</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/02/11/abelardo-de-la-espriella-relato-su-paso-del-ateismo-a-la-fe-cristiana-tras-una-tragedia-familiar-que-parte-de-que-me-converti-no-entendiste/">Infobae: Conversión católica</a></li>
+        <li><a class="source-link" href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-05-24/el-dinero-de-alex-saab-que-llego-a-las-cuentas-de-abelardo-de-la-espriella.html">El País: Dinero de Alex Saab</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/01/27/desempolvan-video-de-abelardo-de-la-espriella-en-el-que-respalda-la-adopcion-por-parte-de-parejas-del-mismo-sexo-prefiero/">Infobae: Giro adopción LGBT</a></li>
+        <li><a class="source-link" href="https://www.elespectador.com/politica/elecciones-colombia-2026/propuestas-de-abelardo-de-la-espriella-este-es-su-plan-de-gobierno/">El Espectador: Plan de gobierno</a></li>
+        <li><a class="source-link" href="https://cambiocolombia.com/analisis-programa-gobierno-abelardo-espriella-propuestas-viabilidad-elecciones">Cambio: Análisis viabilidad</a></li>
+        <li><a class="source-link" href="https://www.elcolombiano.com/colombia/abelardo-formula-vicepresidencial-jose-manuel-restrepo-claves-DF34466665">El Colombiano: Fórmula Restrepo</a></li>
+        <li><a class="source-link" href="https://www.las2orillas.co/ivan-cepeda-lleva-sobre-sus-hombros-la-semilla-del-genocidio-a-la-union-patriotica/">Las 2 Orillas: Cepeda y UP</a></li>
+        <li><a class="source-link" href="https://www.youtube.com/watch?v=sxc_1SYJDvk">YT: Abelardo conversión católica (EL TIEMPO)</a></li>
+        <li><a class="source-link" href="https://cdn.jwplayer.com/previews/T1NEgpk1">JWPlayer: Abelardo adopción LGBT</a></li>
+        <li><a class="source-link" href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html">RED+: Cepeda encuentra a su padre</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:#4ecca3;font-size:1.1rem;margin-bottom:15px;">Sobre Cepeda</h3>
+      <ul style="padding-left:20px;font-size:0.85rem;">
+        <li><a class="source-link" href="https://www.las2orillas.co/ivan-cepeda-lleva-sobre-sus-hombros-la-semilla-del-genocidio-a-la-union-patriotica/">Las 2 Orillas: La semilla del genocidio UP</a></li>
+        <li><a class="source-link" href="https://www.las2orillas.co/la-herencia-comunista-de-cepeda-y-los-cuestionamientos-por-su-cercania-a-las-farc/">Las 2 Orillas: Herencia comunista y FARC</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/04/24/ivan-cepeda-aclaro-cual-es-realmente-su-ideologia-naci-en-politica-en-el-partido-comunista/">Infobae: "Nací en el Partido Comunista"</a></li>
+        <li><a class="source-link" href="https://redmas.com.co/politica/el-dia-que-ivan-cepeda-encontro-a-su-padre-asesinado-el-crimen-que-salpico-a-militares-y-paramilitares-en-los-anos-90-20260529-0022.html">Red+: El día que encontró a su padre asesinado</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2025/04/16/asi-fue-el-asesinato-de-manuel-cepeda-vargas-el-padre-del-senador-ivan-cepeda-gustavo-petro-anuncio-la-recaptura-del-exmilitar-condenado-por-el-crimen/">Infobae: Asesinato de Manuel Cepeda</a></li>
+        <li><a class="source-link" href="https://elexpediente.co/los-vinculos-de-manuel-cepeda-vargas-yira-castro-chadid-e-ivan-cepeda-con-las-farc-la-historia-que-el-candidato-del-pacto-no-cuenta/">El Expediente: Vínculos con FARC</a></li>
+        <li><a class="source-link" href="https://factual.afp.com/doc.afp.com.989N663">AFP Factual: Contexto genocidio UP</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2026/01/03/reviven-antiguo-mensaje-de-ivan-cepeda-sobre-nicolas-maduro-durante-la-sucesion-en-venezuela-tras-la-muerte-de-chavez-boquisucio/">Infobae: Cepeda y Maduro 2013</a></li>
+        <li><a class="source-link" href="https://www.elespectador.com/politica/elecciones-colombia-2026/consulta-pacto-historico-ivan-cepeda-habla-de-estados-unidos-daniel-quintero-uribe-y-sus-propuestas-noticias-hoy/">El Espectador: Entrevista Cepeda</a></li>
+        <li><a class="source-link" href="https://cnnespanol.cnn.com/2025/10/31/colombia/ivan-cepeda-colombia-entrevista-conclusiones-orix">CNN: Cepeda entrevista</a></li>
+        <li><a class="source-link" href="https://www.elcolombiano.com/colombia/entrevista-ivan-cepeda-ganador-consulta-pacto-historico-KH30402679">El Colombiano: Cepeda gana consulta</a></li>
+      </ul>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:30px;font-size:0.8rem;color:#555;">Todos los datos provienen de fuentes periodísticas verificables. Fecha de compilación: 1 de junio de 2026.</p>
+</section>
+
+<div class="footer">
+  🐉👾 Hecho por C — Datos recopilados del vault Obsidian de Planes de Gobierno + investigación web<br>
+  Proyecto: proyecto_planes_gobierno · obsidian-candidatos
+</div>
+
+<script>
+  // Accordion
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const content = this.nextElementSibling;
+      content.classList.toggle('open');
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // Highlight active nav
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section, .verdict-box');
+    const navLinks = document.querySelectorAll('.nav a');
+    let current = '';
+    sections.forEach(s => {
+      const top = s.offsetTop - 150;
+      if (window.scrollY >= top) current = s.id || 'veredicto';
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      if (current === 'veredicto' && a.getAttribute('href') === '#veredicto') a.classList.add('active');
+    });
+  });
+
+  // Modal / Lightbox
+  function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+  document.querySelectorAll('.modal-overlay').forEach(m => {
+    m.addEventListener('click', function(e) { if(e.target === this) { this.classList.remove('open'); document.body.style.overflow=''; } });
+  });
+  document.addEventListener('keydown', function(e) { if(e.key === 'Escape') { document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow=''; }); } });
+</script>
+
+</body>
+</html>
