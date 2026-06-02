@@ -5,17 +5,26 @@
     { "src": "*.html", "use": "@vercel/static" },
     { "src": "css/*", "use": "@vercel/static" },
     { "src": "js/*", "use": "@vercel/static" },
+    { "src": "pdfs/*", "use": "@vercel/static", "config": { "zeroConfig": true } },
     { "src": "refs/*", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
     { "src": "/css/(.*)", "dest": "/css/$1" },
     { "src": "/js/(.*)", "dest": "/js/$1" },
+    { "src": "/pdfs/(.*)", "dest": "/pdfs/$1" },
     { "src": "/refs/registry.json", "dest": "/refs/registry.json" },
-    { "src": "/pdfs/(.*)", "status": 404 },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/pdfs/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
     {
       "source": "/refs/registry.json",
       "headers": [
