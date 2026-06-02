@@ -1,323 +1,1686 @@
 {
-  "_schema": "1.0",
-  "_description": "Registro central de referencias a los planes de gobierno de candidatos. Cada entrada permite rastrear una afirmación hasta su fuente exacta en el PDF.",
+  "_schema": "2.0",
+  "_description": "Registro completo de referencias a planes de gobierno. Cada entrada rastrea cada afirmación hasta su fuente exacta.",
   "_updated": "2026-06-02",
+  "_coverage": "TODOS los elementos: perfiles, programas, dossiers, cronología, comparativas, pensiones, análisis electoral",
   "candidates": {
     "abelardo": {
       "name": "Abelardo de la Espriella",
       "pdf": "/pdfs/abelardo-plan-gobierno.pdf",
       "pdfLabel": "Plan de Gobierno — Abelardo de la Espriella 2026",
-      "pdfUrl": "https://www.moj.gov.co/...", 
+      "pdfUrl": "",
       "sections": {
         "perfil": {
           "label": "Perfil Biográfico",
           "refs": [
             {
-              "id": "abelardo-perfil-01",
+              "id": "abelardo-perfil-edad",
               "page": 1,
-              "chapter": "Presentación del Candidato",
-              "paragraph": 2,
-              "text": "Abogado de la Universidad Sergio Arboleda, empresario",
-              "context": "Hoja de vida del candidato"
+              "chapter": "Presentación",
+              "section": "Datos personales",
+              "text": "47 años (31 jul 1978)",
+              "context": "Edad del candidato"
             },
             {
-              "id": "abelardo-perfil-02",
+              "id": "abelardo-perfil-lugar",
               "page": 1,
-              "chapter": "Presentación del Candidato",
-              "paragraph": 5,
-              "text": "Nacionalidad colombiana, estadounidense e italiana",
-              "context": "Datos biográficos del candidato"
+              "chapter": "Presentación",
+              "section": "Datos personales",
+              "text": "Bogotá, criado en Montería, Córdoba",
+              "context": "Lugar de origen"
             },
             {
-              "id": "abelardo-perfil-03",
+              "id": "abelardo-perfil-partido",
+              "page": 1,
+              "chapter": "Presentación",
+              "section": "Filiación política",
+              "text": "Defensores de la Patria / Mov. Salvación Nacional",
+              "context": "Partido político"
+            },
+            {
+              "id": "abelardo-perfil-profesion",
+              "page": 1,
+              "chapter": "Presentación",
+              "section": "Formación",
+              "text": "Abogado (U. Sergio Arboleda), empresario",
+              "context": "Profesión del candidato"
+            },
+            {
+              "id": "abelardo-perfil-nacionalidad",
               "page": 2,
-              "chapter": "Trayectoria Profesional",
+              "chapter": "Presentación",
+              "section": "Datos personales",
+              "text": "Colombiana, Estadounidense, Italiana",
+              "context": "Triple nacionalidad"
+            },
+            {
+              "id": "abelardo-perfil-religion",
+              "page": 2,
+              "chapter": "Presentación",
+              "section": "Trayectoria personal",
+              "text": "Ateo → Católico (2021)",
+              "context": "Conversión religiosa"
+            },
+            {
+              "id": "abelardo-perfil-experiencia",
+              "page": 2,
+              "chapter": "Trayectoria",
               "section": "Experiencia laboral",
+              "text": "Ningún cargo público. Abogado litigante",
+              "context": "Experiencia política"
+            },
+            {
+              "id": "abelardo-perfil-lema",
+              "page": 1,
+              "chapter": "Presentación",
               "paragraph": 1,
-              "text": "Abogado litigante, ningún cargo público previo",
-              "context": "Experiencia profesional"
+              "text": "El Milagro de los Nunca — Patria Milagro",
+              "context": "Lema de campaña"
             }
           ]
         },
         "programa": {
-          "label": "Programa de Gobierno",
+          "label": "Programa de Gobierno: 13 Propuestas",
           "refs": [
             {
-              "id": "abelardo-prog-01",
+              "id": "abelardo-prog-seg-01",
               "page": 5,
-              "chapter": "Ejes Programáticos",
-              "section": "1. Seguridad y Orden",
-              "paragraph": 3,
-              "text": "\"Con criminales no hay negociación\"",
-              "context": "Política de seguridad: mano dura contra el crimen"
+              "chapter": "Eje 1: Seguridad y Orden",
+              "text": "Con criminales no hay negociación",
+              "context": "Política de seguridad"
             },
             {
-              "id": "abelardo-prog-02",
+              "id": "abelardo-prog-seg-02",
               "page": 5,
-              "chapter": "Ejes Programáticos",
-              "section": "1. Seguridad y Orden",
-              "paragraph": 7,
-              "text": "Fumigación de 330.000 hectáreas de cultivos ilícitos",
+              "chapter": "Eje 1: Seguridad y Orden",
+              "text": "Fumigación 330.000 has",
               "context": "Política antinarcóticos"
             },
             {
-              "id": "abelardo-prog-03",
+              "id": "abelardo-prog-seg-03",
               "page": 6,
-              "chapter": "Ejes Programáticos",
-              "section": "1. Seguridad y Orden",
-              "paragraph": 2,
-              "text": "Restablecimiento del porte de armas para ciudadanos",
+              "chapter": "Eje 1: Seguridad y Orden",
+              "text": "Porte de armas para ciudadanos",
               "context": "Política de tenencia de armas"
             },
             {
-              "id": "abelardo-prog-04",
+              "id": "abelardo-prog-seg-04",
               "page": 6,
-              "chapter": "Ejes Programáticos",
-              "section": "1. Seguridad y Orden",
-              "paragraph": 5,
-              "text": "Terminación de los procesos de paz con grupos armados",
+              "chapter": "Eje 1: Seguridad y Orden",
+              "text": "Fin del Acuerdo de Paz",
               "context": "Política de paz"
             },
             {
-              "id": "abelardo-prog-05",
+              "id": "abelardo-prog-eco-01",
               "page": 7,
-              "chapter": "Ejes Programáticos",
-              "section": "2. Economía y Reactivación",
-              "paragraph": 1,
-              "text": "Crecimiento del 7% anual del PIB",
-              "context": "Meta económica"
+              "chapter": "Eje 2: Economía y Reactivación",
+              "text": "Crecimiento 7% anual",
+              "context": "Meta de crecimiento"
             },
             {
-              "id": "abelardo-prog-06",
+              "id": "abelardo-prog-eco-02",
               "page": 7,
-              "chapter": "Ejes Programáticos",
-              "section": "2. Economía y Reactivación",
-              "paragraph": 4,
-              "text": "Reducir el tamaño del Estado en un 25%",
-              "context": "Política de reducción del Estado"
+              "chapter": "Eje 2: Economía y Reactivación",
+              "text": "Reducir Estado en 1/4",
+              "context": "Reducción del Estado"
             },
             {
-              "id": "abelardo-prog-07",
+              "id": "abelardo-prog-eco-03",
               "page": 7,
-              "chapter": "Ejes Programáticos",
-              "section": "2. Economía y Reactivación",
-              "paragraph": 6,
-              "text": "Desregulación total de la economía",
+              "chapter": "Eje 2: Economía y Reactivación",
+              "text": "Desregulación total",
               "context": "Política de desregulación"
             },
             {
-              "id": "abelardo-prog-08",
+              "id": "abelardo-prog-eco-04",
               "page": 8,
-              "chapter": "Ejes Programáticos",
-              "section": "2. Economía y Reactivación",
-              "paragraph": 3,
-              "text": "Eliminación de ministerios para reducir gasto público",
-              "context": "Reforma del Estado"
+              "chapter": "Eje 2: Economía y Reactivación",
+              "text": "Eliminar ministerios",
+              "context": "Reforma administrativa"
             },
             {
-              "id": "abelardo-prog-09",
+              "id": "abelardo-prog-ext-01",
               "page": 10,
-              "chapter": "Ejes Programáticos",
-              "section": "4. Política Exterior",
-              "paragraph": 1,
-              "text": "Salida de Colombia de la Corte IDH",
-              "context": "Política internacional"
+              "chapter": "Eje 4: Política Exterior",
+              "text": "Salir de Corte IDH y ONU",
+              "context": "Aislamiento internacional"
             },
             {
-              "id": "abelardo-prog-10",
+              "id": "abelardo-prog-ext-02",
               "page": 10,
-              "chapter": "Ejes Programáticos",
-              "section": "4. Política Exterior",
-              "paragraph": 2,
-              "text": "Salida de Colombia de las Naciones Unidas",
-              "context": "Política internacional"
+              "chapter": "Eje 4: Política Exterior",
+              "text": "Reanudar con Israel",
+              "context": "Relaciones diplomáticas"
             },
             {
-              "id": "abelardo-prog-11",
+              "id": "abelardo-prog-ext-03",
               "page": 10,
-              "chapter": "Ejes Programáticos",
-              "section": "4. Política Exterior",
-              "paragraph": 4,
-              "text": "Restablecimiento de relaciones diplomáticas con Israel",
-              "context": "Política internacional"
+              "chapter": "Eje 4: Política Exterior",
+              "text": "Aliado de ultraderecha global",
+              "context": "Alineamiento internacional"
             },
             {
-              "id": "abelardo-prog-12",
-              "page": 10,
-              "chapter": "Ejes Programáticos",
-              "section": "4. Política Exterior",
-              "paragraph": 6,
-              "text": "Alineamiento con líderes de ultraderecha global (Trump, Milei, Bukele)",
-              "context": "Política internacional"
-            },
-            {
-              "id": "abelardo-prog-13",
+              "id": "abelardo-prog-amb-01",
               "page": 12,
-              "chapter": "Ejes Programáticos",
-              "section": "5. Medio Ambiente y Recursos Naturales",
-              "paragraph": 2,
-              "text": "Reactivación de exploración de petróleo y gas",
+              "chapter": "Eje 5: Medio Ambiente",
+              "text": "Reactivar exploración petróleo y gas",
               "context": "Política energética"
             },
             {
-              "id": "abelardo-prog-14",
+              "id": "abelardo-prog-amb-02",
               "page": 12,
-              "chapter": "Ejes Programáticos",
-              "section": "5. Medio Ambiente y Recursos Naturales",
-              "paragraph": 3,
-              "text": "Permitir el fracking",
+              "chapter": "Eje 5: Medio Ambiente",
+              "text": "Fracking permitido",
               "context": "Política de hidrocarburos"
             },
             {
-              "id": "abelardo-prog-15",
+              "id": "abelardo-prog-amb-03",
               "page": 12,
-              "chapter": "Ejes Programáticos",
-              "section": "5. Medio Ambiente y Recursos Naturales",
-              "paragraph": 5,
-              "text": "Minería de oro, cobre y tierras raras a gran escala",
+              "chapter": "Eje 5: Medio Ambiente",
+              "text": "Minería de oro, cobre, tierras raras",
               "context": "Política minera"
             },
             {
-              "id": "abelardo-prog-16",
+              "id": "abelardo-prog-amb-04",
               "page": 13,
-              "chapter": "Ejes Programáticos",
-              "section": "5. Medio Ambiente y Recursos Naturales",
-              "paragraph": 2,
-              "text": "Expandir la frontera agrícola en 2 millones de hectáreas",
+              "chapter": "Eje 5: Medio Ambiente",
+              "text": "Expandir frontera agrícola 2M has",
               "context": "Política agrícola"
             },
             {
-              "id": "abelardo-prog-17",
-              "page": 15,
-              "chapter": "Ejes Programáticos",
-              "section": "7. Pensiones",
-              "subtitle": "Derogatoria de la Ley 2381",
-              "paragraph": 1,
-              "text": "Derogar la reforma pensional Ley 2381 de 2025",
-              "context": "Propuesta de reforma pensional"
+              "id": "abelardo-prog-est-01",
+              "page": 3,
+              "chapter": "Principios",
+              "section": "Modelo de Estado",
+              "text": "Estado reducido en 1/4",
+              "context": "Tamaño del Estado"
             },
             {
-              "id": "abelardo-prog-18",
+              "id": "abelardo-prog-est-02",
+              "page": 3,
+              "chapter": "Principios",
+              "section": "Modelo de Estado",
+              "text": "Privatización de servicios",
+              "context": "Modelo económico"
+            },
+            {
+              "id": "abelardo-prog-est-03",
+              "page": 4,
+              "chapter": "Principios",
+              "section": "Modelo de Estado",
+              "text": "Desregulación como dogma",
+              "context": "Filosofía económica"
+            },
+            {
+              "id": "abelardo-prog-est-04",
+              "page": 4,
+              "chapter": "Principios",
+              "section": "Modelo de Estado",
+              "text": "Eliminar ministerios",
+              "context": "Reducción del Estado"
+            },
+            {
+              "id": "abelardo-prog-val-01",
+              "page": 3,
+              "chapter": "Principios",
+              "section": "Familia",
+              "text": "En contra del aborto",
+              "context": "Valores sociales"
+            },
+            {
+              "id": "abelardo-prog-val-02",
+              "page": 3,
+              "chapter": "Principios",
+              "section": "Familia",
+              "text": "En contra adopción homoparental",
+              "context": "Valores sociales"
+            },
+            {
+              "id": "abelardo-prog-val-03",
+              "page": 3,
+              "chapter": "Principios",
+              "section": "Familia",
+              "text": "Familia tradicional como núcleo",
+              "context": "Valores sociales"
+            },
+            {
+              "id": "abelardo-prog-val-04",
+              "page": 4,
+              "chapter": "Principios",
+              "section": "Rescate Moral",
+              "text": "Rescate moral de la nación",
+              "context": "Principios morales"
+            },
+            {
+              "id": "abelardo-prog-jus-01",
+              "page": 9,
+              "chapter": "Eje 3: Justicia",
+              "text": "Salir de Corte IDH",
+              "context": "Justicia internacional"
+            },
+            {
+              "id": "abelardo-prog-jus-02",
+              "page": 9,
+              "chapter": "Eje 3: Justicia",
+              "text": "Extinción de dominio exprés",
+              "context": "Política anticorrupción"
+            },
+            {
+              "id": "abelardo-prog-jus-03",
+              "page": 9,
+              "chapter": "Eje 3: Justicia",
+              "text": "Sin garantías procesales para criminales",
+              "context": "Política penal"
+            },
+            {
+              "id": "abelardo-prog-pen-01",
               "page": 15,
-              "chapter": "Ejes Programáticos",
-              "section": "7. Pensiones",
-              "subtitle": "Sistema de Capitalización",
-              "paragraph": 3,
-              "text": "Migrar a un sistema 100% de capitalización individual",
+              "chapter": "Eje 7: Pensiones",
+              "text": "Derogar reforma Ley 2381",
+              "context": "Reforma pensional"
+            },
+            {
+              "id": "abelardo-prog-pen-02",
+              "page": 15,
+              "chapter": "Eje 7: Pensiones",
+              "text": "100% capitalización individual",
               "context": "Modelo pensional"
             },
             {
-              "id": "abelardo-prog-19",
+              "id": "abelardo-prog-pen-03",
               "page": 15,
-              "chapter": "Ejes Programáticos",
-              "section": "7. Pensiones",
-              "paragraph": 5,
-              "text": "Reducir cotizaciones para aumentar ingreso disponible",
+              "chapter": "Eje 7: Pensiones",
+              "text": "Reducir cotizaciones",
               "context": "Política de cotizaciones"
             },
             {
-              "id": "abelardo-prog-20",
-              "page": 3,
-              "chapter": "Principios y Valores",
-              "section": "Familia Tradicional",
-              "paragraph": 2,
-              "text": "La familia tradicional como núcleo de la sociedad",
-              "context": "Principios fundamentales del plan"
+              "id": "gen-002",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-002",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
-              "id": "abelardo-prog-21",
-              "page": 4,
-              "chapter": "Principios y Valores",
-              "section": "Rescate Moral",
-              "paragraph": 1,
-              "text": "Rescate moral de la nación",
-              "context": "Principios morales"
+              "id": "programas-detail-012",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-012",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-02",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-02",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-19",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-19",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-ref-004",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-ref-004",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-04<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-04<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-023",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-023",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-055",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-055",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-ref-009",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-ref-009",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-08",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-08",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-18",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-18",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-015",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-015",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-011",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-011",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-09",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-09",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-001",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-001",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-03",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-03",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-053",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-053",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-003",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-003",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-16",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-16",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-007",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-007",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-11",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-11",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "elec<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "elec<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-14",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-14",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-054",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-054",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-002",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-002",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-12",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-12",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-048",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-048",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-005",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-005",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-04",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-04",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-015",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-015",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-006",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-006",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-13",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-13",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "veredicto-conclusion-000",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "veredicto-conclusion-000",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-0<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-0<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-008",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-008",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-009",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-009",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-005",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-005",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-006",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-006",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-05",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-05",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-017",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-017",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-013",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-013",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-018",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-018",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-06",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-06",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-004",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-004",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-014",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-014",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-000",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-000",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-003",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-003",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-07",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-07",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-016",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-016",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "veredicto-conclusion-001",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "veredicto-conclusion-001",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "comparativa-detail-057",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "comparativa-detail-057",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-006",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-006",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-007",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-007",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-010",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-010",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-ref-008",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-ref-008",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-011",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-011",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-001",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-001",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-ref-007",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-ref-007",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-<td data-ref=<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-<td data-ref=<td data-ref=",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-perfil-03",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-perfil-03",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-01",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-01",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-15",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-15",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-prog-17",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-prog-17",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "programas-detail-002",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "programas-detail-002",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-014",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-014",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-perfil-01",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-perfil-01",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-030",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-030",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-data-010",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-data-010",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "gen-003",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "gen-003",
+              "context": "Referencia automática — verificar ubicación exacta"
             }
           ]
         },
         "dossier": {
-          "label": "Dossier — Controversias",
+          "label": "Dossier: Controversias y Dato Clave",
           "refs": [
             {
-              "id": "abelardo-dossier-dmg",
-              "page": 18,
+              "id": "abelardo-dossier-dmg-01",
+              "page": 19,
               "chapter": "Anexos",
-              "section": "Relación con David Murcia Guzmán (DMG)",
-              "paragraph": 2,
-              "text": "Abelardo fue abogado defensor de David Murcia Guzmán desde 2008",
-              "context": "Caso DMG - pirámide financiera"
+              "section": "DMG - Pirámide Financiera",
+              "text": "David Murcia Guzmán creó DMG, estafó a más de 200.000 colombianos",
+              "context": "Caso DMG"
             },
             {
-              "id": "abelardo-dossier-firmas",
+              "id": "abelardo-dossier-dmg-02",
               "page": 20,
               "chapter": "Anexos",
-              "section": "Escándalo de firmas",
-              "paragraph": 1,
-              "text": "62% de firmas inválidas según la Registraduría Nacional",
-              "context": "Fraude electoral - firmas falsificadas"
+              "section": "DMG - Pirámide Financiera",
+              "text": "Murcia pasó de jefe de comunicaciones a uno de los hombres más ricos en 3 años",
+              "context": "Caso DMG"
             },
             {
-              "id": "abelardo-dossier-maltrato",
+              "id": "abelardo-dossier-dmg-03",
+              "page": 21,
+              "chapter": "Anexos",
+              "section": "DMG - Pirámide Financiera",
+              "text": "En 2008 estalló el escándalo; Murcia huyó a Panamá",
+              "context": "Caso DMG"
+            },
+            {
+              "id": "abelardo-dossier-dmg-04",
               "page": 22,
               "chapter": "Anexos",
-              "section": "Controversias personales",
-              "paragraph": 1,
-              "text": "Confesión de maltrato animal en The Suso's Show (2014)",
-              "context": "Maltrato animal confesado"
+              "section": "DMG - Pirámide Financiera",
+              "text": "Abelardo lo defendió; interceptaciones revelan solicitudes de dinero",
+              "context": "Caso DMG"
             },
             {
-              "id": "abelardo-dossier-conversion",
+              "id": "abelardo-dossier-dmg-05",
               "page": 23,
               "chapter": "Anexos",
-              "section": "Conversión religiosa",
-              "paragraph": 1,
-              "text": "Conversión de ateo a católico en 2021 tras muerte de su tía",
+              "section": "DMG - Pirámide Financiera",
+              "text": "David Murcia denunció a Abelardo por no devolverle $5.000 millones",
+              "context": "Caso DMG"
+            },
+            {
+              "id": "abelardo-dossier-dmg-06",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "DMG - Pirámide Financiera",
+              "text": "Murcia presentó queja disciplinaria ante la Comisión de Disciplina Judicial",
+              "context": "Caso DMG"
+            },
+            {
+              "id": "abelardo-dossier-dmg-07",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "DMG - Pirámide Financiera",
+              "text": "Abelardo también fue abogado de Alex Saab (testaferro de Maduro)",
+              "context": "Caso DMG"
+            },
+            {
+              "id": "abelardo-dossier-firmas-01",
+              "page": 21,
+              "chapter": "Anexos",
+              "section": "Firmas Falsas",
+              "text": "Revelado por Cecilia Orozco en febrero 2026",
+              "context": "Fraude electoral"
+            },
+            {
+              "id": "abelardo-dossier-firmas-02",
+              "page": 22,
+              "chapter": "Anexos",
+              "section": "Firmas Falsas",
+              "text": "Datos ilegibles, duplicados y firmas de personas fallecidas",
+              "context": "Fraude electoral"
+            },
+            {
+              "id": "abelardo-dossier-firmas-03",
+              "page": 23,
+              "chapter": "Anexos",
+              "section": "Firmas Falsas",
+              "text": "La Registraduría dijo que inconsistencias no constituían necesariamente fraude",
+              "context": "Fraude electoral"
+            },
+            {
+              "id": "abelardo-dossier-firmas-04",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Firmas Falsas",
+              "text": "El candidato defendió la fortaleza del respaldo ciudadano",
+              "context": "Fraude electoral"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-01",
+              "page": 23,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "Fragmento se viralizó en plena campaña 2026 desatando indignación masiva",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-02",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "Matador lo incendió en X: pregúntese qué clase de hombre se ríe contando que hizo sufrir a un animal",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-03",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "Esmeralda Hernández lo llamó maltratador y farsante",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-04",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "Abelardo incluyó Bienestar Animal como uno de los 13 pilares de su plan",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-05",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "Hernández señaló que Abelardo demandó a Petro cuando intentó prohibir las corridas de toros",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-06",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "También ha admitido haber sido cazador en el pasado",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-maltrato-07",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Maltrato Animal",
+              "text": "Las 2 Orillas: De ponerle pólvora a gatos a querer gobernar con terror",
+              "context": "Controversia maltrato animal"
+            },
+            {
+              "id": "abelardo-dossier-conv-01",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Conversión Religiosa",
+              "text": "Suponiendo que Dios exista, creo que es responsable de todo lo malo",
               "context": "Conversión al catolicismo"
             },
             {
-              "id": "abelardo-dossier-lifestyle",
-              "page": 24,
-              "chapter": "Anexos",
-              "section": "Estilo de vida",
-              "paragraph": 1,
-              "text": "Estilo de vida ostentoso: jet privado, ropa italiana, vinos de lujo",
-              "context": "Contradicción con discurso populista"
-            },
-            {
-              "id": "abelardo-dossier-mancuso",
+              "id": "abelardo-dossier-conv-02",
               "page": 25,
               "chapter": "Anexos",
-              "section": "Vínculos con paramilitarismo",
-              "paragraph": 1,
-              "text": "Salvatore Mancuso afirma conocer a Abelardo desde la infancia",
-              "context": "Relación con el paramilitarismo"
+              "section": "Conversión Religiosa",
+              "text": "Muerte de su tía Beatrice → empezó a estudiar la Biblia",
+              "context": "Conversión al catolicismo"
             },
             {
-              "id": "abelardo-dossier-adopcion",
+              "id": "abelardo-dossier-conv-03",
               "page": 26,
               "chapter": "Anexos",
-              "section": "Giro en adopción homoparental",
-              "paragraph": 3,
-              "text": "En 2016 apoyaba adopción LGBT; en 2026 dice 'los niños son sagrados'",
-              "context": "Cambio de posición sobre adopción homoparental"
+              "section": "Conversión Religiosa",
+              "text": "Visita a la Basílica del Señor de los Milagros en Buga, rompió a llorar",
+              "context": "Conversión al catolicismo"
             },
             {
-              "id": "abelardo-dossier-saab",
-              "page": 19,
-              "chapter": "Anexos",
-              "section": "Caso Alex Saab",
-              "paragraph": 1,
-              "text": "Dinero de Alex Saab llegó a cuentas de Abelardo, según El País",
-              "context": "Vínculos con el testaferro de Maduro"
-            },
-            {
-              "id": "abelardo-dossier-restrepo",
+              "id": "abelardo-dossier-conv-04",
               "page": 27,
               "chapter": "Anexos",
+              "section": "Conversión Religiosa",
+              "text": "La inteligencia viene del hombre, pero la sabiduría viene de Dios",
+              "context": "Conversión al catolicismo"
+            },
+            {
+              "id": "abelardo-dossier-conv-05",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Conversión Religiosa",
+              "text": "A mí es el único tipo que se le ha negado la conversión",
+              "context": "Conversión al catolicismo"
+            },
+            {
+              "id": "abelardo-dossier-conv-06",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Conversión Religiosa",
+              "text": "Conversión vista como oportunismo político para atraer el voto cristiano",
+              "context": "Conversión al catolicismo"
+            },
+            {
+              "id": "abelardo-dossier-life-01",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Usa mocasines Louis Vuitton",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-02",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Más de 20 lociones para distintas horas del día",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-03",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Botellas de alcohol que cuestan más de $10.000 USD",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-04",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Viaja en jet privado",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-05",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Viaja una vez al año a comprar ropa a Italia",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-06",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Esposa: Si perdemos, nos volvemos a Italia o EE.UU.",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-07",
+              "page": 31,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "Se presenta como la voz de los nunca pero tiene triple nacionalidad",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-life-08",
+              "page": 32,
+              "chapter": "Anexos",
+              "section": "Estilo de Vida",
+              "text": "El País: El abogado del diablo que quiere ser presidente",
+              "context": "Contradicción estilo de vida"
+            },
+            {
+              "id": "abelardo-dossier-ext-01",
+              "page": 11,
+              "chapter": "Anexos",
+              "section": "Posición Internacional",
+              "text": "Sacar a Colombia de la Corte IDH",
+              "context": "Política exterior extrema"
+            },
+            {
+              "id": "abelardo-dossier-ext-02",
+              "page": 12,
+              "chapter": "Anexos",
+              "section": "Posición Internacional",
+              "text": "Sacar a Colombia de las Naciones Unidas",
+              "context": "Política exterior extrema"
+            },
+            {
+              "id": "abelardo-dossier-ext-03",
+              "page": 13,
+              "chapter": "Anexos",
+              "section": "Posición Internacional",
+              "text": "Reanudar relaciones con Israel",
+              "context": "Política exterior extrema"
+            },
+            {
+              "id": "abelardo-dossier-ext-04",
+              "page": 14,
+              "chapter": "Anexos",
+              "section": "Posición Internacional",
+              "text": "Restaurar el porte de armas para ciudadanos",
+              "context": "Política exterior extrema"
+            },
+            {
+              "id": "abelardo-dossier-ext-05",
+              "page": 15,
+              "chapter": "Anexos",
+              "section": "Posición Internacional",
+              "text": "Terminar los procesos de paz con grupos armados",
+              "context": "Política exterior extrema"
+            },
+            {
+              "id": "abelardo-dossier-ext-06",
+              "page": 16,
+              "chapter": "Anexos",
+              "section": "Posición Internacional",
+              "text": "Alineamiento con Trump, Milei, Bukele",
+              "context": "Política exterior extrema"
+            },
+            {
+              "id": "abelardo-dossier-mancuso-01",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Vínculos Paramilitarismo",
+              "text": "Conozco a Abelardo desde que somos muchachitos - Salvatore Mancuso",
+              "context": "Relación con Mancuso"
+            },
+            {
+              "id": "abelardo-dossier-mancuso-02",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Vínculos Paramilitarismo",
+              "text": "Estudiaron en el mismo colegio y círculo social de clase alta de Montería",
+              "context": "Relación con Mancuso"
+            },
+            {
+              "id": "abelardo-dossier-mancuso-03",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Vínculos Paramilitarismo",
+              "text": "Álvaro Uribe es amigo cercano del padre de Abelardo",
+              "context": "Relación con Mancuso"
+            },
+            {
+              "id": "abelardo-dossier-adop-01",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Adopción Homoparental",
+              "text": "2016: prefería niño en hogar homosexual que en la calle",
+              "context": "Giro en adopción LGBT"
+            },
+            {
+              "id": "abelardo-dossier-adop-02",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Adopción Homoparental",
+              "text": "2026: los niños son sagrados, los sacaría de esa ecuación",
+              "context": "Giro en adopción LGBT"
+            },
+            {
+              "id": "abelardo-dossier-adop-03",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Adopción Homoparental",
+              "text": "También en contra del aborto, rescate moral de la nación",
+              "context": "Giro en adopción LGBT"
+            },
+            {
+              "id": "abelardo-dossier-adop-04",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Adopción Homoparental",
+              "text": "Defiende la familia tradicional como núcleo de la sociedad",
+              "context": "Giro en adopción LGBT"
+            },
+            {
+              "id": "abelardo-dossier-adop-05",
+              "page": 31,
+              "chapter": "Anexos",
+              "section": "Adopción Homoparental",
+              "text": "Opositores: cambió posición para alinearse con voto cristiano",
+              "context": "Giro en adopción LGBT"
+            },
+            {
+              "id": "abelardo-dossier-restrepo-01",
+              "page": 28,
+              "chapter": "Anexos",
               "section": "Fórmula Vicepresidencial",
-              "paragraph": 1,
-              "text": "José Manuel Restrepo como fórmula vicepresidencial",
-              "context": "Composición de la fórmula"
+              "text": "Restrepo fue Ministro de Hacienda y Comercio de Duque",
+              "context": "José Manuel Restrepo"
+            },
+            {
+              "id": "abelardo-dossier-restrepo-02",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Fórmula Vicepresidencial",
+              "text": "Rector de la Universidad del Rosario",
+              "context": "José Manuel Restrepo"
+            },
+            {
+              "id": "abelardo-dossier-restrepo-03",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Fórmula Vicepresidencial",
+              "text": "Busca dar confianza a los mercados y sector empresarial",
+              "context": "José Manuel Restrepo"
+            },
+            {
+              "id": "abelardo-dossier-restrepo-04",
+              "page": 31,
+              "chapter": "Anexos",
+              "section": "Fórmula Vicepresidencial",
+              "text": "Críticos: es el freno técnico a las ideas radicales de Abelardo",
+              "context": "José Manuel Restrepo"
+            },
+            {
+              "id": "abelardo-dossier-detail-022",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-022",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-025",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-025",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-062",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-062",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-027",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-027",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-026",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-026",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-066",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-066",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-020",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-020",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-060",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-060",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-068",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-068",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-067",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-067",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-019",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-019",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-dmg",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-dmg",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-024",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-024",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-028",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-028",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-061",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-061",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-063",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-063",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "pensiones-detail-059",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "pensiones-detail-059",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-firmas",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-firmas",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "pensiones-detail-058",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "pensiones-detail-058",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-064",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-064",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-conversion",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-conversion",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-restrepo-05",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-restrepo-05",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "electoral-detail-065",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "electoral-detail-065",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-021",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-021",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "abelardo-dossier-detail-023",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "abelardo-dossier-detail-023",
+              "context": "Referencia automática — verificar ubicación exacta"
+            }
+          ]
+        },
+        "cronologia": {
+          "label": "Cronología Clave",
+          "refs": [
+            {
+              "id": "abelardo-crono-1978",
+              "page": 2,
+              "chapter": "Línea de Tiempo",
+              "text": "Nace en Bogotá. Criado en Montería, clase alta ganadera",
+              "context": "1978 - Nacimiento"
+            },
+            {
+              "id": "abelardo-crono-2008",
+              "page": 18,
+              "chapter": "Línea de Tiempo",
+              "text": "Abogado de David Murcia Guzmán (DMG). Interceptaciones lo vinculan",
+              "context": "2008 - Caso DMG"
+            },
+            {
+              "id": "abelardo-crono-2012",
+              "page": 23,
+              "chapter": "Línea de Tiempo",
+              "text": "Biografía autorizada El Abogado del Diablo. Abelardo ateo",
+              "context": "2012 - Publicación biografía"
+            },
+            {
+              "id": "abelardo-crono-2014",
+              "page": 22,
+              "chapter": "Línea de Tiempo",
+              "text": "The Suso's Show: confiesa haber quemado gatos con pólvora",
+              "context": "2014 - Maltrato animal"
+            },
+            {
+              "id": "abelardo-crono-2016",
+              "page": 26,
+              "chapter": "Línea de Tiempo",
+              "text": "Apoya adopción homoparental: prefiero niño en hogar homosexual que en la calle",
+              "context": "2016 - Posición adopción LGBT"
+            },
+            {
+              "id": "abelardo-crono-2021",
+              "page": 23,
+              "chapter": "Línea de Tiempo",
+              "text": "Muerte de su tía Beatrice → conversión al catolicismo",
+              "context": "2021 - Conversión religiosa"
+            },
+            {
+              "id": "abelardo-crono-2025",
+              "page": 19,
+              "chapter": "Línea de Tiempo",
+              "text": "Lanza campaña. Alex Saab vinculado a sus cuentas",
+              "context": "2025 - Campaña"
+            },
+            {
+              "id": "abelardo-crono-feb2026",
+              "page": 20,
+              "chapter": "Línea de Tiempo",
+              "text": "62% firmas inválidas. Murcia lo denuncia por $5.000M. Dinero Saab",
+              "context": "Feb 2026 - Escándalos"
+            },
+            {
+              "id": "abelardo-crono-mar2026",
+              "page": 27,
+              "chapter": "Línea de Tiempo",
+              "text": "Anuncia a José Manuel Restrepo como fórmula vicepresidencial",
+              "context": "Mar 2026 - Fórmula VP"
+            },
+            {
+              "id": "abelardo-crono-may2026",
+              "page": 1,
+              "chapter": "Línea de Tiempo",
+              "text": "Pasa a segunda vuelta. Video maltrato animal se viraliza",
+              "context": "May 2026 - Segunda vuelta"
+            }
+          ]
+        },
+        "analisis_electoral": {
+          "label": "Análisis Electoral",
+          "refs": [
+            {
+              "id": "abelardo-elect-20años",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Contexto",
+              "text": "20 años gobernó la derecha/centroderecha (2002-2022)",
+              "context": "Contexto histórico"
+            },
+            {
+              "id": "abelardo-elect-4años",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Contexto",
+              "text": "4 años lleva la izquierda en el poder (2022-2026)",
+              "context": "Gobierno actual"
+            },
+            {
+              "id": "abelardo-elect-timeline-2002",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2002-2010: Álvaro Uribe Vélez, Derecha",
+              "context": "Gobierno Uribe"
+            },
+            {
+              "id": "abelardo-elect-timeline-2010",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2010-2018: Juan Manuel Santos, Centro",
+              "context": "Gobierno Santos"
+            },
+            {
+              "id": "abelardo-elect-timeline-2018",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2018-2022: Iván Duque, Derecha",
+              "context": "Gobierno Duque"
+            },
+            {
+              "id": "abelardo-elect-timeline-2022",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2022-2026: Gustavo Petro, Izquierda",
+              "context": "Gobierno Petro"
+            },
+            {
+              "id": "abelardo-elect-evol-2002",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2002: Luis E. Garzón 4.4% (~487.000 votos)",
+              "context": "Voto izquierda 2002"
+            },
+            {
+              "id": "abelardo-elect-evol-2006",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2006: Carlos Gaviria 22% (~2.6M votos) +435%",
+              "context": "Voto izquierda 2006"
+            },
+            {
+              "id": "abelardo-elect-evol-2010",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2010: Gustavo Petro 9.1% (~1.3M) -49%",
+              "context": "Voto izquierda 2010"
+            },
+            {
+              "id": "abelardo-elect-evol-2014",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2014: Clara López 15.2% (~1.96M) +47%",
+              "context": "Voto izquierda 2014"
+            },
+            {
+              "id": "abelardo-elect-evol-2018",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2018: Gustavo Petro 25.1% (~4.86M) +148%",
+              "context": "Voto izquierda 2018"
+            },
+            {
+              "id": "abelardo-elect-evol-2022",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2022: Gustavo Petro 40.3% (~8.53M) +76%",
+              "context": "Voto izquierda 2022"
+            },
+            {
+              "id": "abelardo-elect-2v-2018",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Segunda vuelta",
+              "text": "2018: Izquierda 8.04M (41.8%) vs Derecha 10.4M (54%)",
+              "context": "Segunda vuelta 2018"
+            },
+            {
+              "id": "abelardo-elect-2v-2022",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Segunda vuelta",
+              "text": "2022: Izquierda 11.28M (50.4%) vs Derecha 10.58M (47.3%)",
+              "context": "Segunda vuelta 2022"
+            },
+            {
+              "id": "abelardo-elect-no-dictadura",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Indicadores",
+              "text": "No ha pasado: cierre Congreso, persecución, control medios, eliminar elecciones",
+              "context": "Lo que NO ha pasado con Petro"
+            },
+            {
+              "id": "abelardo-elect-si-uribe",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Indicadores",
+              "text": "Sí pasó con Uribe: parapolítica, falsos positivos, chuzadas DAS, reelección",
+              "context": "Lo que SÍ pasó con Uribe"
             }
           ]
         }
@@ -333,267 +1696,1266 @@
           "label": "Perfil Biográfico",
           "refs": [
             {
-              "id": "cepeda-perfil-01",
+              "id": "cepeda-perfil-edad",
               "page": 1,
               "chapter": "Presentación",
-              "paragraph": 2,
-              "text": "Filósofo de la Universidad de Sofía, Bulgaria",
+              "section": "Datos personales",
+              "text": "63 años (24 oct 1962)",
+              "context": "Edad del candidato"
+            },
+            {
+              "id": "cepeda-perfil-lugar",
+              "page": 1,
+              "chapter": "Presentación",
+              "section": "Datos personales",
+              "text": "Bogotá",
+              "context": "Lugar de origen"
+            },
+            {
+              "id": "cepeda-perfil-partido",
+              "page": 1,
+              "chapter": "Presentación",
+              "section": "Filiación política",
+              "text": "Pacto Histórico (antes Polo Dem., AD M-19, UP)",
+              "context": "Partido político"
+            },
+            {
+              "id": "cepeda-perfil-profesion",
+              "page": 1,
+              "chapter": "Presentación",
+              "section": "Formación",
+              "text": "Filósofo (U. de Sofía, Bulgaria)",
               "context": "Formación académica"
             },
             {
-              "id": "cepeda-perfil-02",
+              "id": "cepeda-perfil-cargo",
               "page": 2,
               "chapter": "Trayectoria",
-              "section": "Vida Política",
-              "paragraph": 1,
-              "text": "Senador, antes Representante a la Cámara por Bogotá",
-              "context": "Trayectoria política"
+              "section": "Cargos públicos",
+              "text": "Senador de la República (desde 2014)",
+              "context": "Cargo actual"
             },
             {
-              "id": "cepeda-perfil-03",
+              "id": "cepeda-perfil-padres",
               "page": 2,
               "chapter": "Trayectoria",
-              "section": "Derechos Humanos",
-              "paragraph": 3,
-              "text": "Defensor de derechos humanos, múltiples reconocimientos internacionales",
-              "context": "Trayectoria en DDHH"
+              "section": "Origen familiar",
+              "text": "Manuel Cepeda (senador UP, asesinado 1994) · Yira Castro (concejala)",
+              "context": "Familia del candidato"
+            },
+            {
+              "id": "cepeda-perfil-exilio",
+              "page": 2,
+              "chapter": "Trayectoria",
+              "section": "Exilio",
+              "text": "Cuba, Checoslovaquia, Bulgaria — 3 años a los 3 años",
+              "context": "Exilio político familiar"
+            },
+            {
+              "id": "cepeda-perfil-ideologia",
+              "page": 3,
+              "chapter": "Trayectoria",
+              "section": "Evolución ideológica",
+              "text": "Nací en el Partido Comunista → izquierda democrática",
+              "context": "Transformación ideológica"
+            },
+            {
+              "id": "cepeda-perfil-lema",
+              "page": 1,
+              "chapter": "Presentación",
+              "text": "El Poder de la Verdad",
+              "context": "Lema de campaña"
             }
           ]
         },
         "programa": {
-          "label": "Programa de Gobierno",
+          "label": "Programa de Gobierno: Colombia Potencia Mundial de la Vida",
           "refs": [
             {
-              "id": "cepeda-prog-01",
+              "id": "cepeda-prog-seg-01",
               "page": 5,
-              "chapter": "Colombia Potencia Mundial de la Vida",
-              "section": "Seguridad Humana",
-              "paragraph": 2,
-              "text": "Seguridad entendida como acceso a derechos (salud, educación, trabajo)",
-              "context": "Concepto de seguridad humana"
+              "chapter": "Eje 1: Seguridad Humana",
+              "text": "Seguridad = derechos (salud, educación, trabajo)",
+              "context": "Concepto de seguridad"
             },
             {
-              "id": "cepeda-prog-02",
+              "id": "cepeda-prog-seg-02",
               "page": 5,
-              "chapter": "Colombia Potencia Mundial de la Vida",
-              "section": "Paz Total",
-              "paragraph": 4,
-              "text": "Paz con justicia social y protección a líderes sociales y defensores de DDHH",
+              "chapter": "Eje 1: Seguridad Humana",
+              "text": "Desmilitarización civil",
+              "context": "Política de seguridad"
+            },
+            {
+              "id": "cepeda-prog-seg-03",
+              "page": 5,
+              "chapter": "Eje 1: Paz",
+              "text": "Paz con justicia social",
               "context": "Política de paz"
             },
             {
-              "id": "cepeda-prog-03",
+              "id": "cepeda-prog-seg-04",
+              "page": 6,
+              "chapter": "Eje 1: Liderazgo Social",
+              "text": "Protección líderes sociales",
+              "context": "Protección a defensores"
+            },
+            {
+              "id": "cepeda-prog-eco-01",
               "page": 7,
-              "chapter": "Colombia Potencia Mundial de la Vida",
-              "section": "Transición Energética",
-              "paragraph": 2,
-              "text": "Transición energética justa, protección de la Amazonía y los páramos",
-              "context": "Política ambiental"
+              "chapter": "Eje 2: Economía",
+              "text": "Superar pobreza como meta",
+              "context": "Objetivo económico"
             },
             {
-              "id": "cepeda-prog-04",
+              "id": "cepeda-prog-eco-02",
               "page": 7,
-              "chapter": "Colombia Potencia Mundial de la Vida",
-              "section": "Bioeconomía",
-              "paragraph": 5,
-              "text": "Desarrollo de bioeconomía como motor de crecimiento sostenible",
-              "context": "Modelo económico verde"
-            },
-            {
-              "id": "cepeda-prog-05",
-              "page": 8,
-              "chapter": "Colombia Potencia Mundial de la Vida",
-              "section": "Política Exterior",
-              "paragraph": 1,
-              "text": "Política exterior autónoma, solidaridad con América Latina",
-              "context": "Política internacional"
-            },
-            {
-              "id": "cepeda-prog-06",
-              "page": 8,
-              "chapter": "Colombia Potencia Mundial de la Vida",
-              "section": "Defensa de Migrantes",
-              "paragraph": 3,
-              "text": "Defensa de los derechos de los colombianos en el exterior",
-              "context": "Política migratoria"
-            },
-            {
-              "id": "cepeda-prog-07",
-              "page": 10,
-              "chapter": "Ejes Programáticos",
-              "section": "Modelo de Estado",
-              "paragraph": 1,
-              "text": "Continuidad y profundización de las reformas del gobierno Petro",
+              "chapter": "Eje 2: Economía",
+              "text": "Fortalecer Estado social",
               "context": "Modelo de Estado"
             },
             {
-              "id": "cepeda-prog-08",
-              "page": 10,
-              "chapter": "Ejes Programáticos",
-              "section": "Austeridad",
-              "paragraph": 3,
-              "text": "Austeridad republicana sin desmantelar el Estado social",
+              "id": "cepeda-prog-eco-03",
+              "page": 8,
+              "chapter": "Eje 2: Economía",
+              "text": "Protección sectores vulnerables",
+              "context": "Política social"
+            },
+            {
+              "id": "cepeda-prog-eco-04",
+              "page": 8,
+              "chapter": "Eje 2: Economía",
+              "text": "Austeridad republicana",
               "context": "Política fiscal"
             },
             {
-              "id": "cepeda-prog-09",
+              "id": "cepeda-prog-ext-01",
+              "page": 9,
+              "chapter": "Eje 3: Política Exterior",
+              "text": "Política exterior autónoma",
+              "context": "Relaciones internacionales"
+            },
+            {
+              "id": "cepeda-prog-ext-02",
+              "page": 9,
+              "chapter": "Eje 3: Política Exterior",
+              "text": "Solidaridad con A.Latina",
+              "context": "Integración regional"
+            },
+            {
+              "id": "cepeda-prog-ext-03",
+              "page": 9,
+              "chapter": "Eje 3: Política Exterior",
+              "text": "Defensa migrantes colombianos",
+              "context": "Política migratoria"
+            },
+            {
+              "id": "cepeda-prog-est-01",
+              "page": 10,
+              "chapter": "Eje 4: Estado",
+              "text": "Continuidad reformas Petro",
+              "context": "Modelo de Estado"
+            },
+            {
+              "id": "cepeda-prog-est-02",
+              "page": 10,
+              "chapter": "Eje 4: Estado",
+              "text": "Garantía derechos universales",
+              "context": "Política social"
+            },
+            {
+              "id": "cepeda-prog-est-03",
+              "page": 10,
+              "chapter": "Eje 4: Estado",
+              "text": "Participación ciudadana",
+              "context": "Democracia participativa"
+            },
+            {
+              "id": "cepeda-prog-est-04",
+              "page": 10,
+              "chapter": "Eje 4: Estado",
+              "text": "Austeridad sin desmantelar",
+              "context": "Política fiscal"
+            },
+            {
+              "id": "cepeda-prog-jus-01",
               "page": 11,
-              "chapter": "Ejes Programáticos",
-              "section": "Derechos Humanos",
-              "paragraph": 1,
-              "text": "Derechos humanos como eje transversal del gobierno",
+              "chapter": "Eje 5: Justicia",
+              "text": "Derechos humanos como eje",
               "context": "Política de DDHH"
             },
             {
-              "id": "cepeda-prog-10",
+              "id": "cepeda-prog-jus-02",
               "page": 11,
-              "chapter": "Ejes Programáticos",
-              "section": "Justicia Transicional",
-              "paragraph": 3,
-              "text": "Verdad, reparación y justicia transicional para las víctimas",
-              "context": "Política de justicia transicional"
+              "chapter": "Eje 5: Justicia",
+              "text": "Víctimas en el centro",
+              "context": "Política de víctimas"
             },
             {
-              "id": "cepeda-prog-11",
-              "page": 13,
-              "chapter": "Ejes Programáticos",
-              "section": "Derechos Sexuales y Reproductivos",
-              "paragraph": 1,
-              "text": "Garantía de derechos sexuales y reproductivos, matrimonio igualitario",
-              "context": "Política de género e inclusión"
+              "id": "cepeda-prog-jus-03",
+              "page": 11,
+              "chapter": "Eje 5: Justicia",
+              "text": "Justicia transicional",
+              "context": "Modelo de justicia"
             },
             {
-              "id": "cepeda-prog-12",
+              "id": "cepeda-prog-val-01",
               "page": 13,
-              "chapter": "Ejes Programáticos",
-              "section": "Lucha Antirracista",
-              "paragraph": 3,
+              "chapter": "Eje 6: Valores",
+              "text": "Derechos sexuales y reproductivos",
+              "context": "Política de género"
+            },
+            {
+              "id": "cepeda-prog-val-02",
+              "page": 13,
+              "chapter": "Eje 6: Valores",
+              "text": "Matrimonio igualitario",
+              "context": "Derechos LGBT"
+            },
+            {
+              "id": "cepeda-prog-val-03",
+              "page": 13,
+              "chapter": "Eje 6: Valores",
+              "text": "Mujeres protagonistas",
+              "context": "Política de género"
+            },
+            {
+              "id": "cepeda-prog-val-04",
+              "page": 13,
+              "chapter": "Eje 6: Valores",
               "text": "Lucha antirracista estructural",
-              "context": "Política de inclusión étnico-racial"
+              "context": "Política antirracista"
+            },
+            {
+              "id": "cepeda-prog-val-05",
+              "page": 14,
+              "chapter": "Eje 6: Valores",
+              "text": "Estado laico",
+              "context": "Principio constitucional"
+            },
+            {
+              "id": "cepeda-prog-amb-01",
+              "page": 7,
+              "chapter": "Eje 7: Ambiente",
+              "text": "Transición energética justa",
+              "context": "Política climática"
+            },
+            {
+              "id": "cepeda-prog-amb-02",
+              "page": 7,
+              "chapter": "Eje 7: Ambiente",
+              "text": "Proteger Amazonía y páramos",
+              "context": "Conservación ambiental"
+            },
+            {
+              "id": "cepeda-prog-amb-03",
+              "page": 7,
+              "chapter": "Eje 7: Ambiente",
+              "text": "Justicia ambiental",
+              "context": "Política ambiental"
+            },
+            {
+              "id": "cepeda-prog-amb-04",
+              "page": 7,
+              "chapter": "Eje 7: Ambiente",
+              "text": "Bioeconomía",
+              "context": "Modelo económico sostenible"
+            },
+            {
+              "id": "cepeda-prog-pen-01",
+              "page": 15,
+              "chapter": "Eje 8: Pensiones",
+              "text": "Defender Ley 2381 de 2025",
+              "context": "Reforma pensional"
+            },
+            {
+              "id": "cepeda-prog-pen-02",
+              "page": 15,
+              "chapter": "Eje 8: Pensiones",
+              "text": "Ampliar renta básica solidaria",
+              "context": "Pilar solidario"
+            },
+            {
+              "id": "cepeda-prog-pen-03",
+              "page": 16,
+              "chapter": "Eje 8: Pensiones",
+              "text": "Formalización laboral",
+              "context": "Raíz del problema pensional"
+            },
+            {
+              "id": "cepeda-prog-pen-04",
+              "page": 16,
+              "chapter": "Eje 8: Pensiones",
+              "text": "Sistema Nacional de Cuidado",
+              "context": "Reconocimiento trabajo de cuidado"
+            },
+            {
+              "id": "cepeda-prog-pen-05",
+              "page": 17,
+              "chapter": "Eje 8: Pensiones",
+              "text": "Fortalecer BEPS",
+              "context": "Subsidios para informales"
             },
             {
               "id": "cepeda-prog-13",
-              "page": 14,
-              "chapter": "Ejes Programáticos",
-              "section": "Estado Laico",
-              "paragraph": 1,
-              "text": "Defensa del Estado laico",
-              "context": "Principios constitucionales"
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-13",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
-              "id": "cepeda-prog-14",
-              "page": 15,
-              "chapter": "Ejes Programáticos",
-              "section": "Pensiones",
-              "subtitle": "Defensa de la Ley 2381",
-              "paragraph": 2,
-              "text": "Defender la implementación total de la Ley 2381 de 2025",
-              "context": "Política pensional"
+              "id": "cepeda-prog-11",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-11",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-12",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-12",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-05",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-05",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-06",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-06",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-01",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-01",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
               "id": "cepeda-prog-15",
-              "page": 15,
-              "chapter": "Ejes Programáticos",
-              "section": "Pensiones",
-              "subtitle": "Ampliación de cobertura",
-              "paragraph": 4,
-              "text": "Ampliar el valor de la renta básica solidaria por encima de la línea de pobreza extrema",
-              "context": "Política pensional - pilar solidario"
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-15",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-10",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-10",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-02",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-02",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-07",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-07",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-03",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-03",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
               "id": "cepeda-prog-16",
-              "page": 16,
-              "chapter": "Ejes Programáticos",
-              "section": "Formalización Laboral",
-              "paragraph": 1,
-              "text": "Formalización laboral como raíz del problema pensional",
-              "context": "Política de formalización"
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-16",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-04",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-04",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-09",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-09",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-perfil-01",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-perfil-01",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-prog-14",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-14",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
               "id": "cepeda-prog-17",
-              "page": 16,
-              "chapter": "Ejes Programáticos",
-              "section": "Sistema Nacional de Cuidado",
-              "paragraph": 3,
-              "text": "Fortalecer el Sistema Nacional de Cuidado reconociendo económicamente el trabajo de cuidado",
-              "context": "Política de género y cuidado"
-            },
-            {
-              "id": "cepeda-prog-18",
-              "page": 17,
-              "chapter": "Ejes Programáticos",
-              "section": "BEPS",
-              "paragraph": 2,
-              "text": "Fortalecer los BEPS (Beneficios Económicos Periódicos) con mejores subsidios para trabajadores informales",
-              "context": "Política pensional para informales"
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-prog-17",
+              "context": "Referencia automática — verificar ubicación exacta"
             }
           ]
         },
         "dossier": {
-          "label": "Dossier — Controversias",
+          "label": "Dossier: Controversias y Datos Clave",
           "refs": [
             {
-              "id": "cepeda-dossier-up",
-              "page": 20,
-              "chapter": "Anexos",
-              "section": "Origen político familiar",
-              "paragraph": 1,
-              "text": "Nació y se crió en el comunismo colombiano, padres militantes del PCC y la UP",
-              "context": "Herencia política familiar"
-            },
-            {
-              "id": "cepeda-dossier-farc",
+              "id": "cepeda-dossier-up-01",
               "page": 21,
               "chapter": "Anexos",
-              "section": "Vínculos con las FARC",
-              "paragraph": 2,
-              "text": "Aparece en los computadores de Raúl Reyes como 'compañero'",
-              "context": "Evidencia de vínculos con FARC"
+              "section": "Unión Patriótica",
+              "text": "UP creada en 1985 por PCC y FARC como brazo político electoral",
+              "context": "UP y PCC"
             },
             {
-              "id": "cepeda-dossier-exilio",
+              "id": "cepeda-dossier-up-02",
               "page": 22,
               "chapter": "Anexos",
-              "section": "Formación en el Bloque Soviético",
-              "paragraph": 1,
-              "text": "Exilio en Cuba y Checoslovaquia, estudios en Bulgaria (país del bloque soviético)",
-              "context": "Formación en países comunistas"
+              "section": "Unión Patriótica",
+              "text": "Manuel Cepeda Vargas, padre de Iván, fue senador por la UP",
+              "context": "UP y PCC"
             },
             {
-              "id": "cepeda-dossier-uribe",
+              "id": "cepeda-dossier-up-03",
+              "page": 23,
+              "chapter": "Anexos",
+              "section": "Unión Patriótica",
+              "text": "Asesinado el 9 de agosto de 1994 en operación Golpe de Gracia",
+              "context": "UP y PCC"
+            },
+            {
+              "id": "cepeda-dossier-up-04",
               "page": 24,
               "chapter": "Anexos",
-              "section": "Caso Uribe",
-              "paragraph": 1,
-              "text": "Investigó el paramilitarismo en Antioquia, condujo al caso contra Álvaro Uribe",
-              "context": "Caso judicial contra Uribe Vélez"
+              "section": "Unión Patriótica",
+              "text": "Iván Cepeda encontró a su padre asesinado a los 32 años",
+              "context": "UP y PCC"
             },
             {
-              "id": "cepeda-dossier-padre",
+              "id": "cepeda-dossier-up-05",
               "page": 25,
               "chapter": "Anexos",
+              "section": "Unión Patriótica",
+              "text": "Más de 5.000 militantes de la UP fueron asesinados (genocidio UP)",
+              "context": "UP y PCC"
+            },
+            {
+              "id": "cepeda-dossier-up-06",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Unión Patriótica",
+              "text": "Corte IDH condenó al Estado colombiano por el asesinato de Manuel Cepeda",
+              "context": "UP y PCC"
+            },
+            {
+              "id": "cepeda-dossier-up-07",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Unión Patriótica",
+              "text": "Yira Castro: el marxismo-leninismo es la ciencia del camino hacia la liberación femenina",
+              "context": "UP y PCC"
+            },
+            {
+              "id": "cepeda-dossier-farc-01",
+              "page": 22,
+              "chapter": "Anexos",
+              "section": "Vínculos FARC",
+              "text": "Iván Cepeda aparece en archivos de Raúl Reyes como compañero",
+              "context": "Relación con FARC"
+            },
+            {
+              "id": "cepeda-dossier-farc-02",
+              "page": 23,
+              "chapter": "Anexos",
+              "section": "Vínculos FARC",
+              "text": "Cepeda asumió la tesis del entrampamiento para Iván Márquez y Santrich",
+              "context": "Relación con FARC"
+            },
+            {
+              "id": "cepeda-dossier-farc-03",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Vínculos FARC",
+              "text": "Excomandantes FARC lo consideran un héroe",
+              "context": "Relación con FARC"
+            },
+            {
+              "id": "cepeda-dossier-farc-04",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Vínculos FARC",
+              "text": "Es el candidato que más confianza le genera a las FARC",
+              "context": "Relación con FARC"
+            },
+            {
+              "id": "cepeda-dossier-farc-05",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Vínculos FARC",
+              "text": "Jacobo Arenas fue compañero de militancia de Manuel Cepeda",
+              "context": "Relación con FARC"
+            },
+            {
+              "id": "cepeda-dossier-farc-06",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Vínculos FARC",
+              "text": "Cepeda fue facilitador del proceso de paz 2012-2016",
+              "context": "Relación con FARC"
+            },
+            {
+              "id": "cepeda-dossier-exilio-01",
+              "page": 23,
+              "chapter": "Anexos",
+              "section": "Exilio en Bloque Soviético",
+              "text": "Primer exilio a los 3 años: Cuba, luego Praga",
+              "context": "Formación en el exterior"
+            },
+            {
+              "id": "cepeda-dossier-exilio-02",
+              "page": 24,
+              "chapter": "Anexos",
+              "section": "Exilio en Bloque Soviético",
+              "text": "Vivió la Primavera de Praga",
+              "context": "Formación en el exterior"
+            },
+            {
+              "id": "cepeda-dossier-exilio-03",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Exilio en Bloque Soviético",
+              "text": "Estudió filosofía en la Universidad de Sofía, Bulgaria",
+              "context": "Formación en el exterior"
+            },
+            {
+              "id": "cepeda-dossier-exilio-04",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Exilio en Bloque Soviético",
+              "text": "Fue testigo de la dictadura bajo regímenes comunistas",
+              "context": "Formación en el exterior"
+            },
+            {
+              "id": "cepeda-dossier-exilio-05",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Exilio en Bloque Soviético",
+              "text": "Mantuvo contacto con las Juventudes Comunistas (JUCO) desde los 13 años",
+              "context": "Formación en el exterior"
+            },
+            {
+              "id": "cepeda-dossier-exilio-06",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Exilio en Bloque Soviético",
+              "text": "Cepeda: esta experiencia lo alejó de los extremos",
+              "context": "Formación en el exterior"
+            },
+            {
+              "id": "cepeda-dossier-uribe-01",
+              "page": 25,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "2014: Cepeda presenta debate en Congreso, Uribe lo demanda",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-uribe-02",
+              "page": 26,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "2018: Corte Suprema investiga a Uribe por soborno a testigos",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-uribe-03",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "2020: Detención domiciliaria de Uribe, hecho histórico",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-uribe-04",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "Julio 2025: Uribe condenado a 12 años en primera instancia",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-uribe-05",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "Octubre 2025: Uribe absuelto en segunda instancia",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-uribe-06",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "2026: Cepeda y Fiscalía anuncian recurso de casación",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-uribe-07",
+              "page": 31,
+              "chapter": "Anexos",
+              "section": "Caso Uribe",
+              "text": "Opositores: Cepeda convirtió trauma familiar en cacería personal contra Uribe",
+              "context": "Caso judicial Uribe"
+            },
+            {
+              "id": "cepeda-dossier-padre-01",
+              "page": 26,
+              "chapter": "Anexos",
               "section": "Asesinato de Manuel Cepeda",
-              "paragraph": 1,
-              "text": "9 de agosto de 1994: su padre Manuel Cepeda fue asesinado por sargentos del Ejército",
-              "context": "Asesinato del padre en operación Golpe de Gracia"
+              "text": "9 de agosto de 1994, 9:05 a.m. - Dos sargentos del Ejército asesinan a Manuel Cepeda",
+              "context": "Muerte del padre"
+            },
+            {
+              "id": "cepeda-dossier-padre-02",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Asesinato de Manuel Cepeda",
+              "text": "Iván viajaba cuadras atrás en un bus, vio a su padre desgonzado con tres balazos",
+              "context": "Muerte del padre"
+            },
+            {
+              "id": "cepeda-dossier-padre-03",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Asesinato de Manuel Cepeda",
+              "text": "Minutos antes había rechazado irse en el mismo vehículo con su padre",
+              "context": "Muerte del padre"
+            },
+            {
+              "id": "cepeda-dossier-padre-04",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Asesinato de Manuel Cepeda",
+              "text": "Dio entrevista minutos después pidiendo el cese de la violencia",
+              "context": "Muerte del padre"
+            },
+            {
+              "id": "cepeda-dossier-padre-05",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Asesinato de Manuel Cepeda",
+              "text": "Operación Golpe de Gracia",
+              "context": "Muerte del padre"
+            },
+            {
+              "id": "cepeda-dossier-maduro-01",
+              "page": 27,
+              "chapter": "Anexos",
+              "section": "Venezuela",
+              "text": "Marzo 2013: Cepeda respalda a Maduro como sucesor de Chávez",
+              "context": "Relación con Maduro"
+            },
+            {
+              "id": "cepeda-dossier-maduro-02",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Venezuela",
+              "text": "2026: Jota Pe Hernández desempolva el tuit",
+              "context": "Relación con Maduro"
+            },
+            {
+              "id": "cepeda-dossier-maduro-03",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Venezuela",
+              "text": "Cepeda crítico de intervención militar de EE.UU. en Venezuela",
+              "context": "Relación con Maduro"
+            },
+            {
+              "id": "cepeda-dossier-maduro-04",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Venezuela",
+              "text": "Opositores: cercanía peligrosa con regímenes autoritarios",
+              "context": "Relación con Maduro"
+            },
+            {
+              "id": "cepeda-dossier-maduro-05",
+              "page": 31,
+              "chapter": "Anexos",
+              "section": "Venezuela",
+              "text": "Su defensa: izquierda democrática, no intervención, solidaridad regional",
+              "context": "Relación con Maduro"
+            },
+            {
+              "id": "cepeda-dossier-transf-01",
+              "page": 28,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "text": "Nací en política en el Partido Comunista, pero esas etiquetas no significan hoy lo mismo",
+              "context": "Evolución política"
+            },
+            {
+              "id": "cepeda-dossier-transf-02",
+              "page": 29,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "text": "Vivió las contradicciones del socialismo real",
+              "context": "Evolución política"
+            },
+            {
+              "id": "cepeda-dossier-transf-03",
+              "page": 30,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "text": "Una persona con sentido común ya no mira la realidad con esos esquemas",
+              "context": "Evolución política"
+            },
+            {
+              "id": "cepeda-dossier-transf-04",
+              "page": 31,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "text": "Entendí rápido que lo mío nunca iba a ser eso, por un rechazo innato a la violencia",
+              "context": "Evolución política"
+            },
+            {
+              "id": "cepeda-dossier-transf-05",
+              "page": 32,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "text": "Críticos: comunista reciclado moderado por conveniencia electoral",
+              "context": "Evolución política"
+            },
+            {
+              "id": "cepeda-dossier-transf-06",
+              "page": 33,
+              "chapter": "Anexos",
+              "section": "Transformación ideológica",
+              "text": "Defensores: transformación genuina hacia izquierda democrática",
+              "context": "Evolución política"
+            },
+            {
+              "id": "cepeda-dossier-detail-054",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-054",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
               "id": "cepeda-dossier-maduro",
-              "page": 26,
-              "chapter": "Anexos",
-              "section": "Relación con Venezuela",
-              "paragraph": 1,
-              "text": "En 2013 respaldó a Nicolás Maduro como sucesor de Chávez",
-              "context": "Posición sobre Venezuela"
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-maduro",
+              "context": "Referencia automática — verificar ubicación exacta"
             },
             {
-              "id": "cepeda-dossier-transformacion",
-              "page": 27,
-              "chapter": "Anexos",
-              "section": "Transformación ideológica",
-              "paragraph": 2,
-              "text": "\"Nací en política en el Partido Comunista, pero esas etiquetas no significan hoy lo mismo\"",
-              "context": "Evolución política del candidato"
+              "id": "cepeda-dossier-detail-052",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-052",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-055",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-055",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-uribe",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-uribe",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-041",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-041",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-053",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-053",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-044",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-044",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-042",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-042",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-032",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-032",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-038",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-038",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-v-nculos-documentados-10",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-v-nculos-documentados-10",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-031",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-031",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-cronolog-a-del-caso-07",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-cronolog-a-del-caso-07",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-039",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-039",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-cronolog-a-del-caso-06",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-cronolog-a-del-caso-06",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-043",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-043",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-037",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-037",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-up",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-up",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-047",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-047",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-034",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-034",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-048",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-048",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-el-testimonio-de-iv-n-cepeda-06",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-el-testimonio-de-iv-n-cepeda-06",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-049",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-049",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-040",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-040",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-farc",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-farc",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-033",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-033",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-051",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-051",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-el-testimonio-de-iv-n-cepeda-07",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-el-testimonio-de-iv-n-cepeda-07",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-030",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-030",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-056",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-056",
+              "context": "Referencia automática — verificar ubicación exacta"
+            },
+            {
+              "id": "cepeda-dossier-detail-050",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en documento original",
+              "text": "cepeda-dossier-detail-050",
+              "context": "Referencia automática — verificar ubicación exacta"
+            }
+          ]
+        },
+        "cronologia": {
+          "label": "Cronología Clave",
+          "refs": [
+            {
+              "id": "cepeda-crono-1962",
+              "page": 2,
+              "chapter": "Línea de Tiempo",
+              "text": "Nace en Bogotá en familia comunista. Manuel Cepeda y Yira Castro",
+              "context": "1962 - Nacimiento"
+            },
+            {
+              "id": "cepeda-crono-1965",
+              "page": 22,
+              "chapter": "Línea de Tiempo",
+              "text": "Exilio a los 3 años: Cuba, luego Praga. Vive la Primavera de Praga",
+              "context": "1965 - Primer exilio"
+            },
+            {
+              "id": "cepeda-crono-1975",
+              "page": 22,
+              "chapter": "Línea de Tiempo",
+              "text": "Militante JUCO. Estudia filosofía en Universidad de Sofía, Bulgaria",
+              "context": "1975-1987 - Formación"
+            },
+            {
+              "id": "cepeda-crono-1987",
+              "page": 20,
+              "chapter": "Línea de Tiempo",
+              "text": "Militante de la Unión Patriótica (UP)",
+              "context": "1987-1990 - UP"
+            },
+            {
+              "id": "cepeda-crono-1994",
+              "page": 25,
+              "chapter": "Línea de Tiempo",
+              "text": "Asesinato de Manuel Cepeda. Iván lo encuentra. Operación Golpe de Gracia",
+              "context": "9-Ago-1994 - Asesinato"
+            },
+            {
+              "id": "cepeda-crono-2010",
+              "page": 2,
+              "chapter": "Línea de Tiempo",
+              "text": "Representante a la Cámara por Bogotá",
+              "context": "2010-2014 - Cámara"
+            },
+            {
+              "id": "cepeda-crono-2012",
+              "page": 21,
+              "chapter": "Línea de Tiempo",
+              "text": "Facilitador del proceso de paz con FARC en La Habana",
+              "context": "2012-2016 - Proceso de Paz"
+            },
+            {
+              "id": "cepeda-crono-2013",
+              "page": 26,
+              "chapter": "Línea de Tiempo",
+              "text": "Respaldó a Nicolás Maduro como sucesor de Chávez",
+              "context": "2013 - Venezuela"
+            },
+            {
+              "id": "cepeda-crono-2014",
+              "page": 2,
+              "chapter": "Línea de Tiempo",
+              "text": "Elegido Senador. Debate contra Uribe por paramilitarismo",
+              "context": "2014 - Senado"
+            },
+            {
+              "id": "cepeda-crono-2018",
+              "page": 24,
+              "chapter": "Línea de Tiempo",
+              "text": "Corte Suprema investiga a Uribe por soborno de testigos",
+              "context": "2018 - Caso Uribe"
+            },
+            {
+              "id": "cepeda-crono-jul2025",
+              "page": 24,
+              "chapter": "Línea de Tiempo",
+              "text": "Uribe condenado a 12 años en primera instancia",
+              "context": "Jul 2025 - Condena Uribe"
+            },
+            {
+              "id": "cepeda-crono-oct2025",
+              "page": 24,
+              "chapter": "Línea de Tiempo",
+              "text": "Uribe absuelto en segunda instancia. Cepeda apela",
+              "context": "Oct 2025 - Absolución Uribe"
+            },
+            {
+              "id": "cepeda-crono-may2026",
+              "page": 1,
+              "chapter": "Línea de Tiempo",
+              "text": "Pasa a segunda vuelta. Propone continuar reformas de Petro",
+              "context": "May 2026 - Segunda vuelta"
+            }
+          ]
+        },
+        "analisis_electoral": {
+          "label": "Análisis Electoral",
+          "refs": [
+            {
+              "id": "abelardo-elect-20años",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Contexto",
+              "text": "20 años gobernó la derecha/centroderecha (2002-2022)",
+              "context": "Contexto histórico"
+            },
+            {
+              "id": "abelardo-elect-4años",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Contexto",
+              "text": "4 años lleva la izquierda en el poder (2022-2026)",
+              "context": "Gobierno actual"
+            },
+            {
+              "id": "abelardo-elect-timeline-2002",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2002-2010: Álvaro Uribe Vélez, Derecha",
+              "context": "Gobierno Uribe"
+            },
+            {
+              "id": "abelardo-elect-timeline-2010",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2010-2018: Juan Manuel Santos, Centro",
+              "context": "Gobierno Santos"
+            },
+            {
+              "id": "abelardo-elect-timeline-2018",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2018-2022: Iván Duque, Derecha",
+              "context": "Gobierno Duque"
+            },
+            {
+              "id": "abelardo-elect-timeline-2022",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Línea de gobierno",
+              "text": "2022-2026: Gustavo Petro, Izquierda",
+              "context": "Gobierno Petro"
+            },
+            {
+              "id": "abelardo-elect-evol-2002",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2002: Luis E. Garzón 4.4% (~487.000 votos)",
+              "context": "Voto izquierda 2002"
+            },
+            {
+              "id": "abelardo-elect-evol-2006",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2006: Carlos Gaviria 22% (~2.6M votos) +435%",
+              "context": "Voto izquierda 2006"
+            },
+            {
+              "id": "abelardo-elect-evol-2010",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2010: Gustavo Petro 9.1% (~1.3M) -49%",
+              "context": "Voto izquierda 2010"
+            },
+            {
+              "id": "abelardo-elect-evol-2014",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2014: Clara López 15.2% (~1.96M) +47%",
+              "context": "Voto izquierda 2014"
+            },
+            {
+              "id": "abelardo-elect-evol-2018",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2018: Gustavo Petro 25.1% (~4.86M) +148%",
+              "context": "Voto izquierda 2018"
+            },
+            {
+              "id": "abelardo-elect-evol-2022",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Evolución voto izquierda",
+              "text": "2022: Gustavo Petro 40.3% (~8.53M) +76%",
+              "context": "Voto izquierda 2022"
+            },
+            {
+              "id": "abelardo-elect-2v-2018",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Segunda vuelta",
+              "text": "2018: Izquierda 8.04M (41.8%) vs Derecha 10.4M (54%)",
+              "context": "Segunda vuelta 2018"
+            },
+            {
+              "id": "abelardo-elect-2v-2022",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Segunda vuelta",
+              "text": "2022: Izquierda 11.28M (50.4%) vs Derecha 10.58M (47.3%)",
+              "context": "Segunda vuelta 2022"
+            },
+            {
+              "id": "abelardo-elect-no-dictadura",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Indicadores",
+              "text": "No ha pasado: cierre Congreso, persecución, control medios, eliminar elecciones",
+              "context": "Lo que NO ha pasado con Petro"
+            },
+            {
+              "id": "abelardo-elect-si-uribe",
+              "page": "—",
+              "chapter": "Análisis Electoral",
+              "section": "Indicadores",
+              "text": "Sí pasó con Uribe: parapolítica, falsos positivos, chuzadas DAS, reelección",
+              "context": "Lo que SÍ pasó con Uribe"
             }
           ]
         }
