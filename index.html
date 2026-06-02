@@ -56,7 +56,7 @@
   }
 
   /* ===== SECTIONS ===== */
-  section { padding:clamp(24px, 4vw, 48px) 16px; max-width:1200px; margin:0 auto; }
+  section { padding:clamp(24px, 4vw, 48px) 16px; max-width:1200px; margin:0 auto; scroll-margin-top:70px; }
   @media(min-width:768px){ section{ padding:40px 24px; } }
   section h2 { font-size:clamp(1.3rem, 4vw, 2rem); font-weight:800; margin-bottom:clamp(16px, 3vw, 30px); text-align:center; }
   section h2 .sub { font-size:clamp(0.8rem, 2.5vw, 0.95rem); color:#999; font-weight:400; display:block; margin-top:4px; }
@@ -148,7 +148,7 @@
   @media(min-width:768px){ .footer{ padding:30px; } }
 
   /* ===== VERDICT ===== */
-  .verdict-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border:2px solid #e94560; border-radius:16px; padding:clamp(20px, 3vw, 30px); margin:clamp(24px, 4vw, 40px) 0; text-align:center; }
+  .verdict-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border:2px solid #e94560; border-radius:16px; padding:clamp(20px, 3vw, 30px); margin:clamp(24px, 4vw, 40px) 0; text-align:center; scroll-margin-top:70px; }
   .verdict-box h2 { margin-bottom:12px; }
   .verdict-box p { max-width:800px; margin:0 auto; color:#bbb; font-size:clamp(0.88rem, 2.3vw, 0.95rem); }
 
@@ -1163,19 +1163,19 @@
 
   <div class="highlight-box">
     <h4>⏳ Línea de Tiempo — Gobiernos 2002-2026</h4>
-    <table class="elec-table">
+    <div class="table-wrap-elec"><table class="elec-table">
       <tr><th>Período</th><th>Presidente</th><th>Espectro</th><th>Años</th></tr>
       <tr><td>2002-2010</td><td>Álvaro Uribe Vélez</td><td>🔴 Derecha (Primero Colombia)</td><td><span class="num num-der">8 años</span></td></tr>
       <tr><td>2010-2018</td><td>Juan Manuel Santos</td><td>🟡 Centro (Partido de la U) — exuribista</td><td><span class="num num-der">8 años</span></td></tr>
       <tr><td>2018-2022</td><td>Iván Duque Márquez</td><td>🔴 Derecha (Centro Democrático)</td><td><span class="num num-der">4 años</span></td></tr>
       <tr><td>2022-2026</td><td>Gustavo Petro Urrego</td><td>🟢 Izquierda (Pacto Histórico)</td><td><span class="num num-izq">4 años</span></td></tr>
-    </table>
+    </table></div>
     <p style="font-size:0.82rem;color:#888;margin-top:8px;">🔑 <strong>Dato clave:</strong> Cuando se habla de "dictadura" de Petro, vale recordar que la derecha gobernó 20 años consecutivos sin que se calificara como tal. La alternancia democrática es una señal de salud, no de autoritarismo.</p>
   </div>
 
   <h3 style="font-size:1.1rem;margin:20px 0 12px;">📈 Evolución del Voto por la Izquierda (2002-2022)</h3>
 
-  <table class="elec-table">
+  <div class="table-wrap-elec"><table class="elec-table">
     <tr><th>Año</th><th>Candidato</th><th>Votos 1ª vuelta</th><th>%</th><th>Crecimiento</th></tr>
     <tr><td>2002</td><td>Luis E. Garzón (PDI)</td><td class="num num-izq">~487.000</td><td>4.4%</td><td>—</td></tr>
     <tr><td>2006</td><td>Carlos Gaviria (PDA)</td><td class="num num-izq">~2.609.412</td><td>22.0%</td><td class="trend-up">🚀 +435%</td></tr>
@@ -1183,13 +1183,13 @@
     <tr><td>2014</td><td>Clara López (PDA/UP)</td><td class="num num-izq">~1.958.518</td><td>15.2%</td><td class="trend-up">+47%</td></tr>
     <tr><td>2018</td><td>Gustavo Petro (Pacto)</td><td class="num num-izq">~4.855.069</td><td>25.1%</td><td class="trend-up">🚀 +148%</td></tr>
     <tr><td>2022</td><td>Gustavo Petro (Pacto)</td><td class="num num-izq"><strong>~8.527.768</strong></td><td><strong>40.3%</strong></td><td class="trend-up">🚀 +76%</td></tr>
-  </table>
+  </table></div>
 
   <p style="font-size:0.85rem;color:#888;margin:10px 0;">La izquierda pasó de <strong>4.4%</strong> a <strong>50.4%</strong> en segunda vuelta — un crecimiento de <strong>11.5x</strong> en 20 años.</p>
 
   <h3 style="font-size:1.1rem;margin:20px 0 12px;">⚖️ Izquierda vs Derecha en Segunda Vuelta</h3>
 
-  <table class="elec-table">
+  <div class="table-wrap-elec"><table class="elec-table">
     <tr><th>Año</th><th style="color:#4ecca3;">Votos Izquierda</th><th style="color:#e94560;">Votos Derecha</th><th>% Participación</th><th>Ganador</th></tr>
     <tr><td><strong>2018</strong></td><td>8.040.449 <span style="color:#888;font-size:0.75rem;">(41.8%)</span></td><td><span class="num num-der">10.398.689</span> <span style="color:#888;font-size:0.75rem;">(54.0%)</span></td><td>54.0%</td><td>🔴 Duque</td></tr>
     <tr><td><strong>2022</strong></td><td><span class="num num-izq"><strong>11.281.013</strong></span> <span style="color:#888;font-size:0.75rem;">(50.4%)</span></td><td>10.580.412 <span style="color:#888;font-size:0.75rem;">(47.3%)</span></td><td><span class="num num-gold">58.2%</span></td><td>🟢 <strong>Petro</strong></td></tr>
@@ -1323,23 +1323,51 @@
     });
   });
 
-  // Highlight active nav
+  // Highlight active nav + scroll nav horizontally to keep active visible
+  let navScrollTicking = false;
   window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section, .verdict-box');
-    const navLinks = document.querySelectorAll('.nav a');
-    let current = '';
-    sections.forEach(s => {
-      const top = s.offsetTop - 150;
-      if (window.scrollY >= top) current = s.id || '';
-    });
-    navLinks.forEach(a => {
-      a.classList.remove('active');
-      a.removeAttribute('aria-current');
-      if (a.getAttribute('href') === '#' + current) {
-        a.classList.add('active');
-        a.setAttribute('aria-current', 'page');
-      }
-    });
+    if (!navScrollTicking) {
+      window.requestAnimationFrame(() => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav a');
+        const navEl = document.querySelector('.nav');
+        let current = '';
+        const scrollPos = window.scrollY + 120;
+        sections.forEach(s => {
+          const top = s.offsetTop;
+          const bottom = top + s.offsetHeight;
+          if (scrollPos >= top && scrollPos < bottom) {
+            current = s.id;
+          }
+        });
+        // Fallback: last section if scrolled past everything
+        if (!current && sections.length > 0) {
+          const last = sections[sections.length - 1];
+          if (window.scrollY + window.innerHeight >= last.offsetTop + last.offsetHeight - 100) {
+            current = last.id;
+          }
+        }
+        navLinks.forEach(a => {
+          a.classList.remove('active');
+          a.removeAttribute('aria-current');
+          const href = a.getAttribute('href');
+          if (href && href.substring(1) === current) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+            // Auto-scroll nav horizontally to keep active link visible
+            if (navEl && navEl.scrollWidth > navEl.clientWidth) {
+              const aRect = a.getBoundingClientRect();
+              const navRect = navEl.getBoundingClientRect();
+              if (aRect.left < navRect.left || aRect.right > navRect.right) {
+                a.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              }
+            }
+          }
+        });
+        navScrollTicking = false;
+      });
+      navScrollTicking = true;
+    }
   });
 
   // Modal / Lightbox
