@@ -153,6 +153,52 @@
   .stat-card .num.red { color:#e94560; }
   .stat-card .num.green { color:#4ecca3; }
   .stat-card .label { font-size:0.75rem; color:#888; margin-top:4px; }
+
+  /* PENSIONES SECTION */
+  .tema-card { background:#111; border:1px solid #333; border-radius:12px; padding:20px; margin:15px 0; }
+  .tema-card h3 { font-size:1.1rem; margin-bottom:12px; }
+  .tema-card h3.abel-t { color:#e94560; }
+  .tema-card h3.cep-t { color:#4ecca3; }
+  .tema-card h3.neutral-t { color:#ffd700; }
+  .tema-card ul { padding-left:18px; font-size:0.88rem; }
+  .tema-card ul li { margin-bottom:6px; }
+  .tema-card p { font-size:0.88rem; color:#bbb; margin-bottom:8px; }
+  .highlight-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border:1px solid #4ecca340; border-radius:12px; padding:18px; margin:12px 0; }
+  .highlight-box h4 { color:#4ecca3; font-size:0.95rem; margin-bottom:6px; }
+  .highlight-box p { font-size:0.85rem; color:#ccc; }
+  .pilar-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:15px 0; }
+  @media(max-width:600px){ .pilar-grid{grid-template-columns:1fr;} }
+  .pilar-card { background:#0d0d0d; border:1px solid #333; border-radius:10px; padding:14px; }
+  .pilar-card h4 { font-size:0.9rem; margin-bottom:6px; }
+  .pilar-card h4.pil-solid { color:#4ecca3; }
+  .pilar-card h4.pil-semi { color:#ffd700; }
+  .pilar-card h4.pil-contr { color:#e94560; }
+  .pilar-card h4.pil-vol { color:#8888ff; }
+  .pilar-card p { font-size:0.8rem; color:#999; }
+
+  /* ELECTORAL ANALYSIS */
+  .elec-table { width:100%; border-collapse:collapse; margin:12px 0; font-size:0.85rem; }
+  .elec-table th { background:#1a1a1a; color:#888; padding:8px 10px; text-align:left; font-weight:600; border-bottom:2px solid #333; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; }
+  .elec-table td { padding:7px 10px; border-bottom:1px solid #222; }
+  .elec-table tr:hover td { background:#141414; }
+  .elec-table .num { font-weight:700; font-family:monospace; }
+  .num-izq { color:#4ecca3; }
+  .num-der { color:#e94560; }
+  .num-gold { color:#ffd700; }
+  .wider { font-weight:700; color:#4ecca3; }
+  .trend-up { color:#4ecca3; }
+  .trend-down { color:#e94560; }
+  .key-fact { background:linear-gradient(135deg,#1a1a2e,#16213e); border:2px solid #ffd70040; border-radius:12px; padding:18px; margin:15px 0; text-align:center; }
+  .key-fact .big { font-size:1.8rem; font-weight:900; display:block; }
+  .key-fact .big.green { color:#4ecca3; }
+  .key-fact .big.red { color:#e94560; }
+  .key-fact .big.gold { color:#ffd700; }
+  .key-fact .lbl { font-size:0.8rem; color:#888; display:block; margin-top:4px; }
+  .chart-bar { display:flex; align-items:center; gap:6px; margin:3px 0; font-size:0.82rem; }
+  .chart-fill { height:18px; border-radius:4px; min-width:2px; transition:width .3s; }
+  .chart-fill.left { background:#4ecca3; }
+  .chart-fill.right { background:#e94560; }
+  .chart-fill.neutral { background:#ffd700; }
 </style>
 </head>
 <body>
@@ -172,6 +218,8 @@
   <a href="#comparativa">⚖️ Comparativa</a>
   <a href="#multimedia">🎬 Multimedia</a>
   <a href="#cronologia">⏳ Cronología</a>
+  <a href="#pensiones">🏛️ Pensiones</a>
+  <a href="#electoral">📊 Izq vs Der</a>
   <a href="#fuentes">📚 Fuentes</a>
 </div>
 
@@ -967,6 +1015,161 @@
   </div>
 </section>
 
+<!-- ===== PENSIONES ===== -->
+<section id="pensiones">
+  <h2>🏛️ Pensiones y Adultos Mayores <span class="sub">El sistema pensional colombiano y las propuestas de los candidatos</span></h2>
+
+  <div class="highlight-box">
+    <h4>📊 El Problema de Fondo</h4>
+    <p>Colombia tiene una de las tasas de cobertura pensional más bajas de Latinoamérica: solo <strong>1 de cada 4 adultos mayores</strong> recibe una pensión. La informalidad laboral (~58%) es la raíz del problema. La Ley 2381 de 2025 (Reforma Pensional) busca cambiar esto con un sistema de 4 pilares. Sin embargo, la reforma está en proceso de revisión por la Corte Constitucional tras el Auto 841 de 2025.</p>
+  </div>
+
+  <div class="pilar-grid">
+    <div class="pilar-card">
+      <h4 class="pil-solid">🔵 Pilar Solidario</h4>
+      <p>Renta de <strong>$223.800/mes</strong> para adultos mayores 65+/60+ en pobreza (Sisbén hasta C3). Reemplaza a Colombia Mayor.</p>
+    </div>
+    <div class="pilar-card">
+      <h4 class="pil-semi">🟡 Pilar Semicontributivo</h4>
+      <p>Renta vitalicia para quienes cotizaron <strong>300-999 semanas</strong>. Subsidio del 20% (hombres) o 30% (mujeres).</p>
+    </div>
+    <div class="pilar-card">
+      <h4 class="pil-contr">🔴 Pilar Contributivo</h4>
+      <p>Colpensiones recibe aportes hasta <strong>2.3 SMLMV</strong>, AFP el excedente. Pensión única de vejez. Edades: 57(M)/62(H), 1.300 semanas.</p>
+    </div>
+    <div class="pilar-card">
+      <h4 class="pil-vol">🟣 Ahorro Voluntario</h4>
+      <p>Aportes voluntarios para mejorar pensión. Sin modificaciones por la reforma.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="border-color:#4ecca3;">
+    <h4>✅ Avances Sociales de la Reforma</h4>
+    <p>• Reconocimiento del trabajo de cuidado: reducción de <strong>50 semanas por hijo</strong> (máx. 3) • Pensión familiar (parejas suman semanas) • Pensión anticipada (+1.000 semanas) • Cotización flexible para rurales e independientes</p>
+  </div>
+
+  <h3 style="font-size:1.2rem;margin:25px 0 15px;text-align:center;">⚡ Las Propuestas de Cada Candidato</h3>
+
+  <div class="split">
+    <div class="card-abelardo">
+      <span class="tag tag-red">🔴 ABELARDO — EXTREMA DERECHA</span>
+      <h3>Postura: Derogar la Ley 2381</h3>
+      <ul style="padding-left:18px;font-size:0.88rem;">
+        <li><strong>Derogar la reforma</strong> y volver al sistema anterior de competencia RPM/RAIS</li>
+        <li>Migrar a un sistema <strong>100% de capitalización individual</strong> (estilo Chile pre-reforma)</li>
+        <li><strong>Reducir cotizaciones</strong> para aumentar ingreso disponible de trabajadores</li>
+        <li>Subsidio directo a adultos mayores pobres con <strong>recorte de gasto público</strong></li>
+      </ul>
+      <div class="controversy" style="margin-top:12px;">
+        <h4>⚠️ Crítica</h4>
+        <p style="font-size:0.82rem;">El modelo de capitalización individual probado en Chile generó baja cobertura y pensiones de miseria, lo que llevó a reformas estructurales en 2022. Derogar una ley ya aprobada requeriría mayorías que el Congreso actual no tiene.</p>
+      </div>
+    </div>
+    <div class="card-cepeda">
+      <span class="tag tag-green">🟢 CEPEDA — IZQUIERDA DEMOCRÁTICA</span>
+      <h3>Postura: Defender y Profundizar la Ley 2381</h3>
+      <ul style="padding-left:18px;font-size:0.88rem;">
+        <li><strong>Defender la implementación total</strong> de la Ley 2381 pese a recursos judiciales</li>
+        <li><strong>Ampliar el valor</strong> de la renta básica solidaria por encima de la línea de pobreza extrema</li>
+        <li><strong>Formalización laboral</strong> como raíz del problema pensional</li>
+        <li><strong>Sistema Nacional de Cuidado</strong> que reconozca económicamente el trabajo de cuidado</li>
+        <li>Fortalecer los <strong>BEPS</strong> con mejores subsidios para informales</li>
+      </ul>
+      <div class="controversy cepeda" style="margin-top:12px;">
+        <h4>⚠️ Crítica</h4>
+        <p style="font-size:0.82rem;">La reforma no resuelve el déficit fiscal de Colpensiones a largo plazo. Concentrar los primeros 2.3 SMLMV en Colpensiones aumenta el pasivo pensional del Estado. La sostenibilidad del pilar solidario depende de ingresos tributarios no garantizados.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="key-fact" style="margin-top:25px;">
+    <p style="font-size:0.85rem;color:#aaa;">📎 <strong>Este tema se cruza con el análisis electoral completo:</strong> el sistema pensional es uno de los campos de batalla ideológicos donde más se diferencian izquierda y derecha. <a href="#electoral" style="color:#4ecca3;">Ver análisis electoral →</a></p>
+  </div>
+</section>
+
+<!-- ===== ELECTORAL ===== -->
+<section id="electoral">
+  <h2>📊 Izquierda vs Derecha — Análisis Electoral <span class="sub">20 años de datos para entender el presente</span></h2>
+
+  <div class="key-fact">
+    <span class="big green">20 años</span>
+    <span class="lbl">gobernó la derecha/centroderecha en Colombia (2002-2022)</span>
+    <span class="big red" style="margin-top:10px;">4 años</span>
+    <span class="lbl">lleva la izquierda en el poder (2022-2026)</span>
+  </div>
+
+  <div class="highlight-box">
+    <h4>⏳ Línea de Tiempo — Gobiernos 2002-2026</h4>
+    <table class="elec-table">
+      <tr><th>Período</th><th>Presidente</th><th>Espectro</th><th>Años</th></tr>
+      <tr><td>2002-2010</td><td>Álvaro Uribe Vélez</td><td>🔴 Derecha (Primero Colombia)</td><td><span class="num num-der">8 años</span></td></tr>
+      <tr><td>2010-2018</td><td>Juan Manuel Santos</td><td>🟡 Centro (Partido de la U) — exuribista</td><td><span class="num num-der">8 años</span></td></tr>
+      <tr><td>2018-2022</td><td>Iván Duque Márquez</td><td>🔴 Derecha (Centro Democrático)</td><td><span class="num num-der">4 años</span></td></tr>
+      <tr><td>2022-2026</td><td>Gustavo Petro Urrego</td><td>🟢 Izquierda (Pacto Histórico)</td><td><span class="num num-izq">4 años</span></td></tr>
+    </table>
+    <p style="font-size:0.82rem;color:#888;margin-top:8px;">🔑 <strong>Dato clave:</strong> Cuando se habla de "dictadura" de Petro, vale recordar que la derecha gobernó 20 años consecutivos sin que se calificara como tal. La alternancia democrática es una señal de salud, no de autoritarismo.</p>
+  </div>
+
+  <h3 style="font-size:1.1rem;margin:20px 0 12px;">📈 Evolución del Voto por la Izquierda (2002-2022)</h3>
+
+  <table class="elec-table">
+    <tr><th>Año</th><th>Candidato</th><th>Votos 1ª vuelta</th><th>%</th><th>Crecimiento</th></tr>
+    <tr><td>2002</td><td>Luis E. Garzón (PDI)</td><td class="num num-izq">~487.000</td><td>4.4%</td><td>—</td></tr>
+    <tr><td>2006</td><td>Carlos Gaviria (PDA)</td><td class="num num-izq">~2.609.412</td><td>22.0%</td><td class="trend-up">🚀 +435%</td></tr>
+    <tr><td>2010</td><td>Gustavo Petro (PDA)</td><td class="num num-izq">~1.331.267</td><td>9.1%</td><td class="trend-down">-49%</td></tr>
+    <tr><td>2014</td><td>Clara López (PDA/UP)</td><td class="num num-izq">~1.958.518</td><td>15.2%</td><td class="trend-up">+47%</td></tr>
+    <tr><td>2018</td><td>Gustavo Petro (Pacto)</td><td class="num num-izq">~4.855.069</td><td>25.1%</td><td class="trend-up">🚀 +148%</td></tr>
+    <tr><td>2022</td><td>Gustavo Petro (Pacto)</td><td class="num num-izq"><strong>~8.527.768</strong></td><td><strong>40.3%</strong></td><td class="trend-up">🚀 +76%</td></tr>
+  </table>
+
+  <p style="font-size:0.85rem;color:#888;margin:10px 0;">La izquierda pasó de <strong>4.4%</strong> a <strong>50.4%</strong> en segunda vuelta — un crecimiento de <strong>11.5x</strong> en 20 años.</p>
+
+  <h3 style="font-size:1.1rem;margin:20px 0 12px;">⚖️ Izquierda vs Derecha en Segunda Vuelta</h3>
+
+  <table class="elec-table">
+    <tr><th>Año</th><th style="color:#4ecca3;">Votos Izquierda</th><th style="color:#e94560;">Votos Derecha</th><th>% Participación</th><th>Ganador</th></tr>
+    <tr><td><strong>2018</strong></td><td>8.040.449 <span style="color:#888;font-size:0.75rem;">(41.8%)</span></td><td><span class="num num-der">10.398.689</span> <span style="color:#888;font-size:0.75rem;">(54.0%)</span></td><td>54.0%</td><td>🔴 Duque</td></tr>
+    <tr><td><strong>2022</strong></td><td><span class="num num-izq"><strong>11.281.013</strong></span> <span style="color:#888;font-size:0.75rem;">(50.4%)</span></td><td>10.580.412 <span style="color:#888;font-size:0.75rem;">(47.3%)</span></td><td><span class="num num-gold">58.2%</span></td><td>🟢 <strong>Petro</strong></td></tr>
+  </table>
+
+  <div class="key-fact" style="border-color:#4ecca3;">
+    <span class="big green">700.601</span>
+    <span class="lbl">votos de diferencia ganó Petro en 2022 — la elección con la participación MÁS ALTA en 24 años</span>
+  </div>
+
+  <h3 style="font-size:1.1rem;margin:20px 0 12px;">🔍 ¿Dictadura? Indicadores Reales</h3>
+
+  <div class="split" style="margin-bottom:15px;">
+    <div class="card-abelardo">
+      <h3 style="font-size:0.95rem;">Lo que NO ha pasado bajo Petro</h3>
+      <ul style="padding-left:16px;font-size:0.82rem;">
+        <li>❌ Cierre del Congreso</li>
+        <li>❌ Persecución a la oposición</li>
+        <li>❌ Control de medios de comunicación</li>
+        <li>❌ Eliminación de elecciones</li>
+        <li>❌ Reforma para reelegirse</li>
+        <li>❌ Violación masiva de DDHH sistemática</li>
+      </ul>
+    </div>
+    <div class="card-cepeda">
+      <h3 style="font-size:0.95rem;">Lo que SÍ pasó bajo Uribe (2002-2010)</h3>
+      <ul style="padding-left:16px;font-size:0.82rem;">
+        <li>⚠️ Parapolítica: ~50 congresistas presos</li>
+        <li>⚠️ Falsos Positivos: ~6.400 ejecuciones</li>
+        <li>⚠️ Chuzadas del DAS a opositores</li>
+        <li>⚠️ Cambió la Constitución para reelegirse (2004)</li>
+        <li>⚠️ Agro Ingreso Seguro (corrupción masiva)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="key-fact" style="border-color:#ffd700;">
+    <p style="font-size:0.9rem;">Llamar "dictadura" a 4 años de izquierda después de 20 años consecutivos de derecha no resiste el análisis histórico. Colombia no está en una dictadura por ningún indicador objetivo (Freedom House, Democracy Index, V-Dem). El debate real está en los <strong>temas</strong>: pensiones, salud, seguridad, economía.</p>
+  </div>
+
+  <p style="text-align:center;font-size:0.8rem;color:#555;margin-top:15px;">📎 <strong>Ver también:</strong> <a href="#pensiones" style="color:#4ecca3;">Pensiones y Adultos Mayores</a> — una de las diferencias clave entre izquierda y derecha</p>
+</section>
+
 <!-- ===== FUENTES ===== -->
 <section id="fuentes">
   <h2>📚 Fuentes Documentales</h2>
@@ -1010,12 +1213,29 @@
       </ul>
     </div>
   </div>
-  <p style="text-align:center;margin-top:30px;font-size:0.8rem;color:#555;">Todos los datos provienen de fuentes periodísticas verificables. Fecha de compilación: 1 de junio de 2026.</p>
+  <p style="text-align:center;margin-top:30px;font-size:0.8rem;color:#555;">Todos los datos provienen de fuentes periodísticas verificables. Fecha de compilación: 2 de junio de 2026.</p>
+
+  <div style="margin-top:20px;padding-top:15px;border-top:1px solid #222;">
+    <h3 style="font-size:0.95rem;text-align:center;margin-bottom:10px;">📚 Fuentes Adicionales — Pensiones y Análisis Electoral</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;font-size:0.8rem;">
+      <ul style="padding-left:18px;">
+        <li><a class="source-link" href="https://www.presidencia.gov.co/prensa/Paginas/ABC-DE-LA-LEY-DE-REFORMA-PENSIONAL-250317.aspx">Presidencia: ABC Reforma Pensional</a></li>
+        <li><a class="source-link" href="https://www.infobae.com/colombia/2025/06/30/reforma-pensional-aprobada-este-es-el-abece-para-que-recuerde-el-nuevo-sistema-en-colombia/">Infobae: Nueva Reforma Pensional</a></li>
+        <li><a class="source-link" href="https://asesoriasjuridicas.com.co/reforma-pensional-colombia-2026/">Asesorías Jurídicas: Pilares Reforma</a></li>
+      </ul>
+      <ul style="padding-left:18px;">
+        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2022">Wikipedia: Elecciones 2022</a></li>
+        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2018">Wikipedia: Elecciones 2018</a></li>
+        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2014">Wikipedia: Elecciones 2014</a></li>
+        <li><a class="source-link" href="https://es.wikipedia.org/wiki/Elecciones_presidenciales_de_Colombia_de_2010">Wikipedia: Elecciones 2010</a></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <div class="footer">
   🐉👾 Hecho por C — Datos recopilados del vault Obsidian de Planes de Gobierno + investigación web<br>
-  Proyecto: proyecto_planes_gobierno · obsidian-candidatos
+  Proyecto: proyecto_planes_gobierno · obsidian-candidatos · 25 secciones
 </div>
 
 <script>
