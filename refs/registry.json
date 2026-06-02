@@ -105,14 +105,14 @@
             },
             {
               "id": "abelardo-prog-seg-04",
-              "page": 6,
+              "page": 5,
               "chapter": "Eje 1: Seguridad y Orden",
               "text": "Fin del Acuerdo de Paz",
               "context": "Política de paz"
             },
             {
               "id": "abelardo-prog-eco-01",
-              "page": 7,
+              "page": 9,
               "chapter": "Eje 2: Economía y Reactivación",
               "text": "Crecimiento 7% anual",
               "context": "Meta de crecimiento"
@@ -126,70 +126,70 @@
             },
             {
               "id": "abelardo-prog-eco-03",
-              "page": 7,
+              "page": 9,
               "chapter": "Eje 2: Economía y Reactivación",
               "text": "Desregulación total",
               "context": "Política de desregulación"
             },
             {
               "id": "abelardo-prog-eco-04",
-              "page": 8,
+              "page": 7,
               "chapter": "Eje 2: Economía y Reactivación",
               "text": "Eliminar ministerios",
               "context": "Reforma administrativa"
             },
             {
               "id": "abelardo-prog-ext-01",
-              "page": 10,
+              "page": 14,
               "chapter": "Eje 4: Política Exterior",
               "text": "Salir de Corte IDH y ONU",
               "context": "Aislamiento internacional"
             },
             {
               "id": "abelardo-prog-ext-02",
-              "page": 10,
+              "page": 14,
               "chapter": "Eje 4: Política Exterior",
               "text": "Reanudar con Israel",
               "context": "Relaciones diplomáticas"
             },
             {
               "id": "abelardo-prog-ext-03",
-              "page": 10,
+              "page": 14,
               "chapter": "Eje 4: Política Exterior",
               "text": "Aliado de ultraderecha global",
               "context": "Alineamiento internacional"
             },
             {
               "id": "abelardo-prog-amb-01",
-              "page": 12,
+              "page": 11,
               "chapter": "Eje 5: Medio Ambiente",
               "text": "Reactivar exploración petróleo y gas",
               "context": "Política energética"
             },
             {
               "id": "abelardo-prog-amb-02",
-              "page": 12,
+              "page": 11,
               "chapter": "Eje 5: Medio Ambiente",
               "text": "Fracking permitido",
               "context": "Política de hidrocarburos"
             },
             {
               "id": "abelardo-prog-amb-03",
-              "page": 12,
+              "page": 11,
               "chapter": "Eje 5: Medio Ambiente",
               "text": "Minería de oro, cobre, tierras raras",
               "context": "Política minera"
             },
             {
               "id": "abelardo-prog-amb-04",
-              "page": 13,
+              "page": 12,
               "chapter": "Eje 5: Medio Ambiente",
               "text": "Expandir frontera agrícola 2M has",
               "context": "Política agrícola"
             },
             {
               "id": "abelardo-prog-est-01",
-              "page": 3,
+              "page": 7,
               "chapter": "Principios",
               "section": "Modelo de Estado",
               "text": "Estado reducido en 1/4",
@@ -197,7 +197,7 @@
             },
             {
               "id": "abelardo-prog-est-02",
-              "page": 3,
+              "page": 7,
               "chapter": "Principios",
               "section": "Modelo de Estado",
               "text": "Privatización de servicios",
@@ -205,7 +205,7 @@
             },
             {
               "id": "abelardo-prog-est-03",
-              "page": 4,
+              "page": 9,
               "chapter": "Principios",
               "section": "Modelo de Estado",
               "text": "Desregulación como dogma",
@@ -213,7 +213,7 @@
             },
             {
               "id": "abelardo-prog-est-04",
-              "page": 4,
+              "page": 7,
               "chapter": "Principios",
               "section": "Modelo de Estado",
               "text": "Eliminar ministerios",
@@ -245,7 +245,7 @@
             },
             {
               "id": "abelardo-prog-val-04",
-              "page": 4,
+              "page": 3,
               "chapter": "Principios",
               "section": "Rescate Moral",
               "text": "Rescate moral de la nación",
@@ -253,21 +253,21 @@
             },
             {
               "id": "abelardo-prog-jus-01",
-              "page": 9,
+              "page": 14,
               "chapter": "Eje 3: Justicia",
               "text": "Salir de Corte IDH",
               "context": "Justicia internacional"
             },
             {
               "id": "abelardo-prog-jus-02",
-              "page": 9,
+              "page": 8,
               "chapter": "Eje 3: Justicia",
               "text": "Extinción de dominio exprés",
               "context": "Política anticorrupción"
             },
             {
               "id": "abelardo-prog-jus-03",
-              "page": 9,
+              "page": 8,
               "chapter": "Eje 3: Justicia",
               "text": "Sin garantías procesales para criminales",
               "context": "Política penal"
@@ -311,7 +311,7 @@
             },
             {
               "id": "abelardo-lista-03",
-              "page": 3,
+              "page": 5,
               "chapter": "13 Propuestas",
               "section": "Propuesta 3",
               "text": "Seguridad",
@@ -319,7 +319,7 @@
             },
             {
               "id": "abelardo-lista-04",
-              "page": 4,
+              "page": 8,
               "chapter": "13 Propuestas",
               "section": "Propuesta 4",
               "text": "Anticorrupción",
@@ -327,7 +327,7 @@
             },
             {
               "id": "abelardo-lista-05",
-              "page": 5,
+              "page": 6,
               "chapter": "13 Propuestas",
               "section": "Propuesta 5",
               "text": "Salud",
@@ -335,7 +335,7 @@
             },
             {
               "id": "abelardo-lista-06",
-              "page": 6,
+              "page": 9,
               "chapter": "13 Propuestas",
               "section": "Propuesta 6",
               "text": "Economía",
@@ -343,7 +343,7 @@
             },
             {
               "id": "abelardo-lista-09",
-              "page": 9,
+              "page": 13,
               "chapter": "13 Propuestas",
               "section": "Propuesta 9",
               "text": "Educación",
@@ -351,7 +351,7 @@
             },
             {
               "id": "abelardo-lista-10",
-              "page": 10,
+              "page": 12,
               "chapter": "13 Propuestas",
               "section": "Propuesta 10",
               "text": "Mujeres",
@@ -359,7 +359,7 @@
             },
             {
               "id": "abelardo-lista-11",
-              "page": 11,
+              "page": 12,
               "chapter": "13 Propuestas",
               "section": "Propuesta 11",
               "text": "Campo",
@@ -367,7 +367,7 @@
             },
             {
               "id": "abelardo-lista-12",
-              "page": 12,
+              "page": 15,
               "chapter": "13 Propuestas",
               "section": "Propuesta 12",
               "text": "Cultura",
@@ -375,7 +375,7 @@
             },
             {
               "id": "abelardo-lista-13",
-              "page": 13,
+              "page": 12,
               "chapter": "13 Propuestas",
               "section": "Propuesta 13",
               "text": "Bienestar Animal Integral",
@@ -412,7 +412,7 @@
             },
             {
               "id": "abelardo-dossier-dmg-04",
-              "page": 22,
+              "page": 21,
               "chapter": "Anexos",
               "section": "DMG - Pirámide Financiera",
               "text": "Abelardo lo defendió; interceptaciones revelan solicitudes de dinero",
@@ -420,7 +420,7 @@
             },
             {
               "id": "abelardo-dossier-dmg-05",
-              "page": 23,
+              "page": 21,
               "chapter": "Anexos",
               "section": "DMG - Pirámide Financiera",
               "text": "David Murcia denunció a Abelardo por no devolverle $5.000 millones",
@@ -428,7 +428,7 @@
             },
             {
               "id": "abelardo-dossier-dmg-06",
-              "page": 24,
+              "page": 21,
               "chapter": "Anexos",
               "section": "DMG - Pirámide Financiera",
               "text": "Murcia presentó queja disciplinaria ante la Comisión de Disciplina Judicial",
@@ -436,7 +436,7 @@
             },
             {
               "id": "abelardo-dossier-dmg-07",
-              "page": 25,
+              "page": 21,
               "chapter": "Anexos",
               "section": "DMG - Pirámide Financiera",
               "text": "Abelardo también fue abogado de Alex Saab (testaferro de Maduro)",
@@ -452,7 +452,7 @@
             },
             {
               "id": "abelardo-dossier-firmas-02",
-              "page": 22,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Firmas Falsas",
               "text": "Datos ilegibles, duplicados y firmas de personas fallecidas",
@@ -460,7 +460,7 @@
             },
             {
               "id": "abelardo-dossier-firmas-03",
-              "page": 23,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Firmas Falsas",
               "text": "La Registraduría dijo que inconsistencias no constituían necesariamente fraude",
@@ -468,7 +468,7 @@
             },
             {
               "id": "abelardo-dossier-firmas-04",
-              "page": 24,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Firmas Falsas",
               "text": "El candidato defendió la fortaleza del respaldo ciudadano",
@@ -476,7 +476,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-01",
-              "page": 23,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "Fragmento se viralizó en plena campaña 2026 desatando indignación masiva",
@@ -484,7 +484,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-02",
-              "page": 24,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "Matador lo incendió en X: pregúntese qué clase de hombre se ríe contando que hizo sufrir a un animal",
@@ -492,7 +492,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-03",
-              "page": 25,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "Esmeralda Hernández lo llamó maltratador y farsante",
@@ -500,7 +500,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-04",
-              "page": 26,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "Abelardo incluyó Bienestar Animal como uno de los 13 pilares de su plan",
@@ -508,7 +508,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-05",
-              "page": 27,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "Hernández señaló que Abelardo demandó a Petro cuando intentó prohibir las corridas de toros",
@@ -516,7 +516,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-06",
-              "page": 28,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "También ha admitido haber sido cazador en el pasado",
@@ -524,7 +524,7 @@
             },
             {
               "id": "abelardo-dossier-maltrato-07",
-              "page": 29,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Maltrato Animal",
               "text": "Las 2 Orillas: De ponerle pólvora a gatos a querer gobernar con terror",
@@ -532,7 +532,7 @@
             },
             {
               "id": "abelardo-dossier-conv-01",
-              "page": 24,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Conversión Religiosa",
               "text": "Suponiendo que Dios exista, creo que es responsable de todo lo malo",
@@ -540,7 +540,7 @@
             },
             {
               "id": "abelardo-dossier-conv-02",
-              "page": 25,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Conversión Religiosa",
               "text": "Muerte de su tía Beatrice → empezó a estudiar la Biblia",
@@ -548,7 +548,7 @@
             },
             {
               "id": "abelardo-dossier-conv-03",
-              "page": 26,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Conversión Religiosa",
               "text": "Visita a la Basílica del Señor de los Milagros en Buga, rompió a llorar",
@@ -556,7 +556,7 @@
             },
             {
               "id": "abelardo-dossier-conv-04",
-              "page": 27,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Conversión Religiosa",
               "text": "La inteligencia viene del hombre, pero la sabiduría viene de Dios",
@@ -564,7 +564,7 @@
             },
             {
               "id": "abelardo-dossier-conv-05",
-              "page": 28,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Conversión Religiosa",
               "text": "A mí es el único tipo que se le ha negado la conversión",
@@ -572,7 +572,7 @@
             },
             {
               "id": "abelardo-dossier-conv-06",
-              "page": 29,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Conversión Religiosa",
               "text": "Conversión vista como oportunismo político para atraer el voto cristiano",
@@ -580,7 +580,7 @@
             },
             {
               "id": "abelardo-dossier-life-01",
-              "page": 25,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Usa mocasines Louis Vuitton",
@@ -588,7 +588,7 @@
             },
             {
               "id": "abelardo-dossier-life-02",
-              "page": 26,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Más de 20 lociones para distintas horas del día",
@@ -596,7 +596,7 @@
             },
             {
               "id": "abelardo-dossier-life-03",
-              "page": 27,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Botellas de alcohol que cuestan más de $10.000 USD",
@@ -604,7 +604,7 @@
             },
             {
               "id": "abelardo-dossier-life-04",
-              "page": 28,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Viaja en jet privado",
@@ -612,7 +612,7 @@
             },
             {
               "id": "abelardo-dossier-life-05",
-              "page": 29,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Viaja una vez al año a comprar ropa a Italia",
@@ -620,7 +620,7 @@
             },
             {
               "id": "abelardo-dossier-life-06",
-              "page": 30,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Esposa: Si perdemos, nos volvemos a Italia o EE.UU.",
@@ -628,7 +628,7 @@
             },
             {
               "id": "abelardo-dossier-life-07",
-              "page": 31,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "Se presenta como la voz de los nunca pero tiene triple nacionalidad",
@@ -636,7 +636,7 @@
             },
             {
               "id": "abelardo-dossier-life-08",
-              "page": 32,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Estilo de Vida",
               "text": "El País: El abogado del diablo que quiere ser presidente",
@@ -692,7 +692,7 @@
             },
             {
               "id": "abelardo-dossier-mancuso-01",
-              "page": 26,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Vínculos Paramilitarismo",
               "text": "Conozco a Abelardo desde que somos muchachitos - Salvatore Mancuso",
@@ -700,7 +700,7 @@
             },
             {
               "id": "abelardo-dossier-mancuso-02",
-              "page": 27,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Vínculos Paramilitarismo",
               "text": "Estudiaron en el mismo colegio y círculo social de clase alta de Montería",
@@ -708,7 +708,7 @@
             },
             {
               "id": "abelardo-dossier-mancuso-03",
-              "page": 28,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Vínculos Paramilitarismo",
               "text": "Álvaro Uribe es amigo cercano del padre de Abelardo",
@@ -716,7 +716,7 @@
             },
             {
               "id": "abelardo-dossier-adop-01",
-              "page": 27,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Adopción Homoparental",
               "text": "2016: prefería niño en hogar homosexual que en la calle",
@@ -724,7 +724,7 @@
             },
             {
               "id": "abelardo-dossier-adop-02",
-              "page": 28,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Adopción Homoparental",
               "text": "2026: los niños son sagrados, los sacaría de esa ecuación",
@@ -732,7 +732,7 @@
             },
             {
               "id": "abelardo-dossier-adop-03",
-              "page": 29,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Adopción Homoparental",
               "text": "También en contra del aborto, rescate moral de la nación",
@@ -740,7 +740,7 @@
             },
             {
               "id": "abelardo-dossier-adop-04",
-              "page": 30,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Adopción Homoparental",
               "text": "Defiende la familia tradicional como núcleo de la sociedad",
@@ -748,7 +748,7 @@
             },
             {
               "id": "abelardo-dossier-adop-05",
-              "page": 31,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Adopción Homoparental",
               "text": "Opositores: cambió posición para alinearse con voto cristiano",
@@ -756,7 +756,7 @@
             },
             {
               "id": "abelardo-dossier-restrepo-01",
-              "page": 28,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Fórmula Vicepresidencial",
               "text": "Restrepo fue Ministro de Hacienda y Comercio de Duque",
@@ -764,7 +764,7 @@
             },
             {
               "id": "abelardo-dossier-restrepo-02",
-              "page": 29,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Fórmula Vicepresidencial",
               "text": "Rector de la Universidad del Rosario",
@@ -772,7 +772,7 @@
             },
             {
               "id": "abelardo-dossier-restrepo-03",
-              "page": 30,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Fórmula Vicepresidencial",
               "text": "Busca dar confianza a los mercados y sector empresarial",
@@ -780,7 +780,7 @@
             },
             {
               "id": "abelardo-dossier-restrepo-04",
-              "page": 31,
+              "page": 21,
               "chapter": "Anexos",
               "section": "Fórmula Vicepresidencial",
               "text": "Críticos: es el freno técnico a las ideas radicales de Abelardo",
@@ -807,28 +807,28 @@
             },
             {
               "id": "abelardo-crono-2012",
-              "page": 23,
+              "page": 21,
               "chapter": "Línea de Tiempo",
               "text": "Biografía autorizada El Abogado del Diablo. Abelardo ateo",
               "context": "2012 - Publicación biografía"
             },
             {
               "id": "abelardo-crono-2014",
-              "page": 22,
+              "page": 21,
               "chapter": "Línea de Tiempo",
               "text": "The Suso's Show: confiesa haber quemado gatos con pólvora",
               "context": "2014 - Maltrato animal"
             },
             {
               "id": "abelardo-crono-2016",
-              "page": 26,
+              "page": 21,
               "chapter": "Línea de Tiempo",
               "text": "Apoya adopción homoparental: prefiero niño en hogar homosexual que en la calle",
               "context": "2016 - Posición adopción LGBT"
             },
             {
               "id": "abelardo-crono-2021",
-              "page": 23,
+              "page": 21,
               "chapter": "Línea de Tiempo",
               "text": "Muerte de su tía Beatrice → conversión al catolicismo",
               "context": "2021 - Conversión religiosa"
@@ -849,7 +849,7 @@
             },
             {
               "id": "abelardo-crono-mar2026",
-              "page": 27,
+              "page": 21,
               "chapter": "Línea de Tiempo",
               "text": "Anuncia a José Manuel Restrepo como fórmula vicepresidencial",
               "context": "Mar 2026 - Fórmula VP"
