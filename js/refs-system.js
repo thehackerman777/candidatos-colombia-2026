@@ -21,6 +21,14 @@
   let currentRefId = null;
   let isPdfReady = false;
 
+  // ===== CUSTOM ERROR =====
+  class PageOutOfRangeError extends Error {
+    constructor(msg) {
+      super(msg);
+      this.name = 'PageOutOfRangeError';
+    }
+  }
+
   const state = {
     viewerOpen: false,
     loadingPdf: false,
@@ -231,17 +239,50 @@
       
       // Navigate to ref's page
       const page = parseInt(ref.page) || 1;
+      
+      // Validar que la página solicitada exista en el documento
+      const totalPages = currentPdfDoc.numPages;
+      if (page > totalPages) {
+        hideAllStates();
+        const canvas = document.getElementById('pdf-canvas');
+        if (canvas) canvas.style.display = 'none';
+        const controls = document.querySelector('.pdf-controls-row');
+        if (controls) controls.classList.remove('visible');
+        
+        throw new PageOutOfRangeError(
+          'La página ' + page + ' no existe en el PDF actual (' + totalPages + ' págs.). ' +
+          'La referencia apunta a un anexo o sección que pudo haber sido eliminada o ' +
+          'corresponde a una versión extendida del documento.'
+        );
+      }
+      
       await renderPdfPage(page);
       
     } catch (e) {
       console.error('[Refs] PDF load failed:', e.name, e.message);
       
-      // Siempre mostrar estado 'no disponible' con metadata
-      // PDF.js lanza MissingPDFException, UnknownErrorException, etc.
-      showUnavailable(refId);
+      // Mostrar error específico según la causa
+      if (e instanceof PageOutOfRangeError) {
+        showUnavailable(refId, e.message);
+        // Habilitar botón para abrir PDF externo
+        const btn = document.getElementById('pdf-external-btn');
+        if (btn && ref) {
+          btn.style.display = 'inline-flex';
+          btn.textContent = '📄 Abrir PDF completo (pág. ' + ref.page + ' no existe)';
+          btn.style.opacity = '0.6';
+          btn.style.cursor = 'default';
+        }
+      } else if (e.message === 'PDF_NO_PATH') {
+        showUnavailable(refId, 'El PDF no ha sido agregado al repositorio. Consulta la referencia manualmente usando los datos de ubicación exacta.');
+      } else if (e.name === 'MissingPDFException') {
+        showUnavailable(refId, 'El archivo PDF no se encuentra en la ruta especificada. Verifica que el archivo exista en el servidor.');
+      } else {
+        // Error genérico de carga/renderizado
+        const errorDetail = e.message ? ' (' + e.message.substring(0, 80) + ')' : '';
+        showUnavailable(refId, 'No se pudo cargar el PDF.' + errorDetail + ' Consulta la referencia manualmente.');
+      }
       
-      // Mostrar el error técnico en consola, no al usuario
-      console.log('[Refs] Para que funcione el visor, coloca el PDF real en: ' + (ref.candidate.pdf || 'pdfs/'));
+      console.log('[Refs] Para diagnóstico, coloca el PDF real en: ' + (ref.candidate.pdf || 'pdfs/'));
     }
   }
 

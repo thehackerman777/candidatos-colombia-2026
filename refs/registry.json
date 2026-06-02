@@ -292,6 +292,94 @@
               "chapter": "Eje 7: Pensiones",
               "text": "Reducir cotizaciones",
               "context": "Política de cotizaciones"
+            },
+            {
+              "id": "abelardo-lista-01",
+              "page": 1,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 1",
+              "text": "Salvar la Patria Milagro",
+              "context": "Propuesta #1 del plan de gobierno: 4 amenazas"
+            },
+            {
+              "id": "abelardo-lista-02",
+              "page": 2,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 2",
+              "text": "Patriotismo Constitucional",
+              "context": "Propuesta #2: Defensa de la Constitución, no a constituyente"
+            },
+            {
+              "id": "abelardo-lista-03",
+              "page": 3,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 3",
+              "text": "Seguridad",
+              "context": "Propuesta #3: Fumigar 330.000 has, fin de negociaciones"
+            },
+            {
+              "id": "abelardo-lista-04",
+              "page": 4,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 4",
+              "text": "Anticorrupción",
+              "context": "Propuesta #4: Bloque de Búsqueda, blockchain"
+            },
+            {
+              "id": "abelardo-lista-05",
+              "page": 5,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 5",
+              "text": "Salud",
+              "context": "Propuesta #5: Plan de choque $10 billones"
+            },
+            {
+              "id": "abelardo-lista-06",
+              "page": 6,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 6",
+              "text": "Economía",
+              "context": "Propuesta #6: Crecimiento 7%, reducir Estado en 1/4"
+            },
+            {
+              "id": "abelardo-lista-09",
+              "page": 9,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 9",
+              "text": "Educación",
+              "context": "Propuesta #9: Universidad Virtual en Casa"
+            },
+            {
+              "id": "abelardo-lista-10",
+              "page": 10,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 10",
+              "text": "Mujeres",
+              "context": "Propuesta #10: Reducir 30% violencia, 40% feminicidios"
+            },
+            {
+              "id": "abelardo-lista-11",
+              "page": 11,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 11",
+              "text": "Campo",
+              "context": "Propuesta #11: 2 millones de nuevas has"
+            },
+            {
+              "id": "abelardo-lista-12",
+              "page": 12,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 12",
+              "text": "Cultura",
+              "context": "Propuesta #12: Industria audiovisual, Pase mi Cultura"
+            },
+            {
+              "id": "abelardo-lista-13",
+              "page": 13,
+              "chapter": "13 Propuestas",
+              "section": "Propuesta 13",
+              "text": "Bienestar Animal Integral",
+              "context": "Propuesta #13: Esterilización masiva, erradicar maltrato"
             }
           ]
         },
@@ -1089,6 +1177,110 @@
               "chapter": "Eje 8: Pensiones",
               "text": "Fortalecer BEPS",
               "context": "Subsidios para informales"
+            },
+            {
+              "id": "cepeda-lista-corrupcion",
+              "page": 17,
+              "chapter": "Programa de Gobierno",
+              "section": "Sist. Nac. Anticorrupción",
+              "text": "Sistema Nacional contra la Macrocrorrupción",
+              "context": "Primera propuesta: persecución de macrorredes"
+            },
+            {
+              "id": "cepeda-lista-etica",
+              "page": 25,
+              "chapter": "Programa de Gobierno",
+              "section": "Revolución Ética",
+              "text": "Reconstruir la moral pública",
+              "context": "Revolución Ética: tolerancia cero corrupción"
+            },
+            {
+              "id": "cepeda-lista-social",
+              "page": 61,
+              "chapter": "Programa de Gobierno",
+              "section": "Revolución Social",
+              "text": "Superación de la Pobreza",
+              "context": "Revolución Social: garantía universal de derechos"
+            },
+            {
+              "id": "cepeda-lista-agraria",
+              "page": 88,
+              "chapter": "Programa de Gobierno",
+              "section": "Revolución Agraria",
+              "text": "Transformar tenencia de la tierra",
+              "context": "Revolución Agraria: agua como derecho"
+            },
+            {
+              "id": "cepeda-lista-territorial",
+              "page": 109,
+              "chapter": "Programa de Gobierno",
+              "section": "Revolución Territorial",
+              "text": "Descentralización y ecosistemas",
+              "context": "Revolución Territorial: Amazonía como prioridad"
+            },
+            {
+              "id": "cepeda-lista-politica",
+              "page": 131,
+              "chapter": "Programa de Gobierno",
+              "section": "Revolución Política",
+              "text": "Participación ciudadana",
+              "context": "Revolución Política: mandar obedeciendo"
+            },
+            {
+              "id": "cepeda-lista-seguridad",
+              "page": 80,
+              "chapter": "Programa de Gobierno",
+              "section": "Seguridad Humana",
+              "text": "Paz con justicia social",
+              "context": "Seguridad Humana: protección de líderes"
+            },
+            {
+              "id": "cepeda-lista-victimas",
+              "page": 95,
+              "chapter": "Programa de Gobierno",
+              "section": "Víctimas y Paz",
+              "text": "Víctimas, Genocidio y Paz",
+              "context": "Profundizar Acuerdo de Paz"
+            },
+            {
+              "id": "cepeda-lista-salud",
+              "page": 119,
+              "chapter": "Programa de Gobierno",
+              "section": "Salud Universal",
+              "text": "Sistema público universal",
+              "context": "Salud: atención primaria, profundizar reformas"
+            },
+            {
+              "id": "cepeda-lista-urbana",
+              "page": 318,
+              "chapter": "Programa de Gobierno",
+              "section": "Revolución Urbana",
+              "text": "Derecho a la ciudad",
+              "context": "Revolución Urbana: vivienda digna"
+            },
+            {
+              "id": "cepeda-lista-mujeres",
+              "page": 349,
+              "chapter": "Programa de Gobierno",
+              "section": "Mujeres",
+              "text": "Protagonismo en las revoluciones",
+              "context": "Mujeres: autonomía económica, fin violencia"
+            },
+            {
+              "id": "cepeda-lista-ambiental",
+              "page": 272,
+              "chapter": "Programa de Gobierno",
+              "section": "Medio Ambiente",
+              "text": "Colombia potencia mundial de la vida",
+              "context": "Justicia Ambiental: bioeconomía"
+            },
+            {
+              "id": "cepeda-lista-animales",
+              "page": 421,
+              "chapter": "Programa de Gobierno",
+              "section": "Bienestar Animal",
+              "text": "Protección integral y justicia ambiental",
+              "context": "Bienestar Animal: protección integral"
             }
           ]
         },
