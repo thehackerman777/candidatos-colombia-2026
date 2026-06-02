@@ -274,9 +274,9 @@
 <div class="nav" id="nav" >
   <a href="#perfiles" >📋 Perfiles</a>
   <a href="#programas">📜 Programas</a>
+  <a href="#datos-clave">📊 Datos Clave</a>
   <a href="#abelardo-dossier">📁 Dossier Abelardo</a>
   <a href="#cepeda-dossier">📁 Dossier Cepeda</a>
-  <a href="#datos-clave">📊 Datos Clave</a>
   <a href="#comparativa">⚖️ Comparativa</a>
   <a href="#multimedia">🎬 Multimedia</a>
   <a href="#cronologia">⏳ Cronología</a>
@@ -305,6 +305,7 @@
         <tr><td>Lema</td><td>"El Milagro de los Nunca — Patria Milagro"</td></tr>
       </table>
     </div>
+    </div>
     <div class="card-cepeda">
       <span class="tag tag-green">🟢 IZQUIERDA DEMOCRÁTICA</span>
       <h3>Iván Cepeda Castro</h3>
@@ -321,6 +322,7 @@
       </table>
     </div>
   </div>
+</div>
 </section>
 
 <!-- ===== PROGRAMAS ===== -->
@@ -1193,7 +1195,7 @@
     <tr><th>Año</th><th style="color:#4ecca3;">Votos Izquierda</th><th style="color:#e94560;">Votos Derecha</th><th>% Participación</th><th>Ganador</th></tr>
     <tr><td><strong>2018</strong></td><td>8.040.449 <span style="color:#888;font-size:0.75rem;">(41.8%)</span></td><td><span class="num num-der">10.398.689</span> <span style="color:#888;font-size:0.75rem;">(54.0%)</span></td><td>54.0%</td><td>🔴 Duque</td></tr>
     <tr><td><strong>2022</strong></td><td><span class="num num-izq"><strong>11.281.013</strong></span> <span style="color:#888;font-size:0.75rem;">(50.4%)</span></td><td>10.580.412 <span style="color:#888;font-size:0.75rem;">(47.3%)</span></td><td><span class="num num-gold">58.2%</span></td><td>🟢 <strong>Petro</strong></td></tr>
-  </table>
+  </table></div>
 
   <div class="key-fact" style="border-color:#4ecca3;">
     <span class="big green">700.601</span>
@@ -1302,94 +1304,165 @@
 </div>
 
 <script>
-  // Accordion with ARIA
+  // ===== ACCORDION =====
   document.querySelectorAll('.accordion-btn').forEach(btn => {
     btn.addEventListener('click', function() {
       const isOpen = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !isOpen);
-      const content = this.nextElementSibling;
-      content.classList.toggle('open');
+      this.nextElementSibling.classList.toggle('open');
     });
   });
 
-  // Smooth scroll
+  // ===== NAV: CLICK → SCROLL TO SECTION =====
+  let isScrollingProgrammatically = false;
+
   document.querySelectorAll('.nav a').forEach(a => {
     a.addEventListener('click', function(e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      // Close mobile nav on selection
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      // Mark that we're about to programmatically scroll
+      isScrollingProgrammatically = true;
+
+      // Remove active from all, set active on clicked
+      document.querySelectorAll('.nav a').forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-current', 'page');
+
+      // Scroll with smooth behavior — the scrollObserver will update active
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Restore scroll flag after animation completes
+      setTimeout(() => {
+        isScrollingProgrammatically = false;
+      }, 800);
+
       this.blur();
     });
   });
 
-  // Highlight active nav + scroll nav horizontally to keep active visible
-  let navScrollTicking = false;
-  window.addEventListener('scroll', () => {
-    if (!navScrollTicking) {
-      window.requestAnimationFrame(() => {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav a');
-        const navEl = document.querySelector('.nav');
-        let current = '';
-        const scrollPos = window.scrollY + 120;
-        sections.forEach(s => {
-          const top = s.offsetTop;
-          const bottom = top + s.offsetHeight;
-          if (scrollPos >= top && scrollPos < bottom) {
-            current = s.id;
-          }
-        });
-        // Fallback: last section if scrolled past everything
-        if (!current && sections.length > 0) {
-          const last = sections[sections.length - 1];
-          if (window.scrollY + window.innerHeight >= last.offsetTop + last.offsetHeight - 100) {
-            current = last.id;
+  // ===== NAV: SCROLL → UPDATE ACTIVE SECTION (IntersectionObserver) =====
+  function updateActiveNav(sectionId) {
+    const navLinks = document.querySelectorAll('.nav a');
+    // Also scroll nav horizontally to keep active link visible
+    const navEl = document.querySelector('.nav');
+    navLinks.forEach(a => {
+      const match = a.getAttribute('href') === '#' + sectionId;
+      a.classList.toggle('active', match);
+      if (match) {
+        a.setAttribute('aria-current', 'page');
+        // Auto-scroll nav horizontally on mobile
+        if (navEl && navEl.scrollWidth > navEl.clientWidth) {
+          const aRect = a.getBoundingClientRect();
+          const navRect = navEl.getBoundingClientRect();
+          if (aRect.left < navRect.left || aRect.right > navRect.right) {
+            a.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
           }
         }
-        navLinks.forEach(a => {
-          a.classList.remove('active');
-          a.removeAttribute('aria-current');
-          const href = a.getAttribute('href');
-          if (href && href.substring(1) === current) {
-            a.classList.add('active');
-            a.setAttribute('aria-current', 'page');
-            // Auto-scroll nav horizontally to keep active link visible
-            if (navEl && navEl.scrollWidth > navEl.clientWidth) {
-              const aRect = a.getBoundingClientRect();
-              const navRect = navEl.getBoundingClientRect();
-              if (aRect.left < navRect.left || aRect.right > navRect.right) {
-                a.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-              }
-            }
-          }
-        });
-        navScrollTicking = false;
-      });
-      navScrollTicking = true;
-    }
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  // Build a section→nav map once
+  const sectionNavMap = new Map();
+  document.querySelectorAll('.nav a').forEach(a => {
+    const id = a.getAttribute('href').substring(1);
+    const el = document.getElementById(id);
+    if (el) sectionNavMap.set(id, el);
   });
 
-  // Modal / Lightbox
+  // Observer options: detect when section enters/leaves near the top
+  const observerOptions = {
+    rootMargin: '-60px 0px -40% 0px',
+    threshold: [0, 0.25, 0.5, 0.75, 1]
+  };
+
+  let activeSectionId = '';
+
+  const scrollObserver = new IntersectionObserver((entries) => {
+    // Only process during natural scroll, not programmatic
+    if (isScrollingProgrammatically) return;
+
+    // Find the section with the highest intersection ratio near top
+    let bestEntry = null;
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
+          bestEntry = entry;
+        }
+      }
+    });
+
+    if (bestEntry && bestEntry.target.id !== activeSectionId) {
+      activeSectionId = bestEntry.target.id;
+      updateActiveNav(activeSectionId);
+    }
+  }, observerOptions);
+
+  // Observe all sections
+  document.querySelectorAll('section[id]').forEach(s => {
+    scrollObserver.observe(s);
+  });
+
+  // Fallback: detect sections via scroll for edge cases (top/bottom of page)
+  window.addEventListener('scroll', () => {
+    if (isScrollingProgrammatically) return;
+
+    // Top of page → first section
+    if (window.scrollY < 100) {
+      const firstSection = document.querySelector('section[id]');
+      if (firstSection && firstSection.id !== activeSectionId) {
+        activeSectionId = firstSection.id;
+        updateActiveNav(activeSectionId);
+      }
+      return;
+    }
+
+    // Bottom of page → last section
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    if (scrollBottom >= docHeight - 50) {
+      const allSections = document.querySelectorAll('section[id]');
+      const lastSection = allSections[allSections.length - 1];
+      if (lastSection && lastSection.id !== activeSectionId) {
+        activeSectionId = lastSection.id;
+        updateActiveNav(activeSectionId);
+      }
+    }
+  }, { passive: true });
+
+  // ===== MODAL / LIGHTBOX =====
   function openModal(id) {
     const modal = document.getElementById(id);
     modal.classList.add('open');
-    document.body.style.overflow='hidden';
+    document.body.style.overflow = 'hidden';
     const closeBtn = modal.querySelector('.modal-close');
     if (closeBtn) setTimeout(() => closeBtn.focus(), 100);
   }
   function closeModal(id) {
     document.getElementById(id).classList.remove('open');
-    document.body.style.overflow='';
+    document.body.style.overflow = '';
   }
   document.querySelectorAll('.modal-overlay').forEach(m => {
-    m.addEventListener('click', function(e) { if(e.target === this) { this.classList.remove('open'); document.body.style.overflow=''; } });
+    m.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
   });
   document.addEventListener('keydown', function(e) {
-    if(e.key === 'Escape') {
+    if (e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay.open').forEach(m => {
         m.classList.remove('open');
-        document.body.style.overflow='';
+        document.body.style.overflow = '';
       });
     }
   });
