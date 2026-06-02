@@ -72,7 +72,7 @@
     });
   }
 
-  // ===== RENDER PDF PAGE =====
+  // ===== RENDER PDF PAGE con soporte retina/HiDPI =====
   async function renderPdfPage(pageNum) {
     const canvas = document.getElementById('pdf-canvas');
     const body = document.getElementById('pdf-body');
@@ -82,12 +82,21 @@
     try {
       const page = await currentPdfDoc.getPage(pageNum);
       const vp = page.getViewport({ scale: 1 });
-      const maxWidth = Math.min(body.clientWidth - 8, 900);
-      const scale = maxWidth / vp.width;
-      const svp = page.getViewport({ scale });
       
+      // Calcular escala base para que quepa en el ancho del contenedor
+      const maxWidth = Math.min(body.clientWidth - 8, 900);
+      const baseScale = maxWidth / vp.width;
+      
+      // Aplicar devicePixelRatio para nitidez en pantallas retina
+      const dpr = window.devicePixelRatio || 1;
+      const svp = page.getViewport({ scale: baseScale * dpr });
+      
+      // Canvas interno: tamaño real (para renderizado nítido)
       canvas.width = svp.width;
       canvas.height = svp.height;
+      // Canvas visual: tamaño reducido (para que quepa en el contenedor)
+      canvas.style.width = (svp.width / dpr) + 'px';
+      canvas.style.height = (svp.height / dpr) + 'px';
       canvas.style.display = 'block';
       
       await page.render({ canvasContext: ctx, viewport: svp }).promise;
