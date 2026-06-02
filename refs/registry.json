@@ -1681,6 +1681,30 @@
               "section": "Indicadores",
               "text": "Sí pasó con Uribe: parapolítica, falsos positivos, chuzadas DAS, reelección",
               "context": "Lo que SÍ pasó con Uribe"
+            },
+            {
+              "id": "electoral-data-",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "Referencia automática: electoral-data-",
+              "context": "Verificar en el plan de gobierno la ubicación exacta de esta afirmación"
+            },
+            {
+              "id": "electoral-data--ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "Referencia automática: electoral-data--ref=",
+              "context": "Verificar en el plan de gobierno la ubicación exacta de esta afirmación"
+            },
+            {
+              "id": "electoral-data--ref=<td data-ref=",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "Referencia automática: electoral-data--ref=<td data-ref=",
+              "context": "Verificar en el plan de gobierno la ubicación exacta de esta afirmación"
             }
           ]
         }
@@ -2956,6 +2980,158 @@
               "section": "Indicadores",
               "text": "Sí pasó con Uribe: parapolítica, falsos positivos, chuzadas DAS, reelección",
               "context": "Lo que SÍ pasó con Uribe"
+            },
+            {
+              "id": "electoral-evol-2022",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-evol-2022",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-key-01",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-key-01",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-evol-2006",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-evol-2006",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-gov-petro",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-gov-petro",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-evol-2014",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-evol-2014",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-evol-2018",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-evol-2018",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-gov-santos",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-gov-santos",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-key-03",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-key-03",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-2v-2022-der",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-2v-2022-der",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-evol-2010",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-evol-2010",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-key-02",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-key-02",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-2v-2022-izq",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-2v-2022-izq",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-data-header",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-data-header",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-gov-duque",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-gov-duque",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-gov-uribe",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-gov-uribe",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-2v-2018-der",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-2v-2018-der",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-key-04",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-key-04",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-evol-2002",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-evol-2002",
+              "context": "Afirmacion verificable en el plan de gobierno"
+            },
+            {
+              "id": "electoral-2v-2018-izq",
+              "page": "—",
+              "chapter": "Documento fuente",
+              "section": "Verificar en PDF original",
+              "text": "electoral-2v-2018-izq",
+              "context": "Afirmacion verificable en el plan de gobierno"
             }
           ]
         }
